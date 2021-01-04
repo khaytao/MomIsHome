@@ -82,9 +82,11 @@ public class PlayerScript : MonoBehaviour
             _animator.SetBool("isWorking", false);
             //progressBar.enabled = false;
             Destroy(curTask.gameObject);
-            Destroy(holdingItem.gameObject);
+            //Destroy(holdingItem.gameObject);
             curTask = null;
+            holdingItem.transform.parent = null;
             holdingItem = null;
+            
         }
     }
 

@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c82072e8-9899-43b6-bd53-edbd08ae1473" name="Default Changelist" comment="" />
+    <list default="true" id="c82072e8-9899-43b6-bd53-edbd08ae1473" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MomIsHome/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MomIsHome/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Demo/demoLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Demo/demoLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/PlayerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/PlayerScript.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,8 +20,9 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/scripts/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/Item.cs" />
-        <option value="$PROJECT_DIR$/Assets/scripts/PlayerScript.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/Task.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/PlayerScript.cs" />
       </list>
     </option>
   </component>
@@ -68,7 +74,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609623547470</updated>
-      <workItem from="1609623560841" duration="6058000" />
+      <workItem from="1609623560841" duration="7117000" />
     </task>
     <servers />
   </component>
@@ -145,24 +151,5 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="375" key="GridCell.Tab.3.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609774074660" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/scripts/PlayerScript.cs</url>
-          <line>62</line>
-          <properties documentPath="E:\studies\year 4\Game Jam\sub4\MomIsHome\Assets\scripts\PlayerScript.cs" initialLine="62">
-            <startOffsets>
-              <option value="1631" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1658" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

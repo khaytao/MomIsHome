@@ -440,6 +440,11 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3590331318709080577, guid: b3d2f83d93bed8c4b8c3d99a6d478a29,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3590331318709080579, guid: b3d2f83d93bed8c4b8c3d99a6d478a29,
         type: 3}
       propertyPath: m_Name
@@ -542,6 +547,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2656725842652145678, guid: 0464ceb596b32dd4a9aef3a4041fb09d,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2656725842652145679, guid: 0464ceb596b32dd4a9aef3a4041fb09d,
         type: 3}

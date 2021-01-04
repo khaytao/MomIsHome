@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
@@ -30,5 +31,10 @@ public class GameManager : Singleton<GameManager>
     public Task getTask(GameObject go)
     {
         return goToTask[go];
+    }
+
+    public bool isGameOver()
+    {
+        return (goToTask.Count <= 0);
     }
 }
