@@ -10,8 +10,10 @@ public class Task : MonoBehaviour
     [HideInInspector] public SpriteRenderer taskRenderer;
     void Start()
     {
+        
         taskCollider = GetComponent<Collider2D>();
         taskRenderer = GetComponent<SpriteRenderer>();
+        color = taskRenderer.color;
         GameManager.Instance.addTask(this);
     }
 }

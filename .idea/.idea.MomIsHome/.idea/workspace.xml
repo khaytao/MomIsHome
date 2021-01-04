@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c82072e8-9899-43b6-bd53-edbd08ae1473" name="Default Changelist" comment="" />
+    <list default="true" id="c82072e8-9899-43b6-bd53-edbd08ae1473" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MomIsHome/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MomIsHome/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MomIsHome/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MomIsHome/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/Wal Horizontal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/Wal Horizontal.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/Wall Vertical.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/Wall Vertical.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/Task.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/Task.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +23,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/scripts/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Task.cs" />
       </list>
     </option>
   </component>
@@ -62,7 +73,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609623547470</updated>
-      <workItem from="1609623560841" duration="2931000" />
+      <workItem from="1609623560841" duration="3940000" />
     </task>
     <servers />
   </component>

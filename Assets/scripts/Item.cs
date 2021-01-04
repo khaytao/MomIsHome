@@ -10,5 +10,6 @@ public class Item : MonoBehaviour
     {
         itemCollider = GetComponent<Collider2D>();
         GameManager.Instance.addItem(this);
+        color = GetComponent<SpriteRenderer>().color;
     }
 }

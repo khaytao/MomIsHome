@@ -7,7 +7,12 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="scripts" t="Include">
+          <e p="GameManager.cs" t="Include" />
+          <e p="Item.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
+          <e p="PlayerScript.cs" t="Include" />
+          <e p="Singleton.cs" t="Include" />
+          <e p="Task.cs" t="Include" />
         </e>
       </e>
       <e p="MomIsHome.sln" t="IncludeFlat" />
