@@ -13,6 +13,7 @@
           <e p="PlayerScript.cs" t="Include" />
           <e p="Singleton.cs" t="Include" />
           <e p="Task.cs" t="Include" />
+          <e p="TaskTags.cs" t="Include" />
         </e>
       </e>
       <e p="MomIsHome.sln" t="IncludeFlat" />

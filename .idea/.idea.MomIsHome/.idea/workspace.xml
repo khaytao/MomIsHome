@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c82072e8-9899-43b6-bd53-edbd08ae1473" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MomIsHome/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MomIsHome/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Demo/demoLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Demo/demoLevel.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fouad.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fouad.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/animations/player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/animations/player.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/PlayerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/PlayerScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/Task.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/Task.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +17,8 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/scripts/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/Item.cs" />
-        <option value="$PROJECT_DIR$/Assets/scripts/Task.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/PlayerScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/Task.cs" />
       </list>
     </option>
   </component>
@@ -75,7 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609623547470</updated>
-      <workItem from="1609623560841" duration="4985000" />
+      <workItem from="1609623560841" duration="5463000" />
     </task>
     <servers />
   </component>
