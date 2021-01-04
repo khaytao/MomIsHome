@@ -2,10 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum TaskType
+{
+    type1,
+    type2,
+    type3
+}
+
 public class Task : MonoBehaviour
 {
     public float duration;
-    public Color color;
+
+    public TaskType type;
     [HideInInspector] public Collider2D taskCollider;
     [HideInInspector] public SpriteRenderer taskRenderer;
     public string fixedBy = "Nothing";
@@ -14,7 +22,6 @@ public class Task : MonoBehaviour
         
         taskCollider = GetComponent<Collider2D>();
         taskRenderer = GetComponent<SpriteRenderer>();
-        color = taskRenderer.color;
         GameManager.Instance.addTask(this);
     }
 }

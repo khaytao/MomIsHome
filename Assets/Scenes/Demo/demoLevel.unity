@@ -272,6 +272,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9112640305817713342, guid: c1e560f9b1d47c443a7b5ec42bfc9d35,
+        type: 3}
+      propertyPath: forTaskType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1e560f9b1d47c443a7b5ec42bfc9d35, type: 3}
 --- !u!1001 &840862579
@@ -350,6 +355,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Task
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590331318709080583, guid: b3d2f83d93bed8c4b8c3d99a6d478a29,
+        type: 3}
+      propertyPath: type
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d2f83d93bed8c4b8c3d99a6d478a29, type: 3}
@@ -653,7 +663,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -760,6 +770,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9112640305817713342, guid: c1e560f9b1d47c443a7b5ec42bfc9d35,
+        type: 3}
+      propertyPath: forTaskType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1e560f9b1d47c443a7b5ec42bfc9d35, type: 3}
 --- !u!1001 &1770522367
@@ -828,6 +843,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Task (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590331318709080583, guid: b3d2f83d93bed8c4b8c3d99a6d478a29,
+        type: 3}
+      propertyPath: type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d2f83d93bed8c4b8c3d99a6d478a29, type: 3}
