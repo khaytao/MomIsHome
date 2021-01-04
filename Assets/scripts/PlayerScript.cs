@@ -60,14 +60,13 @@ public class PlayerScript : MonoBehaviour
 
     private void doTask()
     {
-        Debug.Log("ComparingTask");
-        if (!holdingItem.color.Equals(curTask.color))
+        if (holdingItem.forTaskType != curTask.type)
         {
             return ;
         }
         if (!isFixing)
         {
-            Debug.Log("StartingTask");
+            _animator.SetBool("isMoving", false);
             isFixing = true;
             taskStarted = Time.time;
             //progressBar.enabled = true;

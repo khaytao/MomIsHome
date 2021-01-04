@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Item : MonoBehaviour
 {
-    public Color color;
+    public TaskType forTaskType;
     [HideInInspector] public Collider2D itemCollider;
     void Start()
     {
         itemCollider = GetComponent<Collider2D>();
         GameManager.Instance.addItem(this);
-        color = GetComponent<SpriteRenderer>().color;
     }
 }
