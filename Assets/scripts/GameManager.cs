@@ -5,12 +5,25 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
+    private float timeStarted;
+    private bool gameOver;
+    // how much time has elapsed since the start of game (in case there is an opening scene its not equal to Time.time)
+    public float elapsedTime { get
+        {
+            if (timeStarted == -1)
+                timeStarted = Time.time;
+            return Time.time - timeStarted;
+        }
+    }
     private Dictionary<GameObject, Item> goToItem;
     private Dictionary<GameObject, Task> goToTask;
+    
     public GameManager()
     {
         goToItem = new Dictionary<GameObject, Item>();
         goToTask = new Dictionary<GameObject, Task>();
+        timeStarted = -1;
+        gameOver = false;
     }
 
     public void addItem(Item item)
@@ -33,8 +46,14 @@ public class GameManager : Singleton<GameManager>
         return goToTask[go];
     }
 
+    public void timeOver()
+    {
+        Debug.Log("Game over!");
+        gameOver = true;
+    }
+
     public bool isGameOver()
     {
-        return (goToTask.Count <= 0);
+        return gameOver || (goToTask.Count <= 0);
     }
 }
