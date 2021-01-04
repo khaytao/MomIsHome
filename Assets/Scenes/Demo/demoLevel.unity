@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3804d21d55f6114882bc6b7ec53b6fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameDurationMinutes: 10
+  gameDurationMinutes: 90
   gameTimeFactor: 120
   minuteHand: {fileID: 1826988219}
   hourHand: {fileID: 1605084787}
