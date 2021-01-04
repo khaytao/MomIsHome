@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c82072e8-9899-43b6-bd53-edbd08ae1473" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MomIsHome/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MomIsHome/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MomIsHome/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MomIsHome/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/Wal Horizontal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/Wal Horizontal.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/Wall Vertical.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/Wall Vertical.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/prefabs/player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/prefabs/player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/Task.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/Task.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Demo/demoLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Demo/demoLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Fouad.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Fouad.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/animations/player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/animations/player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/PlayerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/PlayerScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +23,7 @@
         <option value="$PROJECT_DIR$/Assets/scripts/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/Task.cs" />
+        <option value="$PROJECT_DIR$/Assets/scripts/PlayerScript.cs" />
       </list>
     </option>
   </component>
@@ -34,9 +33,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.2665222" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="XThreadsFramesViewSplitterKey" value="0.65784115" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -55,10 +57,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="22760">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="22760" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -73,7 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609623547470</updated>
-      <workItem from="1609623560841" duration="3940000" />
+      <workItem from="1609623560841" duration="4985000" />
     </task>
     <servers />
   </component>
@@ -84,5 +86,90 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1877" height="375" key="GridCell.Tab.0.bottom" timestamp="1609774074805">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609774074805" />
+    <state width="1877" height="375" key="GridCell.Tab.0.center" timestamp="1609774074805">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609774074805" />
+    <state width="1877" height="375" key="GridCell.Tab.0.left" timestamp="1609774074805">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609774074805" />
+    <state width="1877" height="375" key="GridCell.Tab.0.right" timestamp="1609774074805">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609774074805" />
+    <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1609774091147">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609774091147" />
+    <state width="1877" height="375" key="GridCell.Tab.1.center" timestamp="1609774091147">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609774091147" />
+    <state width="1877" height="375" key="GridCell.Tab.1.left" timestamp="1609774091146">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609774091146" />
+    <state width="1877" height="375" key="GridCell.Tab.1.right" timestamp="1609774091147">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609774091147" />
+    <state width="1877" height="375" key="GridCell.Tab.2.bottom" timestamp="1609774074660">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609774074660" />
+    <state width="1877" height="375" key="GridCell.Tab.2.center" timestamp="1609774074660">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609774074660" />
+    <state width="1877" height="375" key="GridCell.Tab.2.left" timestamp="1609774074660">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609774074660" />
+    <state width="1877" height="375" key="GridCell.Tab.2.right" timestamp="1609774074660">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609774074660" />
+    <state width="1877" height="375" key="GridCell.Tab.3.bottom" timestamp="1609774074660">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609774074660" />
+    <state width="1877" height="375" key="GridCell.Tab.3.center" timestamp="1609774074660">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609774074660" />
+    <state width="1877" height="375" key="GridCell.Tab.3.left" timestamp="1609774074660">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609774074660" />
+    <state width="1877" height="375" key="GridCell.Tab.3.right" timestamp="1609774074660">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1609774074660" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/scripts/PlayerScript.cs</url>
+          <line>62</line>
+          <properties documentPath="E:\studies\year 4\Game Jam\sub4\MomIsHome\Assets\scripts\PlayerScript.cs" initialLine="62">
+            <startOffsets>
+              <option value="1631" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1658" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

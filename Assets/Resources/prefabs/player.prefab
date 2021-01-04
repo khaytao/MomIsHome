@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2656725842652145676}
   - component: {fileID: 2656725842652145666}
   - component: {fileID: 3799690604005532839}
+  - component: {fileID: 8130031418392580537}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -115,7 +116,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2656725842652145673}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9b4d7904abda7c46b8e7898494f1909, type: 3}
   m_Name: 
@@ -167,3 +168,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.27328318, y: 0.24320775}
   m_EdgeRadius: 0
+--- !u!114 &8130031418392580537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2656725842652145673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107afbf72f7a93b45868d7e21faec200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBar: {fileID: 0}
+  interactKey: 324
+  goal_threshold: 0.5
+  speed: 3

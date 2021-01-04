@@ -60,26 +60,28 @@ public class PlayerScript : MonoBehaviour
 
     private void doTask()
     {
-        if (holdingItem.color != curTask.color)
+        Debug.Log("ComparingTask");
+        if (!holdingItem.color.Equals(curTask.color))
         {
             return ;
         }
         if (!isFixing)
         {
+            Debug.Log("StartingTask");
             isFixing = true;
             taskStarted = Time.time;
-            progressBar.enabled = true;
+            //progressBar.enabled = true;
         }
 
-        _animator.SetBool("isMoving", true);
+        _animator.SetBool("isWorking", true);
         float elapsedPerc = (Time.time - taskStarted) / curTask.duration;
-        progressBar.value = elapsedPerc;
+        //progressBar.value = elapsedPerc;
 
         if (elapsedPerc >= 1)
         {
             isFixing = false;
-            _animator.SetBool("isMoving", false);
-            progressBar.enabled = false;
+            _animator.SetBool("isWorking", false);
+            //progressBar.enabled = false;
             Destroy(curTask.gameObject);
             Destroy(holdingItem.gameObject);
             curTask = null;
