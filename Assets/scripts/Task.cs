@@ -16,7 +16,6 @@ public class Task : MonoBehaviour
     public TaskType type;
     [HideInInspector] public Collider2D taskCollider;
     [HideInInspector] public SpriteRenderer taskRenderer;
-    public string fixedBy = "Nothing";
     void Start()
     {
         

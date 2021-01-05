@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -48,12 +49,41 @@ public class GameManager : Singleton<GameManager>
 
     public void timeOver()
     {
-        Debug.Log("Game over!");
+        Debug.Log("Game over!  You lost");
         gameOver = true;
     }
 
     public bool isGameOver()
     {
         return gameOver || (goToTask.Count <= 0);
+    }
+
+    public void endGame()
+    {
+        gameOver = false;
+        timeStarted = -1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void areTasksOver()
+    {
+        if (goToTask.Count <= 0)
+        {
+            Debug.Log("Game over!  You Won");
+            endGame();
+        }
+    }
+
+    public void FinishTask(Task curTask)
+    {
+        //progressBar.enabled = false;
+        
+        //Destroy(holdingItem.gameObject);
+        //holdingItem.transform.parent = null;
+        //holdingItem = null;
+
+        goToTask.Remove(curTask.gameObject);
+        Destroy(curTask.gameObject);
+        areTasksOver();
     }
 }

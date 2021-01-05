@@ -34,10 +34,6 @@ public class TimeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.Instance.isGameOver())
-        {
-            return;
-        }
 
         Vector3 hourAngle = Time.deltaTime * (gameTimeFactor / 60) * hourAnglePerMinute * Vector3.forward;
         hourHand.transform.eulerAngles -= hourAngle;
