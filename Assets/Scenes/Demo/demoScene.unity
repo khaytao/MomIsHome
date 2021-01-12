@@ -1548,7 +1548,7 @@ PrefabInstance:
     - target: {fileID: 8244859602345308170, guid: df036f329b2d63d4c8ced193a71138d8,
         type: 3}
       propertyPath: spreadTimeInterval
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df036f329b2d63d4c8ced193a71138d8, type: 3}
