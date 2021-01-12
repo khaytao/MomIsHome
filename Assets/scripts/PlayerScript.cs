@@ -27,6 +27,7 @@ public class PlayerScript : MonoBehaviour
         _animator = GetComponent<Animator>();
         curTasks = new ArrayList();
         GameManager.Instance.setPlayerScript(this);
+        _goal = _rb.position;
     }
 
     private void Update()
@@ -84,14 +85,14 @@ public class PlayerScript : MonoBehaviour
             //progressBar.enabled = true;
         }
 
-        // _animator.SetBool("isWorking", true);
+        _animator.SetBool("isWorking", true);
         float elapsedPerc = (Time.time - taskStarted) / fixingTask.duration;
         //progressBar.value = elapsedPerc;
 
         if (elapsedPerc >= 1)
         {
             isFixing = false;
-            // _animator.SetBool("isWorking", false);
+            _animator.SetBool("isWorking", false);
             //progressBar.enabled = false;
             if (fixingTask.type == TaskType.Trash)
             {

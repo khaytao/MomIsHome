@@ -36,6 +36,7 @@ public class Task : MonoBehaviour
         if (type == TaskType.Sweep)
         {
             childWaterRenderer.transform.localScale += Time.deltaTime * 0.1f * (Vector3)Vector2.one;
+            duration += Time.deltaTime * 0.1f;
         }
     }
 }

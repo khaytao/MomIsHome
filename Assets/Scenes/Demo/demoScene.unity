@@ -955,6 +955,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35cd8a6300cd2d04b85b59e12d3cff1a, type: 3}
+--- !u!1 &1193240016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3590331318709080579, guid: b3d2f83d93bed8c4b8c3d99a6d478a29,
+    type: 3}
+  m_PrefabInstance: {fileID: 1502027704}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1193240020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193240016}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45f267b18f8a6e84d983bb955a35a238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 2
+  type: 3
+  taskCollider: {fileID: 0}
+  circleCollider: {fileID: 0}
+  taskRenderer: {fileID: 0}
 --- !u!1 &1211291280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,6 +1379,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3590331318709080577, guid: df036f329b2d63d4c8ced193a71138d8,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3590331318709080579, guid: df036f329b2d63d4c8ced193a71138d8,
         type: 3}
       propertyPath: m_Name
@@ -1383,12 +1411,12 @@ PrefabInstance:
     - target: {fileID: 1519167947468476144, guid: b74c87dbb0675c54085d251c5bad153a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.03
+      value: 4.54
       objectReference: {fileID: 0}
     - target: {fileID: 1519167947468476144, guid: b74c87dbb0675c54085d251c5bad153a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.58
+      value: -3.4
       objectReference: {fileID: 0}
     - target: {fileID: 1519167947468476144, guid: b74c87dbb0675c54085d251c5bad153a,
         type: 3}
@@ -1440,7 +1468,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: player Sprites
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1519167947468476147, guid: b74c87dbb0675c54085d251c5bad153a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b74c87dbb0675c54085d251c5bad153a, type: 3}
 --- !u!1001 &1502027704
 PrefabInstance:
@@ -1535,6 +1564,11 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.990566
       objectReference: {fileID: 0}
+    - target: {fileID: 3590331318709080577, guid: b3d2f83d93bed8c4b8c3d99a6d478a29,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3590331318709080579, guid: b3d2f83d93bed8c4b8c3d99a6d478a29,
         type: 3}
       propertyPath: m_Name
@@ -1544,6 +1578,11 @@ PrefabInstance:
         type: 3}
       propertyPath: type
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590331318709080583, guid: b3d2f83d93bed8c4b8c3d99a6d478a29,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3d2f83d93bed8c4b8c3d99a6d478a29, type: 3}
