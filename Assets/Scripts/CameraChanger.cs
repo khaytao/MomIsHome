@@ -19,8 +19,8 @@ public class CameraChanger : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
  
-        camOver.enabled = false;
-        camZoomed.enabled = true;
+        camOver.enabled = !camOver.enabled;
+        camZoomed.enabled = !camZoomed.enabled;
     }
     
     // Update is called once per frame

@@ -163,7 +163,6 @@ public class PlayerScript : MonoBehaviour
         }
 
         _angle = Vector2.Angle(direction, -transform.up);
-
         if (_rb.velocity.x < 0)
         {
             _angle = 360 - _angle;

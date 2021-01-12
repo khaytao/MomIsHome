@@ -20,6 +20,7 @@ public class WallVisability : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        
         if (other.gameObject.CompareTag("Player"))
         {
             _sr.color = new Color(1f,1f,1f,.5f);
