@@ -11,6 +11,11 @@ public class WallVisability : MonoBehaviour
     void Start()
     {
         _sr = GetComponent<SpriteRenderer>();
+        BoxCollider2D[] boxColliders = GetComponents<BoxCollider2D>();
+        foreach (BoxCollider2D boxCollider in boxColliders)
+        {
+            GameManager.Instance.addWallBounds(boxCollider.bounds);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

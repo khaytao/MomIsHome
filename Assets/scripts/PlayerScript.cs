@@ -16,7 +16,8 @@ public class PlayerScript : MonoBehaviour
     private float _angle = 0;
     private Item holdingItem;
     private Item curItem;
-    private Task curTask;
+    private ArrayList curTasks;
+    private Task fixingTask;
     private float taskStarted;
     private bool isFixing;
     // Start is called before the first frame update
@@ -24,6 +25,8 @@ public class PlayerScript : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        curTasks = new ArrayList();
+        GameManager.Instance.setPlayerScript(this);
     }
 
     private void Update()
@@ -39,9 +42,17 @@ public class PlayerScript : MonoBehaviour
             _goal = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             _animator.SetBool("isMoving", true);
         }
-        if (Input.GetKeyDown(interactKey) && !isFixing && curTask != null && holdingItem != null)
+        if (Input.GetKeyDown(interactKey) && !isFixing && curTasks.Count > 0 && holdingItem != null)
         {
-            doTask();
+            foreach (Task task in curTasks)
+            {
+                if (task.type == holdingItem.forTaskType)
+                {
+                    fixingTask = curTasks[0] as Task;
+                    doTask();
+                    break;
+                }
+            }
         }
         else if (Input.GetKeyDown(interactKey))
         {
@@ -50,7 +61,7 @@ public class PlayerScript : MonoBehaviour
                 holdingItem.transform.parent = null;
                 holdingItem = null;
             }
-            if (curItem != null)
+            else if (curItem != null)
             {
                 holdingItem = curItem;
                 holdingItem.gameObject.transform.parent = gameObject.transform;
@@ -60,8 +71,9 @@ public class PlayerScript : MonoBehaviour
 
     private void doTask()
     {
-        if (holdingItem.forTaskType != curTask.type)
+        if (fixingTask == null)
         {
+            isFixing = false;
             return ;
         }
         if (!isFixing)
@@ -72,18 +84,31 @@ public class PlayerScript : MonoBehaviour
             //progressBar.enabled = true;
         }
 
-        _animator.SetBool("isWorking", true);
-        float elapsedPerc = (Time.time - taskStarted) / curTask.duration;
+        // _animator.SetBool("isWorking", true);
+        float elapsedPerc = (Time.time - taskStarted) / fixingTask.duration;
         //progressBar.value = elapsedPerc;
 
         if (elapsedPerc >= 1)
         {
             isFixing = false;
-            _animator.SetBool("isWorking", false);
+            // _animator.SetBool("isWorking", false);
             //progressBar.enabled = false;
-            GameManager.Instance.FinishTask(curTask);
+            if (fixingTask.type == TaskType.Trash)
+            {
+                GameManager.Instance.removeItem(holdingItem);
+                Destroy(holdingItem.gameObject);
+                GameManager.Instance.FinishTask(fixingTask);
+                holdingItem = null;
+            }
+            else
+            {
+                GameManager.Instance.removeTask(fixingTask);
+                curTasks.Remove(fixingTask);
+                Destroy(fixingTask.gameObject);
+                GameManager.Instance.FinishTask(fixingTask);
+                fixingTask = null;
+            }
             //Destroy(holdingItem.gameObject);
-            curTask = null;
             //holdingItem.transform.parent = null;
             //holdingItem = null;
             //GameManager.Instance.areTasksOver();
@@ -112,6 +137,11 @@ public class PlayerScript : MonoBehaviour
         _animator.SetFloat("angle", _angle);
     }
 
+    public void addToTask(Task task)
+    {
+        curTasks.Add(task);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag.Equals("Item"))
@@ -120,7 +150,10 @@ public class PlayerScript : MonoBehaviour
         }
         if (collision.tag.Equals("Task"))
         {
-            curTask = GameManager.Instance.getTask(collision.gameObject);
+            Task colTask = GameManager.Instance.getTask(collision.gameObject);
+            if(!curTasks.Contains(colTask))
+                curTasks.Add(colTask);
+            // curTask = GameManager.Instance.getTask(collision.gameObject);
         }
     }
 
@@ -132,7 +165,11 @@ public class PlayerScript : MonoBehaviour
         }
         if (collision.tag.Equals("Task"))
         {
-            curTask = null;
+            Task task = GameManager.Instance.getTask(collision.gameObject);
+            if(task != null)
+                curTasks.Remove(task);
+            // if(curTask != null && curTask.gameObject.Equals(collision.gameObject))
+            //     curTask = null;
         }
     }
 }
