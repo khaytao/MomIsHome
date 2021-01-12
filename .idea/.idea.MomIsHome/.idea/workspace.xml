@@ -20,11 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c82072e8-9899-43b6-bd53-edbd08ae1473" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MomIsHome/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MomIsHome/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MomIsHome/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MomIsHome/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Resources/House.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Resources/House.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Demo/demoScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Demo/demoScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/animations/New Animator Override Controller.overrideController" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/animations/New Animator Override Controller.overrideController" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/animations/player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/animations/player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FireScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FireScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WallVisability.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WallVisability.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,13 +56,13 @@
         <option value="$PROJECT_DIR$/Assets/scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/FireStarter.cs" />
         <option value="$PROJECT_DIR$/Assets/scripts/WallVisability.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/WallVisability.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FireScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Water.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Task.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraChanger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FireScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WallVisability.cs" />
       </list>
     </option>
   </component>

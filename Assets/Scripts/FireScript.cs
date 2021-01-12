@@ -34,7 +34,7 @@ public class FireScript : MonoBehaviour
         {
             lastCheck = Time.time;
             // 60% chance to generate fire
-            if (Random.Range(0, 10) >= 4)
+            if (Random.Range(0, 10) >= 6)
             {
                 Vector2 dir = new Vector2(Random.Range(-1, 2), Random.Range(-1, 2));
                 Bounds temp = boxBounds;

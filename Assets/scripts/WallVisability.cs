@@ -23,6 +23,8 @@ public class WallVisability : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             _sr.color = new Color(1f,1f,1f,.5f);
+            SpriteRenderer playerSr = other.gameObject.GetComponent<SpriteRenderer>();
+            //playerSr.color = new Color(1f,1f,1f,.75f);
         }
     }
     
@@ -31,6 +33,8 @@ public class WallVisability : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             _sr.color = new Color(1f,1f,1f,1f);
+            SpriteRenderer playerSr = other.gameObject.GetComponent<SpriteRenderer>();
+            //playerSr.color = new Color(1f,1f,1f,.1f);
         }
     }
 }
