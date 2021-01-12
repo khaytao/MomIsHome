@@ -51,6 +51,7 @@ public class GameManager : Singleton<GameManager>
     {
         Debug.Log("Game over!  You lost");
         gameOver = true;
+        endGame();
     }
 
     public bool isGameOver()

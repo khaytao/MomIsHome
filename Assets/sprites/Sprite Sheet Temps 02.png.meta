@@ -1,0 +1,874 @@
+fileFormatVersion: 2
+guid: 4cd22fbc44a42ae4a8151ffb599533ac
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4840035290646160453
+    second: Sprite Sheet Temps 02_0
+  - first:
+      213: -5827038633337115629
+    second: Sprite Sheet Temps 02_1
+  - first:
+      213: -2064235998846984071
+    second: Sprite Sheet Temps 02_2
+  - first:
+      213: 8737225075868114629
+    second: Sprite Sheet Temps 02_3
+  - first:
+      213: -150932383227560142
+    second: Sprite Sheet Temps 02_5
+  - first:
+      213: 1728956594862971024
+    second: Sprite Sheet Temps 02_7
+  - first:
+      213: -3580362734790200603
+    second: Sprite Sheet Temps 02_8
+  - first:
+      213: -2890100950659864573
+    second: Sprite Sheet Temps 02_9
+  - first:
+      213: -7221007061267939571
+    second: Sprite Sheet Temps 02_10
+  - first:
+      213: -943526252949159008
+    second: Sprite Sheet Temps 02_11
+  - first:
+      213: -3601628718995778967
+    second: Sprite Sheet Temps 02_12
+  - first:
+      213: -5210763584406488679
+    second: Sprite Sheet Temps 02_13
+  - first:
+      213: 6839022523547044833
+    second: Sprite Sheet Temps 02_14
+  - first:
+      213: -6350356278011973527
+    second: Sprite Sheet Temps 02_15
+  - first:
+      213: 3395656617654585127
+    second: Sprite Sheet Temps 02_16
+  - first:
+      213: 571036809104760505
+    second: Sprite Sheet Temps 02_19
+  - first:
+      213: 4310913704708845568
+    second: Sprite Sheet Temps 02_20
+  - first:
+      213: 2113877246348528494
+    second: Sprite Sheet Temps 02_21
+  - first:
+      213: 8828164216355935505
+    second: Sprite Sheet Temps 02_22
+  - first:
+      213: 2144918109651196764
+    second: Sprite Sheet Temps 02_23
+  - first:
+      213: -3442326079493097985
+    second: Sprite Sheet Temps 02_24
+  - first:
+      213: 8118871541136389028
+    second: Sprite Sheet Temps 02_25
+  - first:
+      213: 1416434956376746666
+    second: Sprite Sheet Temps 02_26
+  - first:
+      213: -1055860873623823646
+    second: Sprite Sheet Temps 02_27
+  - first:
+      213: 6869243338366258376
+    second: Sprite Sheet Temps 02_28
+  - first:
+      213: -7236298064453610284
+    second: Sprite Sheet Temps 02_29
+  - first:
+      213: -2580932398116831179
+    second: Sprite Sheet Temps 02_30
+  - first:
+      213: -6647330999229787575
+    second: Sprite Sheet Temps 02_31
+  - first:
+      213: -7782367062973652838
+    second: Sprite Sheet Temps 02_32
+  - first:
+      213: 4227399835140249063
+    second: Sprite Sheet Temps 02_33
+  - first:
+      213: 6682883405052008765
+    second: Sprite Sheet Temps 02_34
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_0
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 3879
+        width: 495
+        height: 953
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb5ea8fb8db4dcb0800000000000000
+      internalID: -4840035290646160453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_1
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 3879
+        width: 684
+        height: 958
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31ca6776c33322fa0800000000000000
+      internalID: -5827038633337115629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_2
+      rect:
+        serializedVersion: 2
+        x: 1945
+        y: 3894
+        width: 785
+        height: 894
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 970e62cbb4c5a53e0800000000000000
+      internalID: -2064235998846984071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_3
+      rect:
+        serializedVersion: 2
+        x: 2743
+        y: 3894
+        width: 573
+        height: 938
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ce11c92aebd04970800000000000000
+      internalID: 8737225075868114629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_5
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 3027
+        width: 495
+        height: 784
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f3e901cc7c7edf0800000000000000
+      internalID: -150932383227560142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_7
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 3086
+        width: 519
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09850e4dcdc7ef710800000000000000
+      internalID: 1728956594862971024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_8
+      rect:
+        serializedVersion: 2
+        x: 1681
+        y: 3431
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e2b8c1ff0fff4ec0800000000000000
+      internalID: -3580362734790200603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_9
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 3415
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30866ee6f7c44e7d0800000000000000
+      internalID: -2890100950659864573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_10
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 3013
+        width: 393
+        height: 391
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f79881654d9cb90800000000000000
+      internalID: -7221007061267939571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_11
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 3384
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a3c5b83fdbe7e2f0800000000000000
+      internalID: -943526252949159008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_12
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 3368
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962596723c1740ec0800000000000000
+      internalID: -3601628718995778967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_13
+      rect:
+        serializedVersion: 2
+        x: 2236
+        y: 3363
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 999f8e6b026afa7b0800000000000000
+      internalID: -5210763584406488679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_14
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 3306
+        width: 30
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ebcaee10c619ee50800000000000000
+      internalID: 6839022523547044833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_15
+      rect:
+        serializedVersion: 2
+        x: 2313
+        y: 3088
+        width: 298
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 960bceb5c900fd7a0800000000000000
+      internalID: -6350356278011973527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_16
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 3070
+        width: 166
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 727818ae3bbcf1f20800000000000000
+      internalID: 3395656617654585127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_19
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 2158
+        width: 465
+        height: 812
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9be9c50d3fabce700800000000000000
+      internalID: 571036809104760505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_20
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 2145
+        width: 405
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 000b88a9c2173db30800000000000000
+      internalID: 4310913704708845568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_21
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 2223
+        width: 601
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b826fd720065d10800000000000000
+      internalID: 2113877246348528494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_22
+      rect:
+        serializedVersion: 2
+        x: 2230
+        y: 2500
+        width: 44
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 115d5b6c490f38a70800000000000000
+      internalID: 8828164216355935505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_23
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 2443
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5bdf0e08a744cd10800000000000000
+      internalID: 2144918109651196764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_24
+      rect:
+        serializedVersion: 2
+        x: 2313
+        y: 2225
+        width: 298
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff530ce3ba66a30d0800000000000000
+      internalID: -3442326079493097985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_25
+      rect:
+        serializedVersion: 2
+        x: 2782
+        y: 2207
+        width: 166
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a3767aa6a60ca070800000000000000
+      internalID: 8118871541136389028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_26
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 2047
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa2846961038a310800000000000000
+      internalID: 1416434956376746666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_27
+      rect:
+        serializedVersion: 2
+        x: 1655
+        y: 730
+        width: 497
+        height: 1365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ea1b6f2124d851f0800000000000000
+      internalID: -1055860873623823646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_28
+      rect:
+        serializedVersion: 2
+        x: 3668
+        y: 704
+        width: 495
+        height: 1363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc0a03eb64745f50800000000000000
+      internalID: 6869243338366258376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_29
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 1194
+        width: 599
+        height: 798
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d4556bff31839b90800000000000000
+      internalID: -7236298064453610284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_30
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 792
+        width: 464
+        height: 806
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53003f488afae2cd0800000000000000
+      internalID: -2580932398116831179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_31
+      rect:
+        serializedVersion: 2
+        x: 2468
+        y: 1165
+        width: 599
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 942577edcafefb3a0800000000000000
+      internalID: -6647330999229787575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_32
+      rect:
+        serializedVersion: 2
+        x: 3108
+        y: 766
+        width: 464
+        height: 806
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9061c3936a7ff390800000000000000
+      internalID: -7782367062973652838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_33
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 857
+        width: 691
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e5541990cdbaaa30800000000000000
+      internalID: 4227399835140249063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite Sheet Temps 02_34
+      rect:
+        serializedVersion: 2
+        x: 2341
+        y: 829
+        width: 689
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d395a79ac0f5ebc50800000000000000
+      internalID: 6682883405052008765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

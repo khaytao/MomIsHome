@@ -40,12 +40,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Background
     uniqueID: 2170710645
     locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
   - name: Objects
     uniqueID: 1795343319
+    locked: 0
+  - name: Top
+    uniqueID: 2821987823
     locked: 0
