@@ -130,6 +130,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 266021136}
     m_Modifications:
+    - target: {fileID: 6671353638565699483, guid: 1ebd2c30f93421046951e0c0fbb7da10,
+        type: 3}
+      propertyPath: type
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6671353638565699484, guid: 1ebd2c30f93421046951e0c0fbb7da10,
         type: 3}
       propertyPath: m_RootOrder
@@ -824,6 +829,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5960792778786403110, guid: 4833e17d20fb8b74da10fbc7cc8f57bc,
+        type: 3}
+      propertyPath: forTaskType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5960792778786403110, guid: 4833e17d20fb8b74da10fbc7cc8f57bc,
+        type: 3}
+      propertyPath: holdableType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5960792778786403129, guid: 4833e17d20fb8b74da10fbc7cc8f57bc,
         type: 3}
       propertyPath: m_Name
@@ -973,6 +988,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 676753282796500230, guid: e024fe2ff02161e44b980ff313126635,
+        type: 3}
+      propertyPath: forTaskType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 676753282796500249, guid: e024fe2ff02161e44b980ff313126635,
         type: 3}
@@ -1209,6 +1229,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3590331318709080583, guid: df036f329b2d63d4c8ced193a71138d8,
+        type: 3}
+      propertyPath: type
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df036f329b2d63d4c8ced193a71138d8, type: 3}
 --- !u!4 &1145188722 stripped
@@ -1228,6 +1253,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tape
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850051344905589245, guid: b704a79aff79d1e4e92522dc447cd916,
+        type: 3}
+      propertyPath: forTaskType
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1850051344905589246, guid: b704a79aff79d1e4e92522dc447cd916,
         type: 3}
@@ -1607,6 +1637,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1646011881}
     m_Modifications:
+    - target: {fileID: 1117073934609539660, guid: 0fb2fa1c6c3eb204f95236aabfebf314,
+        type: 3}
+      propertyPath: forTaskType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1117073934609539660, guid: 0fb2fa1c6c3eb204f95236aabfebf314,
+        type: 3}
+      propertyPath: holdableType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1117073934609539663, guid: 0fb2fa1c6c3eb204f95236aabfebf314,
         type: 3}
       propertyPath: m_RootOrder
@@ -1737,6 +1777,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1519167947468476145, guid: b74c87dbb0675c54085d251c5bad153a,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519167947468476145, guid: b74c87dbb0675c54085d251c5bad153a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -779330576612496733, guid: 2c3e5a65beda9204a981d9c0ec6da054,
+        type: 3}
     - target: {fileID: 1519167947468476147, guid: b74c87dbb0675c54085d251c5bad153a,
         type: 3}
       propertyPath: speed
@@ -1838,6 +1889,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7290686025593032582, guid: 0dc54f02fe88e2c408ae79f95b59dc2c,
+        type: 3}
+      propertyPath: forTaskType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7290686025593032582, guid: 0dc54f02fe88e2c408ae79f95b59dc2c,
+        type: 3}
+      propertyPath: holdableType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7290686025593032601, guid: 0dc54f02fe88e2c408ae79f95b59dc2c,
         type: 3}
       propertyPath: m_Name
@@ -1917,6 +1978,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590331318709080583, guid: df036f329b2d63d4c8ced193a71138d8,
+        type: 3}
+      propertyPath: type
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df036f329b2d63d4c8ced193a71138d8, type: 3}
@@ -2014,6 +2080,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1646011881}
     m_Modifications:
+    - target: {fileID: 8644352710587008585, guid: de878e2cfa3f55e4b91782ffe21416f9,
+        type: 3}
+      propertyPath: forTaskType
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8644352710587008586, guid: de878e2cfa3f55e4b91782ffe21416f9,
         type: 3}
       propertyPath: m_RootOrder
@@ -2321,6 +2392,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6608161437908840100, guid: 3892b2c835ff1a642a52368fadb54e13,
+        type: 3}
+      propertyPath: type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3892b2c835ff1a642a52368fadb54e13, type: 3}

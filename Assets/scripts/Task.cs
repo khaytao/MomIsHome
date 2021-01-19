@@ -6,11 +6,12 @@ using UnityEngine;
 
 public enum TaskType
 {
-    Fire,
-    Trash,
-    Repair,
-    Sweep,
-    Tape,
+    None = 0,
+    Fire = 1,
+    Trash = 2,
+    Repair = 3,
+    Sweep = 4,
+    Tape = 5,
 }
 
 public class Task : MonoBehaviour

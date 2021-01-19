@@ -10,6 +10,7 @@ public class PlayerScript : MonoBehaviour
     public KeyCode interactKey;
     private Rigidbody2D _rb;
     public Animator _animator;
+    private SpriteRenderer playerRenderer;
     private Vector2 _goal;
     public float goal_threshold;
     public float speed;
@@ -27,6 +28,7 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        playerRenderer = GetComponent<SpriteRenderer>();
         //_animator = GetComponent<Animator>();
         curTasks = new ArrayList();
         GameManager.Instance.setPlayerScript(this);
@@ -44,7 +46,6 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             _goal = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            _animator.SetBool("isMoving", true);
         }
         if (Input.GetKeyDown(interactKey) && !isFixing && curTasks.Count > 0 && holdingItem != null)
         {
@@ -62,6 +63,8 @@ public class PlayerScript : MonoBehaviour
         {
             if(holdingItem != null)
             {
+                _animator.SetInteger("HoldingItem", 0);
+                holdingItem.gameObject.SetActive(true);
                 holdingItem.transform.parent = null;
                 holdingItem = null;
             }
@@ -69,6 +72,8 @@ public class PlayerScript : MonoBehaviour
             {
                 holdingItem = curItem;
                 holdingItem.gameObject.transform.parent = gameObject.transform;
+                _animator.SetInteger("HoldingItem", (int) holdingItem.forTaskType);
+                holdingItem.gameObject.SetActive(false);
             }
         }
     }
@@ -141,9 +146,26 @@ public class PlayerScript : MonoBehaviour
         if (!isFixing && direction.magnitude < goal_threshold)
         {
             _rb.velocity = Vector2.zero;
-            _animator.SetBool("isMoving", false);
         }
 
+        if (_rb.velocity.x > 0 && !playerRenderer.flipX)
+        {
+            playerRenderer.flipX = true;
+        }
+
+        if (_rb.velocity.x < 0 && playerRenderer.flipX)
+        {
+            playerRenderer.flipX = false;
+        }
+        if (_rb.velocity.magnitude == 0)
+        {
+            _animator.SetBool("isMoving", false);
+        }
+        else
+        {
+            _animator.SetBool("isMoving", true);
+        }
+        
         _angle = Vector2.Angle(direction, -transform.up);
         if (_rb.velocity.x < 0)
         {

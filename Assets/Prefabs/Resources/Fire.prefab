@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0.5
-  type: 0
+  type: 1
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}

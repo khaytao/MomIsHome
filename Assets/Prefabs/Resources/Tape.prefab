@@ -114,7 +114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50ac7afc91fa13544930ba98d39a1306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forTaskType: 4
+  forTaskType: 5
+  canBurn: 0
   itemCollider: {fileID: 0}
 --- !u!95 &7483339870178323278
 Animator:
