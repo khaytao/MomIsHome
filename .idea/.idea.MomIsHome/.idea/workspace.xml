@@ -20,15 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c82072e8-9899-43b6-bd53-edbd08ae1473" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MomIsHome/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MomIsHome/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MomIsHome/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MomIsHome/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Resources/House.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Resources/House.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Demo/demoScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Demo/demoScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Kfir.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Kfir.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/PlayerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/PlayerScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/AI_trials.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/AI_trials.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,10 +61,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraChanger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WallVisability.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FireScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/BlockManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/GoalMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerScript.cs" />
       </list>
     </option>
   </component>
@@ -136,7 +129,7 @@
       <workItem from="1609860075830" duration="2033000" />
       <workItem from="1610365775074" duration="3391000" />
       <workItem from="1610443398501" duration="5043000" />
-      <workItem from="1610997455687" duration="3759000" />
+      <workItem from="1610997455687" duration="6483000" />
     </task>
     <servers />
   </component>

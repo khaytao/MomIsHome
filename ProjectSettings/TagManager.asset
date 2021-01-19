@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Item
   - Task
+  - Wall
   layers:
   - Default
   - TransparentFX
