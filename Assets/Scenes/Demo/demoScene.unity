@@ -190,6 +190,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6671353638565699486, guid: 1ebd2c30f93421046951e0c0fbb7da10,
+        type: 3}
+      propertyPath: m_Radius
+      value: 14.686877
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671353638565699486, guid: 1ebd2c30f93421046951e0c0fbb7da10,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -4.6868777
+      objectReference: {fileID: 0}
     - target: {fileID: 6671353638565699487, guid: 1ebd2c30f93421046951e0c0fbb7da10,
         type: 3}
       propertyPath: m_Name
