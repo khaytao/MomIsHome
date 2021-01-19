@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Pathfinding;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class EnemyAI : MonoBehaviour
 {
 
     public List<Transform> pointsList;
+    public List<string> spawnList;
     public float thresh = 0.1f;
     private AIPath path;
     private AIDestinationSetter ds;
@@ -26,9 +28,21 @@ public class EnemyAI : MonoBehaviour
     {
         if (Vector2.Distance(transform.position, pointsList[i].position) < thresh)
         {
-            Debug.Log("here");
             i = (i + 1) % pointsList.Count;
             ds.target = pointsList[i];
+
+            if (i < spawnList.Count)
+            {
+                GameObject spawn =  Instantiate(Resources.Load("Prefabs/TrashWaste")) as GameObject;
+                if (!(spawn is null))
+                {
+                    spawn.transform.position = transform.position;
+                }
+                else
+                {
+                    Debug.Log("here");
+                }
+            }
             
         }
     }
