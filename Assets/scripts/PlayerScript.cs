@@ -85,18 +85,18 @@ public class PlayerScript : MonoBehaviour
             _animator.SetBool("isMoving", false);
             isFixing = true;
             taskStarted = Time.time;
-            //progressBar.enabled = true;
+            progressBar.gameObject.SetActive(true);
         }
 
         _animator.SetBool("isWorking", true);
         float elapsedPerc = (Time.time - taskStarted) / fixingTask.duration;
-        //progressBar.value = elapsedPerc;
+        progressBar.value = elapsedPerc;
 
         if (elapsedPerc >= 1)
         {
             isFixing = false;
             _animator.SetBool("isWorking", false);
-            //progressBar.enabled = false;
+            progressBar.gameObject.SetActive(false);
 
             Tuple<Task, Item> result = fixingTask.finishFix(holdingItem);
             fixingTask = result.Item1;
