@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : Singleton<GameManager>
 {
     private float timeStarted;
     private bool gameOver;
-
+    
     private int taskCount;
     // how much time has elapsed since the start of game (in case there is an opening scene its not equal to Time.time)
     public float elapsedTime { get
@@ -24,6 +25,7 @@ public class GameManager : Singleton<GameManager>
     private ArrayList fireBounds;
     private PlayerScript playerScript;
 
+    
     public GameManager()
     {
         goToItem = new Dictionary<GameObject, Item>();
@@ -115,12 +117,7 @@ public class GameManager : Singleton<GameManager>
         gameOver = true;
         endGame();
     }
-
-    public bool isGameOver()
-    {
-        return gameOver || (goToTask.Count <= 0);
-    }
-
+    
     public void endGame()
     {
         gameOver = false;
@@ -132,7 +129,7 @@ public class GameManager : Singleton<GameManager>
     {
         if (taskCount <= 0)
         {
-            Debug.Log("Game over!  You Won");
+            Debug.Log("Game over! You Won");
             endGame();
         }
     }
