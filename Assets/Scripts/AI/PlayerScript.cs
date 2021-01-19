@@ -10,6 +10,7 @@ public class PlayerScript : MonoBehaviour
     public KeyCode interactKey;
     private Rigidbody2D _rb;
     public Animator _animator;
+    private SpriteRenderer playerRenderer;
     private Vector2 _goal;
     public float goal_threshold;
     public float speed;
@@ -28,6 +29,7 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        playerRenderer = GetComponent<SpriteRenderer>();
         //_animator = GetComponent<Animator>();
         curTasks = new ArrayList();
         GameManager.Instance.setPlayerScript(this);
@@ -45,7 +47,6 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             _goal = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            _animator.SetBool("isMoving", true);
         }
         if (Input.GetKeyDown(interactKey) && !isFixing && curTasks.Count > 0 && holdingItem != null)
         {
@@ -63,6 +64,8 @@ public class PlayerScript : MonoBehaviour
         {
             if(holdingItem != null)
             {
+                _animator.SetInteger("HoldingItem", 0);
+                holdingItem.gameObject.SetActive(true);
                 holdingItem.transform.parent = null;
                 holdingItem = null;
             }
@@ -70,16 +73,8 @@ public class PlayerScript : MonoBehaviour
             {
                 holdingItem = curItem;
                 holdingItem.gameObject.transform.parent = gameObject.transform;
-            }
-            
-            foreach (Task task in curTasks)
-            {
-                if (task.type == holdingItem.forTaskType)
-                {
-                    fixingTask = curTasks[0] as Task;
-                    doTask();
-                    break;
-                }
+                _animator.SetInteger("HoldingItem", (int) holdingItem.forTaskType);
+                holdingItem.gameObject.SetActive(false);
             }
         }
     }
@@ -96,44 +91,37 @@ public class PlayerScript : MonoBehaviour
             _animator.SetBool("isMoving", false);
             isFixing = true;
             taskStarted = Time.time;
-            //progressBar.enabled = true;
+            progressBar.gameObject.SetActive(true);
         }
 
         _animator.SetBool("isWorking", true);
         float elapsedPerc = (Time.time - taskStarted) / fixingTask.duration;
-        //progressBar.value = elapsedPerc;
+        progressBar.value = elapsedPerc;
 
         if (elapsedPerc >= 1)
         {
             isFixing = false;
             _animator.SetBool("isWorking", false);
-            //progressBar.enabled = false;
-            if (fixingTask.type == TaskType.Trash)
-            {
-                GameManager.Instance.removeItem(holdingItem);
-                Destroy(holdingItem.gameObject);
-                GameManager.Instance.FinishTask(fixingTask);
-                holdingItem = null;
-            }
-            else
-            {
-                GameManager.Instance.removeTask(fixingTask);
-                curTasks.Remove(fixingTask);
-                Destroy(fixingTask.gameObject);
-                GameManager.Instance.FinishTask(fixingTask);
-                fixingTask = null;
-            }
-            //Destroy(holdingItem.gameObject);
-            //holdingItem.transform.parent = null;
-            //holdingItem = null;
-            //GameManager.Instance.areTasksOver();
+            progressBar.gameObject.SetActive(false);
 
+            Tuple<Task, Item> result = fixingTask.finishFix(holdingItem);
+            fixingTask = result.Item1;
+            holdingItem = result.Item2;
+            if (holdingItem == null)
+            {
+                _animator.SetInteger("HoldingItem", 0);
+            }
         }
     }
 
 
     void FixedUpdate()
     {
+        if (isFixing)
+        {
+            _rb.velocity = Vector2.zero;
+            return;
+        }
         Vector2 direction = _goal - _rb.position;
         
         // keyboard input
@@ -163,9 +151,26 @@ public class PlayerScript : MonoBehaviour
         if (!isFixing && direction.magnitude < goal_threshold)
         {
             _rb.velocity = Vector2.zero;
-            _animator.SetBool("isMoving", false);
         }
 
+        if (_rb.velocity.x > 0 && !playerRenderer.flipX)
+        {
+            playerRenderer.flipX = true;
+        }
+
+        if (_rb.velocity.x < 0 && playerRenderer.flipX)
+        {
+            playerRenderer.flipX = false;
+        }
+        if (_rb.velocity.magnitude == 0)
+        {
+            _animator.SetBool("isMoving", false);
+        }
+        else
+        {
+            _animator.SetBool("isMoving", true);
+        }
+        
         _angle = Vector2.Angle(direction, -transform.up);
         if (_rb.velocity.x < 0)
         {
@@ -174,6 +179,11 @@ public class PlayerScript : MonoBehaviour
         _animator.SetFloat("angle", _angle);
     }
 
+    public void removeTask(Task task)
+    {
+        if(curTasks.Contains(task))
+            curTasks.Remove(task);
+    }
     public void addToTask(Task task)
     {
         curTasks.Add(task);
@@ -196,7 +206,7 @@ public class PlayerScript : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag.Equals("Item"))
+        if (collision.tag.Equals("Item") && curItem != null && curItem.gameObject.Equals(collision.gameObject))
         {
             curItem = null;
         }

@@ -214,6 +214,7 @@
           <e p="AI" t="Include">
             <e p="BlockManager.cs" t="Include" />
             <e p="GoalMovement.cs" t="Include" />
+            <e p="PlayerScript.cs" t="Include" />
           </e>
           <e p="CameraChanger.cs" t="Include" />
           <e p="FireScript.cs" t="Include" />
@@ -222,7 +223,6 @@
           <e p="PlayerMovement.cs" t="Include" />
           <e p="PlayerMovementArrows.cs" t="Include" />
           <e p="PlayerMovementMouse.cs" t="Include" />
-          <e p="PlayerScript.cs" t="Include" />
           <e p="Singleton.cs" t="Include" />
           <e p="Task.cs" t="Include" />
           <e p="TimeScript.cs" t="Include" />

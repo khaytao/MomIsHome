@@ -33,7 +33,7 @@ public class FireScript : MonoBehaviour
         if (Time.time - lastCheck >= spreadTimeInterval)
         {
             lastCheck = Time.time;
-            // 60% chance to generate fire
+            // 50% chance to generate fire
             if (Random.Range(0, 10) >= 5)
             {
                 Vector2 dir = new Vector2(Random.Range(-1, 2), Random.Range(-1, 2));

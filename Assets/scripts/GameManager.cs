@@ -73,6 +73,11 @@ public class GameManager : Singleton<GameManager>
         return false;
     }
 
+    public void addToTaskCount(int num)
+    {
+        taskCount += num;
+    }
+
     public void addItem(Item item)
     {
         if (item.forTaskType == TaskType.Trash)
@@ -89,6 +94,7 @@ public class GameManager : Singleton<GameManager>
 
     public void removeTask(Task task)
     {
+        playerScript.removeTask(task);
         goToTask.Remove(task.gameObject);
     }
 
