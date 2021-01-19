@@ -89,6 +89,7 @@ public class GameManager : Singleton<GameManager>
 
     public void removeTask(Task task)
     {
+        playerScript.removeTask(task);
         goToTask.Remove(task.gameObject);
     }
 

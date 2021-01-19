@@ -70,16 +70,6 @@ public class PlayerScript : MonoBehaviour
                 holdingItem = curItem;
                 holdingItem.gameObject.transform.parent = gameObject.transform;
             }
-            
-            foreach (Task task in curTasks)
-            {
-                if (task.type == holdingItem.forTaskType)
-                {
-                    fixingTask = curTasks[0] as Task;
-                    doTask();
-                    break;
-                }
-            }
         }
     }
 
@@ -107,32 +97,21 @@ public class PlayerScript : MonoBehaviour
             isFixing = false;
             _animator.SetBool("isWorking", false);
             //progressBar.enabled = false;
-            if (fixingTask.type == TaskType.Trash)
-            {
-                GameManager.Instance.removeItem(holdingItem);
-                Destroy(holdingItem.gameObject);
-                GameManager.Instance.FinishTask(fixingTask);
-                holdingItem = null;
-            }
-            else
-            {
-                GameManager.Instance.removeTask(fixingTask);
-                curTasks.Remove(fixingTask);
-                Destroy(fixingTask.gameObject);
-                GameManager.Instance.FinishTask(fixingTask);
-                fixingTask = null;
-            }
-            //Destroy(holdingItem.gameObject);
-            //holdingItem.transform.parent = null;
-            //holdingItem = null;
-            //GameManager.Instance.areTasksOver();
 
+            Tuple<Task, Item> result = fixingTask.finishFix(holdingItem);
+            fixingTask = result.Item1;
+            holdingItem = result.Item2;
         }
     }
 
 
     void FixedUpdate()
     {
+        if (isFixing)
+        {
+            _rb.velocity = Vector2.zero;
+            return;
+        }
         Vector2 direction = _goal - _rb.position;
         
         // keyboard input
@@ -173,6 +152,11 @@ public class PlayerScript : MonoBehaviour
         _animator.SetFloat("angle", _angle);
     }
 
+    public void removeTask(Task task)
+    {
+        if(curTasks.Contains(task))
+            curTasks.Remove(task);
+    }
     public void addToTask(Task task)
     {
         curTasks.Add(task);
