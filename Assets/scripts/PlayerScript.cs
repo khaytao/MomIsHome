@@ -106,6 +106,10 @@ public class PlayerScript : MonoBehaviour
             Tuple<Task, Item> result = fixingTask.finishFix(holdingItem);
             fixingTask = result.Item1;
             holdingItem = result.Item2;
+            if (holdingItem == null)
+            {
+                _animator.SetInteger("HoldingItem", 0);
+            }
         }
     }
 
