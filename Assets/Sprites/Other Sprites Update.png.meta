@@ -1,0 +1,613 @@
+fileFormatVersion: 2
+guid: 5934f03db3e58b342bb3417aaa056893
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4951720346697877647
+    second: Other Sprites Update_1
+  - first:
+      213: -8797875962923488234
+    second: Other Sprites Update_2
+  - first:
+      213: -3099975904440158489
+    second: Other Sprites Update_3
+  - first:
+      213: -2808410832843792833
+    second: Other Sprites Update_6
+  - first:
+      213: 4097742998930253726
+    second: Other Sprites Update_7
+  - first:
+      213: -7714593910132929437
+    second: Other Sprites Update_9
+  - first:
+      213: -566801507848514117
+    second: Other Sprites Update_19
+  - first:
+      213: 3370157860273150340
+    second: Other Sprites Update_20
+  - first:
+      213: -3067077507694734649
+    second: Other Sprites Update_22
+  - first:
+      213: -7028598753549170878
+    second: Other Sprites Update_23
+  - first:
+      213: 3176626162158864685
+    second: Other Sprites Update_24
+  - first:
+      213: -8645406006678559506
+    second: Other Sprites Update_25
+  - first:
+      213: -6302536197578068830
+    second: Other Sprites Update_26
+  - first:
+      213: 2378755814750992931
+    second: Other Sprites Update_27
+  - first:
+      213: -3790282975854000299
+    second: Other Sprites Update_28
+  - first:
+      213: -7654118829278516393
+    second: Other Sprites Update_29
+  - first:
+      213: 4778358870312402756
+    second: Other Sprites Update_30
+  - first:
+      213: 1856894180878970793
+    second: Other Sprites Update_31
+  - first:
+      213: -1401989918627234917
+    second: Other Sprites Update_32
+  - first:
+      213: -4964572180294606938
+    second: Other Sprites Update_33
+  - first:
+      213: -6828577127432816779
+    second: Other Sprites Update_35
+  - first:
+      213: 2854562178115822487
+    second: Other Sprites Update_42
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Other Sprites Update_1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 3942
+        width: 2098
+        height: 1938
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 177bffb7494f74bb0800000000000000
+      internalID: -4951720346697877647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Other Sprites Update_2
+      rect:
+        serializedVersion: 2
+        x: 2307
+        y: 3973
+        width: 2155
+        height: 2002
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61c6ff3cc6aa7e580800000000000000
+      internalID: -8797875962923488234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Other Sprites Update_3
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 2700
+        width: 1393
+        height: 1165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e6f29bd65caaf4d0800000000000000
+      internalID: -3099975904440158489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Other Sprites Update_6
+      rect:
+        serializedVersion: 2
+        x: 2294
+        y: 2679
+        width: 1438
+        height: 1207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3e9cf42a358609d0800000000000000
+      internalID: -2808410832843792833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Other Sprites Update_7
+      rect:
+        serializedVersion: 2
+        x: 3827
+        y: 2694
+        width: 612
+        height: 1127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97e418fb8b1ed830800000000000000
+      internalID: 4097742998930253726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Other Sprites Update_9
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 2742
+        width: 567
+        height: 1075
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c822066b140f490800000000000000
+      internalID: -7714593910132929437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Other Sprites Update_20
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 1035
+        width: 554
+        height: 1522
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4895292d7b435ce20800000000000000
+      internalID: 3370157860273150340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Other Sprites Update_22
+      rect:
+        serializedVersion: 2
+        x: 3871
+        y: 1017
+        width: 588
+        height: 1559
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c2d34fb14d8f65d0800000000000000
+      internalID: -3067077507694734649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Other Sprites Update_23
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1550
+        width: 668
+        height: 892
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 247c2f93ca6657e90800000000000000
+      internalID: -7028598753549170878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Other Sprites Update_24
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 2534
+        width: 623
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2901bbf9a4a51c20800000000000000
+      internalID: 3176626162158864685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Other Sprites Update_25
+      rect:
+        serializedVersion: 2
+        x: 2536
+        y: 1532
+        width: 703
+        height: 927
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee465e0da09550880800000000000000
+      internalID: -8645406006678559506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Other Sprites Update_26
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 1175
+        width: 772
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac615778b4e888a0800000000000000
+      internalID: -6302536197578068830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Other Sprites Update_27
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 1102
+        width: 520
+        height: 901
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ab0a17fc9030120800000000000000
+      internalID: 2378755814750992931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Other Sprites Update_28
+      rect:
+        serializedVersion: 2
+        x: 2390
+        y: 1158
+        width: 805
+        height: 316
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 557030a17b5366bc0800000000000000
+      internalID: -3790282975854000299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Other Sprites Update_29
+      rect:
+        serializedVersion: 2
+        x: 3247
+        y: 1084
+        width: 556
+        height: 937
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75ba9306a7b17c590800000000000000
+      internalID: -7654118829278516393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Other Sprites Update_30
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 291
+        width: 647
+        height: 602
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44fbe426314205240800000000000000
+      internalID: 4778358870312402756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Other Sprites Update_31
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 306
+        width: 497
+        height: 606
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9afe7c45b6305c910800000000000000
+      internalID: 1856894180878970793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Other Sprites Update_32
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 329
+        width: 567
+        height: 604
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b7b89d8912b8ce0800000000000000
+      internalID: -1401989918627234917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Other Sprites Update_33
+      rect:
+        serializedVersion: 2
+        x: 2429
+        y: 293
+        width: 640
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6afd0cbc7eb4a1bb0800000000000000
+      internalID: -4964572180294606938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Other Sprites Update_35
+      rect:
+        serializedVersion: 2
+        x: 3245
+        y: 321
+        width: 462
+        height: 573
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 577720e28450c31a0800000000000000
+      internalID: -6828577127432816779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Other Sprites Update_42
+      rect:
+        serializedVersion: 2
+        x: 3924
+        y: 347
+        width: 526
+        height: 568
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 793ebd74d217d9720800000000000000
+      internalID: 2854562178115822487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
