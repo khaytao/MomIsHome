@@ -9,7 +9,7 @@ public class PlayerScript : MonoBehaviour
     public Slider progressBar;
     public KeyCode interactKey;
     private Rigidbody2D _rb;
-    private Animator _animator;
+    public Animator _animator;
     private Vector2 _goal;
     public float goal_threshold;
     public float speed;
@@ -20,11 +20,14 @@ public class PlayerScript : MonoBehaviour
     private Task fixingTask;
     private float taskStarted;
     private bool isFixing;
+
+    public Text tx;
+    
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _animator = GetComponent<Animator>();
+        //_animator = GetComponent<Animator>();
         curTasks = new ArrayList();
         GameManager.Instance.setPlayerScript(this);
         _goal = _rb.position;

@@ -211,6 +211,10 @@
           </e>
         </e>
         <e p="scripts" t="Include">
+          <e p="AI" t="Include">
+            <e p="BlockManager.cs" t="Include" />
+            <e p="GoalMovement.cs" t="Include" />
+          </e>
           <e p="CameraChanger.cs" t="Include" />
           <e p="FireScript.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
