@@ -73,6 +73,11 @@ public class GameManager : Singleton<GameManager>
         return false;
     }
 
+    public void addToTaskCount(int num)
+    {
+        taskCount += num;
+    }
+
     public void addItem(Item item)
     {
         if (item.forTaskType == TaskType.Trash)

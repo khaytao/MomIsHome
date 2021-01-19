@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public enum TaskType
 {
     Fire,
@@ -19,11 +20,13 @@ public class Task : MonoBehaviour
     private SpriteRenderer childWaterRenderer;
     private bool isInteractable;
     private Animator animator;
+    private bool isBurning;
     [HideInInspector] public Collider2D taskCollider;
     [HideInInspector] public Collider2D circleCollider;
     [HideInInspector] public SpriteRenderer taskRenderer;
     void Start()
     {
+        isBurning = false;
         isInteractable = false;
         taskCollider = GetComponent<Collider2D>();
         taskRenderer = GetComponent<SpriteRenderer>();
@@ -66,10 +69,24 @@ public class Task : MonoBehaviour
         Task task = this;
         if (type == TaskType.Trash)
         {
+            // 80% to burn
+            if (item.canBurn && UnityEngine.Random.Range(0, 10) < 8)
+            {
+                type = TaskType.Fire;
+                animator.SetBool("Burning", true);
+                isBurning = true;
+                GameManager.Instance.addToTaskCount(1);
+            }
             GameManager.Instance.removeItem(item);
             Destroy(item.gameObject);
             GameManager.Instance.FinishTask(this);
             item = null;
+        }
+        else if (type == TaskType.Fire && isBurning)
+        {
+            type = TaskType.Trash;
+            animator.SetBool("Burning", false);
+            GameManager.Instance.addToTaskCount(-1);
         }
         // else if (type == TaskType.Tape)
         // {

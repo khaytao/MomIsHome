@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forTaskType: 1
+  canBurn: 1
   itemCollider: {fileID: 0}
 --- !u!95 &8211819967077410510
 Animator:

@@ -8,7 +8,9 @@ public class Item : MonoBehaviour
     public TaskType forTaskType;
     private Animator animator;
     private bool isInteractable;
+    public bool canBurn;
     [HideInInspector] public Collider2D itemCollider;
+
     void Start()
     {
         isInteractable = false;
@@ -16,7 +18,7 @@ public class Item : MonoBehaviour
         animator = GetComponent<Animator>();
         GameManager.Instance.addItem(this);
     }
-    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag.Equals("Player"))
