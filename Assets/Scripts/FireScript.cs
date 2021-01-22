@@ -51,6 +51,12 @@ public class FireScript : MonoBehaviour
                 center.y -= dir.y * boxBounds.extents.y * 0.5f;
                 GameObject newFire = Instantiate(Resources.Load("Fire")) as GameObject;
                 newFire.transform.position = center;
+                
+                Task furniture = GameManager.Instance.inFurniture(new Bounds(center, boxBounds.extents));
+                if (furniture != null)
+                {
+                    
+                }
             }
         }
     }

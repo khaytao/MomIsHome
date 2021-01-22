@@ -12,12 +12,27 @@ public enum TaskType
     Repair = 3,
     Sweep = 4,
     Tape = 5,
+    Furniture = 6,
+    HoldingBin = 20,
+}
+
+public enum FurnitureType
+{
+    None = 0,
+    Fridge = 1,
+    Sink = 2,
+    SofaVertical = 3,
+    Stove = 4,
+    Toilet = 5,
+    Mat = 6,
+    Lamp = 7,
 }
 
 public class Task : MonoBehaviour
 {
     public float duration;
     public TaskType type;
+    public FurnitureType furnitureType;
     private SpriteRenderer childWaterRenderer;
     private bool isInteractable;
     private Animator animator;
@@ -91,7 +106,7 @@ public class Task : MonoBehaviour
         }
         // else if (type == TaskType.Tape)
         // {
-        //     // todo: restore sprite to its original state (animator?)
+        //     // todo: restore sprite to its original state
         // }
         // else if (type == TaskType.Fire)
         // {
@@ -112,5 +127,12 @@ public class Task : MonoBehaviour
     {
         isInteractable = !isInteractable;
         animator.SetBool("Interactable", isInteractable);
+    }
+
+    public void burnFurniture()
+    {
+        // todo: how to make damaged and how to fix? make method 'can fix'
+        animator.SetInteger("BrokenLevel", 1);
+        isBurning = true;
     }
 }

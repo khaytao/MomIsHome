@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -23,6 +24,7 @@ public class GameManager : Singleton<GameManager>
     private Dictionary<GameObject, Task> goToTask;
     private ArrayList wallBounds;
     private ArrayList fireBounds;
+    private ArrayList furnitureTaskBounds;
     private PlayerScript playerScript;
 
     
@@ -34,6 +36,7 @@ public class GameManager : Singleton<GameManager>
         gameOver = false;
         wallBounds = new ArrayList();
         fireBounds = new ArrayList();
+        furnitureTaskBounds = new ArrayList();
         taskCount = 0;
     }
     
@@ -85,10 +88,25 @@ public class GameManager : Singleton<GameManager>
         goToItem.Add(item.gameObject, item);
     }
 
+    public Task inFurniture(Bounds bounds)
+    {
+        foreach (Tuple<Task, Bounds> furn in furnitureTaskBounds)
+        {
+            if (furn.Item2.Intersects(bounds))
+                return furn.Item1;
+        }
+
+        return null;
+    }
+
     public void addTask(Task task)
     {
-        if(task.type != TaskType.Trash)
+        if(task.type != TaskType.Trash && task.type != TaskType.Furniture)
             taskCount++;
+        
+        if (task.type == TaskType.Furniture)
+            furnitureTaskBounds.Add(new Tuple<Task, Bounds>(task,task.GetComponent<Collider2D>().bounds));
+        
         goToTask.Add(task.gameObject, task);
     }
 

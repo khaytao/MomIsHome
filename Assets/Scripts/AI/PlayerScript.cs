@@ -16,11 +16,13 @@ public class PlayerScript : MonoBehaviour
     public float speed;
     private float _angle = 0;
     private Item holdingItem;
+    private Task holdingBin;
     private Item curItem;
     private ArrayList curTasks;
     private Task fixingTask;
     private float taskStarted;
     private bool isFixing;
+    private bool isHoldingBin;
 
     public float wallBounce = 1f;
     public Text tx;
@@ -54,7 +56,7 @@ public class PlayerScript : MonoBehaviour
             {
                 if (task.type == holdingItem.forTaskType)
                 {
-                    fixingTask = curTasks[0] as Task;
+                    fixingTask = task;
                     doTask();
                     break;
                 }
@@ -62,19 +64,42 @@ public class PlayerScript : MonoBehaviour
         }
         else if (Input.GetKeyDown(interactKey))
         {
-            if(holdingItem != null)
+            if (holdingBin != null)
             {
+                holdingBin.transform.parent = null;
+                holdingBin.gameObject.SetActive(true);
+                holdingBin = null;
                 _animator.SetInteger("HoldingItem", 0);
-                holdingItem.gameObject.SetActive(true);
-                holdingItem.transform.parent = null;
-                holdingItem = null;
             }
-            if (curItem != null)
+            else
             {
-                holdingItem = curItem;
-                holdingItem.gameObject.transform.parent = gameObject.transform;
-                _animator.SetInteger("HoldingItem", (int) holdingItem.forTaskType);
-                holdingItem.gameObject.SetActive(false);
+                if (holdingItem != null)
+                {
+                    _animator.SetInteger("HoldingItem", 0);
+                    holdingItem.gameObject.SetActive(true);
+                    holdingItem.transform.parent = null;
+                    holdingItem = null;
+                }
+                foreach (Task task in curTasks)
+                {
+                    if (task.type == TaskType.Trash)
+                    {
+                        holdingBin = task;
+                        holdingBin.gameObject.transform.parent = gameObject.transform;
+                        // 20 for holding bin in animator
+                        _animator.SetInteger("HoldingItem", 20);
+                        holdingBin.gameObject.SetActive(false);
+                        break;
+                    }
+                }
+
+                if (holdingBin == null && curItem != null)
+                {
+                    holdingItem = curItem;
+                    holdingItem.gameObject.transform.parent = gameObject.transform;
+                    _animator.SetInteger("HoldingItem", (int) holdingItem.forTaskType);
+                    holdingItem.gameObject.SetActive(false);
+                }
             }
         }
     }
