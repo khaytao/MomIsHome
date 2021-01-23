@@ -26,6 +26,7 @@ public class GameManager : Singleton<GameManager>
     private ArrayList fireBounds;
     private ArrayList furnitureTaskBounds;
     private PlayerScript playerScript;
+    private int curLevel = 1;
 
     
     public GameManager()
@@ -139,7 +140,9 @@ public class GameManager : Singleton<GameManager>
     {
         Debug.Log("Game over!  You lost");
         gameOver = true;
-        endGame();
+        FindObjectOfType<CanvasManager>().LostScreen();
+        //timeStarted = -1;
+        //endGame();
     }
     
     public void endGame()
@@ -154,7 +157,7 @@ public class GameManager : Singleton<GameManager>
         if (taskCount <= 0)
         {
             Debug.Log("Game over! You Won");
-            endGame();
+            FindObjectOfType<CanvasManager>().WonScreen();
         }
     }
 
@@ -167,5 +170,10 @@ public class GameManager : Singleton<GameManager>
         //holdingItem = null;
         taskCount--;
         areTasksOver();
+    }
+
+    public void LoadLevelPrefabs(int levelNum)
+    {
+        Instantiate(Resources.Load("level/DemoLevelPrefab", typeof(GameObject)));
     }
 }
