@@ -8,6 +8,8 @@ TagManager:
   - Task
   - Wall
   - CanvasManager
+  - level
+  - House
   layers:
   - Default
   - TransparentFX

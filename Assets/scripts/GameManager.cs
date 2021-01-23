@@ -149,11 +149,13 @@ public class GameManager : Singleton<GameManager>
     {
         gameOver = false;
         timeStarted = -1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        LoadLevelPrefabs(1);
     }
 
     public void areTasksOver()
     {
+        Debug.Log(taskCount);
         if (taskCount <= 0)
         {
             Debug.Log("Game over! You Won");
@@ -174,6 +176,23 @@ public class GameManager : Singleton<GameManager>
 
     public void LoadLevelPrefabs(int levelNum)
     {
-        Instantiate(Resources.Load("level/DemoLevelPrefab", typeof(GameObject)));
+        foreach (var task in goToTask.Keys)
+        {
+            Destroy(task);
+        }
+        
+        foreach (var item in goToItem.Keys)
+        {
+            Destroy(item);
+        }
+        
+        GameObject cur = GameObject.FindWithTag("level");
+        Destroy(cur);
+        GameObject house = GameObject.FindWithTag("House");
+        Destroy(house);
+        GameObject level = Instantiate(Resources.Load("levels/oneCan", typeof(GameObject)) as GameObject);
+        Instantiate(Resources.Load("House no walls", typeof(GameObject)) as GameObject);
+        FindObjectOfType<CanvasManager>().GameScreen();
     }
+    
 }
