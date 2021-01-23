@@ -75,7 +75,11 @@
       <change beforePath="$PROJECT_DIR$/Assets/Resources/levels.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/levels/DemoLevelPrefab.prefab" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/levels/DemoLevelPrefab.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/finishedGame/Demo level new house 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/finishedGame/Demo level new house 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Demo/Demo level new house.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Demo/Demo level new house.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/finishedGame/Demo level new house 1.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/finishedGame/Demo level new house 1.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/finishedGame/Levels.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/finishedGame/Levels.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/finishedGame/Levels.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/finishedGame/Levels.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -168,7 +172,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611285177789</updated>
       <workItem from="1611285210689" duration="7798000" />
-      <workItem from="1611394661885" duration="9855000" />
+      <workItem from="1611394661885" duration="10446000" />
     </task>
     <servers />
   </component>
