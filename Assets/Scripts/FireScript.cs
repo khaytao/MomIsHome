@@ -10,15 +10,17 @@ public class FireScript : MonoBehaviour
     private BoxCollider2D boxCollider;
     private Bounds boxBounds;
     private CircleCollider2D circleCollider;
+    private SpriteRenderer fireRenderer;
     
     // Start is called before the first frame update
     void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
         circleCollider = GetComponent<CircleCollider2D>();
+        fireRenderer = GetComponent<SpriteRenderer>();
         boxBounds = boxCollider.bounds;
         // boxBounds = GetComponent<SpriteRenderer>().bounds;
-        GameManager.Instance.addFire(boxBounds);
+        GameManager.Instance.addFire(gameObject, boxBounds);
         lastCheck = Time.time;
         PlayerScript playerScript = GameManager.Instance.getPlayerScript();
         if (playerScript != null && circleCollider.bounds.Contains(playerScript.transform.position))
@@ -44,19 +46,20 @@ public class FireScript : MonoBehaviour
                 center.x += dir.x * boxBounds.size.x;
                 center.y += dir.y * boxBounds.size.y;
                 temp.center = center;
-                if (GameManager.Instance.isInFireOrWall(temp))
+                if (GameManager.Instance.isInFire(temp) || GameManager.Instance.isInWall(temp))
                     return;
                 
-                center.x -= dir.x * boxBounds.extents.x * 0.5f;
-                center.y -= dir.y * boxBounds.extents.y * 0.5f;
+                // center.x -= dir.x * boxBounds.extents.x * 0.5f;
+                // center.y -= dir.y * boxBounds.extents.y * 0.5f;
                 GameObject newFire = Instantiate(Resources.Load("Fire")) as GameObject;
                 newFire.transform.position = center;
                 
-                Task furniture = GameManager.Instance.inFurniture(new Bounds(center, boxBounds.extents));
-                if (furniture != null)
-                {
-                    
-                }
+                // burn furniture if on them
+                // Task furniture = GameManager.Instance.inFurniture(new Bounds(center, boxBounds.extents));
+                // if (furniture != null)
+                // {
+                //     furniture.burnFurniture();
+                // }
             }
         }
     }

@@ -18,11 +18,13 @@ public class PlayerScript : MonoBehaviour
     private Item holdingItem;
     private Task holdingBin;
     private Item curItem;
-    private ArrayList curTasks;
-    private Task fixingTask;
+    private List<Task> curTasks;
+    private List<Task> fixingTasks;
     private float taskStarted;
     private bool isFixing;
     private bool isHoldingBin;
+    private List<Task> highlightedTasks;
+    private Item highlightedItem;
 
     public float wallBounce = 1f;
     public Text tx;
@@ -30,10 +32,11 @@ public class PlayerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        highlightedTasks = new List<Task>();
         _rb = GetComponent<Rigidbody2D>();
         playerRenderer = GetComponent<SpriteRenderer>();
         //_animator = GetComponent<Animator>();
-        curTasks = new ArrayList();
+        curTasks = new List<Task>();
         GameManager.Instance.setPlayerScript(this);
         _goal = _rb.position;
     }
@@ -50,63 +53,55 @@ public class PlayerScript : MonoBehaviour
         {
             _goal = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
-        if (Input.GetKeyDown(interactKey) && !isFixing && curTasks.Count > 0 && holdingItem != null)
+        if (Input.GetKeyDown(interactKey) && highlightedTasks.Count > 0 && highlightedTasks[0].canFix(holdingItem))
         {
-            foreach (Task task in curTasks)
-            {
-                if (task.type == holdingItem.forTaskType)
-                {
-                    fixingTask = task;
-                    doTask();
-                    break;
-                }
-            }
+            fixingTasks = new List<Task>(highlightedTasks);
+            doTask();
         }
         else if (Input.GetKeyDown(interactKey))
         {
-            if (holdingBin != null)
+            if (holdingBin)
             {
                 holdingBin.transform.parent = null;
                 holdingBin.gameObject.SetActive(true);
                 holdingBin = null;
                 _animator.SetInteger("HoldingItem", 0);
+                updateHighlighted();
             }
             else
             {
-                if (holdingItem != null)
+                if (holdingItem)
                 {
                     _animator.SetInteger("HoldingItem", 0);
                     holdingItem.gameObject.SetActive(true);
                     holdingItem.transform.parent = null;
                     holdingItem = null;
                 }
-                foreach (Task task in curTasks)
+                if(highlightedTasks.Count > 0 && highlightedTasks[0].type == TaskType.Trash)
                 {
-                    if (task.type == TaskType.Trash)
-                    {
-                        holdingBin = task;
-                        holdingBin.gameObject.transform.parent = gameObject.transform;
-                        // 20 for holding bin in animator
-                        _animator.SetInteger("HoldingItem", 20);
-                        holdingBin.gameObject.SetActive(false);
-                        break;
-                    }
+                    holdingBin = highlightedTasks[0];
+                    holdingBin.gameObject.transform.parent = gameObject.transform;
+                    // 20 for holding bin in animator
+                    _animator.SetInteger("HoldingItem", 20);
+                    holdingBin.gameObject.SetActive(false);
                 }
 
-                if (holdingBin == null && curItem != null)
+                if (!holdingBin && highlightedItem)
                 {
-                    holdingItem = curItem;
+                    holdingItem = highlightedItem;
                     holdingItem.gameObject.transform.parent = gameObject.transform;
                     _animator.SetInteger("HoldingItem", (int) holdingItem.forTaskType);
                     holdingItem.gameObject.SetActive(false);
+                    highlightedItem = null;
                 }
+                updateHighlighted();
             }
         }
     }
 
     private void doTask()
     {
-        if (fixingTask == null)
+        if (fixingTasks.Count == 0)
         {
             isFixing = false;
             return ;
@@ -120,7 +115,7 @@ public class PlayerScript : MonoBehaviour
         }
 
         _animator.SetBool("isWorking", true);
-        float elapsedPerc = (Time.time - taskStarted) / fixingTask.duration;
+        float elapsedPerc = (Time.time - taskStarted) / fixingTasks[0].duration;
         progressBar.value = elapsedPerc;
 
         if (elapsedPerc >= 1)
@@ -128,14 +123,17 @@ public class PlayerScript : MonoBehaviour
             isFixing = false;
             _animator.SetBool("isWorking", false);
             progressBar.gameObject.SetActive(false);
-
-            Tuple<Task, Item> result = fixingTask.finishFix(holdingItem);
-            fixingTask = result.Item1;
-            holdingItem = result.Item2;
+            
+            foreach (var task in fixingTasks)
+            {
+                holdingItem = task.finishFix(holdingItem);
+            }
+            fixingTasks.Clear();
             if (holdingItem == null)
             {
                 _animator.SetInteger("HoldingItem", 0);
             }
+            updateHighlighted();
         }
     }
 
@@ -208,10 +206,12 @@ public class PlayerScript : MonoBehaviour
     {
         if(curTasks.Contains(task))
             curTasks.Remove(task);
+        updateHighlighted();
     }
     public void addToTask(Task task)
     {
         curTasks.Add(task);
+        updateHighlighted();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -219,13 +219,14 @@ public class PlayerScript : MonoBehaviour
         if (collision.tag.Equals("Item"))
         {
             curItem = GameManager.Instance.getItem(collision.gameObject);
+            updateHighlighted();
         }
         if (collision.tag.Equals("Task"))
         {
             Task colTask = GameManager.Instance.getTask(collision.gameObject);
             if(!curTasks.Contains(colTask))
                 curTasks.Add(colTask);
-            // curTask = GameManager.Instance.getTask(collision.gameObject);
+            updateHighlighted();
         }
     }
 
@@ -234,14 +235,14 @@ public class PlayerScript : MonoBehaviour
         if (collision.tag.Equals("Item") && curItem != null && curItem.gameObject.Equals(collision.gameObject))
         {
             curItem = null;
+            updateHighlighted();
         }
         if (collision.tag.Equals("Task"))
         {
             Task task = GameManager.Instance.getTask(collision.gameObject);
             if(task != null)
                 curTasks.Remove(task);
-            // if(curTask != null && curTask.gameObject.Equals(collision.gameObject))
-            //     curTask = null;
+            updateHighlighted();
         }
     }
 
@@ -251,5 +252,66 @@ public class PlayerScript : MonoBehaviour
         {
             _rb.AddForce(wallBounce * _rb.velocity.normalized);
         }
+    }
+
+    private void updateHighlighted()
+    {
+        List<Task> tasks = new List<Task>();
+        
+        // clear interactables
+        foreach (Task task in highlightedTasks)
+            task.triggerInteractable(false);
+        highlightedTasks.Clear();
+        if (highlightedItem)
+        {
+            highlightedItem.triggerInteractable(false);
+            highlightedItem = null;
+        }
+        
+        // priority to fixing tasks
+        foreach (Task task in curTasks)
+            if (task.type == TaskType.Trash || task.canFix(holdingItem))
+                tasks.Add(task);
+
+        tasks.Sort();
+        if (tasks.Count == 0 && !curItem)
+            return;
+
+        if (curItem && (tasks.Count == 0 || isCloser(curItem.gameObject, tasks[0].gameObject)))
+        {
+            highlightedItem = curItem;
+            highlightedItem.triggerInteractable(true);
+            return;
+        }
+
+        if (highlightedItem)
+        {
+            highlightedItem.triggerInteractable(false);
+            highlightedItem = null;
+        }
+        highlightedTasks.Add(tasks[0]);
+        if (highlightedTasks[0].type == TaskType.Fire)
+        {
+            int fires = 1;
+            for(int i=1; i<tasks.Count; i++)
+                if (tasks[i].type == TaskType.Fire)
+                {
+                    fires++;
+                    highlightedTasks.Add(tasks[i]);
+                    if (fires >= 4)
+                        break;
+                }
+        }
+
+        foreach (var task in highlightedTasks)
+            task.triggerInteractable(true);
+        
+    }
+
+    private bool isCloser(GameObject go1, GameObject go2)
+    {
+        float dist1 = Vector3.Distance(gameObject.transform.position, go1.transform.position);
+        float dist2 = Vector3.Distance(gameObject.transform.position, go2.transform.position);
+        return dist1 < dist2;
     }
 }

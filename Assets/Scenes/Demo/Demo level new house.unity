@@ -130,6 +130,32 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 651262580747372609, guid: 444fd3037b421c743ab71b149258fe72,
+        type: 3}
+      propertyPath: duration
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 774038121905275639, guid: 444fd3037b421c743ab71b149258fe72,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 248371255048801384, guid: 2ad10b2e1c6dcdd4395adaccc78ac9a2,
+        type: 3}
+    - target: {fileID: 1064861386709689927, guid: 444fd3037b421c743ab71b149258fe72,
+        type: 3}
+      propertyPath: duration
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1425715214743220959, guid: 444fd3037b421c743ab71b149258fe72,
+        type: 3}
+      propertyPath: duration
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690429572937499813, guid: 444fd3037b421c743ab71b149258fe72,
+        type: 3}
+      propertyPath: duration
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2177174539466561305, guid: 444fd3037b421c743ab71b149258fe72,
         type: 3}
       propertyPath: m_IsTrigger
@@ -145,10 +171,25 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3600075702521894111, guid: 444fd3037b421c743ab71b149258fe72,
+        type: 3}
+      propertyPath: duration
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4575776099374572387, guid: 444fd3037b421c743ab71b149258fe72,
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4794070443188735034, guid: 444fd3037b421c743ab71b149258fe72,
+        type: 3}
+      propertyPath: duration
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960537606407469476, guid: 444fd3037b421c743ab71b149258fe72,
+        type: 3}
+      propertyPath: duration
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6181900500201739674, guid: 444fd3037b421c743ab71b149258fe72,
         type: 3}
@@ -169,6 +210,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6869209008944333291, guid: 444fd3037b421c743ab71b149258fe72,
+        type: 3}
+      propertyPath: duration
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7324272637574509300, guid: 444fd3037b421c743ab71b149258fe72,
         type: 3}
@@ -320,6 +366,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8743679270889158347, guid: 444fd3037b421c743ab71b149258fe72,
+        type: 3}
+      propertyPath: duration
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9136522836214597333, guid: 444fd3037b421c743ab71b149258fe72,
         type: 3}
@@ -667,6 +718,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CanvasManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 345653274886921209, guid: ddef6f33dce894443af9b37b5d24f45f,
+        type: 3}
+      propertyPath: gameTimeFactor
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 345653274955621512, guid: ddef6f33dce894443af9b37b5d24f45f,
         type: 3}

@@ -1917,18 +1917,18 @@ AnimatorStateMachine:
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: -7194409594278460060}
-    second:
-    - {fileID: 6853875003602118883}
-    - {fileID: -656965521993936872}
-  - first: {fileID: 3647315706520910535}
-    second:
-    - {fileID: 8362107457015576031}
-    - {fileID: 4112542678446111245}
   - first: {fileID: 8700998701346415777}
     second:
     - {fileID: -2533421409891757307}
     - {fileID: -1985236477101179011}
+  - first: {fileID: 3647315706520910535}
+    second:
+    - {fileID: 8362107457015576031}
+    - {fileID: 4112542678446111245}
+  - first: {fileID: -7194409594278460060}
+    second:
+    - {fileID: 6853875003602118883}
+    - {fileID: -656965521993936872}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: -80, y: -30, z: 0}
   m_EntryPosition: {x: -80, y: 70, z: 0}
@@ -1957,18 +1957,18 @@ AnimatorStateMachine:
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: 5563744865909230797}
-    second:
-    - {fileID: 3841384341356385051}
-    - {fileID: -7690358032077611663}
-  - first: {fileID: 5483531939689481823}
-    second:
-    - {fileID: 6972388616592335084}
-    - {fileID: 7498172527787993591}
   - first: {fileID: 1650024221095816475}
     second:
     - {fileID: -1375184977078225797}
     - {fileID: 8218700852860862535}
+  - first: {fileID: 5483531939689481823}
+    second:
+    - {fileID: 6972388616592335084}
+    - {fileID: 7498172527787993591}
+  - first: {fileID: 5563744865909230797}
+    second:
+    - {fileID: 3841384341356385051}
+    - {fileID: -7690358032077611663}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: -80, y: -30, z: 0}
   m_EntryPosition: {x: -80, y: 70, z: 0}
@@ -2400,19 +2400,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: BrokenLevel
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Furniture
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -2632,18 +2632,18 @@ AnimatorStateMachine:
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: -7055048242044756310}
-    second:
-    - {fileID: 5437983913822879792}
-    - {fileID: 5837205093784893969}
-  - first: {fileID: 5334292635029006658}
-    second:
-    - {fileID: -66029115244275772}
-    - {fileID: 4073922831913840309}
   - first: {fileID: 5800428630792406243}
     second:
     - {fileID: 7909499670263305452}
     - {fileID: 7634308461628731025}
+  - first: {fileID: 5334292635029006658}
+    second:
+    - {fileID: -66029115244275772}
+    - {fileID: 4073922831913840309}
+  - first: {fileID: -7055048242044756310}
+    second:
+    - {fileID: 5437983913822879792}
+    - {fileID: 5837205093784893969}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: -80, y: -30, z: 0}
   m_EntryPosition: {x: -80, y: 70, z: 0}
@@ -2996,18 +2996,18 @@ AnimatorStateMachine:
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: -888946658909097841}
-    second:
-    - {fileID: -2581716240109314468}
-    - {fileID: 2653870214385219406}
-  - first: {fileID: 8276792121856544738}
-    second:
-    - {fileID: 7550636957366754305}
-    - {fileID: 6883250545266018086}
   - first: {fileID: 4190546969737926187}
     second:
     - {fileID: 5399989221316938409}
     - {fileID: 8402787978121475654}
+  - first: {fileID: 8276792121856544738}
+    second:
+    - {fileID: 7550636957366754305}
+    - {fileID: 6883250545266018086}
+  - first: {fileID: -888946658909097841}
+    second:
+    - {fileID: -2581716240109314468}
+    - {fileID: 2653870214385219406}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: -80, y: -30, z: 0}
   m_EntryPosition: {x: -80, y: 70, z: 0}
@@ -4121,7 +4121,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400000, guid: 4da8f8fda9f9c484abe706906f0d0b37, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

@@ -19,25 +19,9 @@ public class Item : MonoBehaviour
         GameManager.Instance.addItem(this);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void triggerInteractable(bool interactable)
     {
-        if (other.tag.Equals("Player"))
-        {
-            animator.SetBool("Interactable", true);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.tag.Equals("Player"))
-        {
-            animator.SetBool("Interactable", false);
-        }
-    }
-    
-    public void triggerInteractable()
-    {
-        isInteractable = !isInteractable;
-        animator.SetBool("Interactable", isInteractable);
+        isInteractable = interactable;
+        animator.SetBool("Interactable", interactable);
     }
 }

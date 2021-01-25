@@ -28,7 +28,7 @@ public enum FurnitureType
     Lamp = 7,
 }
 
-public class Task : MonoBehaviour
+public class Task : MonoBehaviour, IComparable<Task>
 {
     public float duration;
     public TaskType type;
@@ -37,12 +37,16 @@ public class Task : MonoBehaviour
     private bool isInteractable;
     private Animator animator;
     private bool isBurning;
+    private int brokenLevel;
+    [HideInInspector] public bool isFurniture;
     [HideInInspector] public Collider2D taskCollider;
     [HideInInspector] public Collider2D circleCollider;
     [HideInInspector] public SpriteRenderer taskRenderer;
     void Start()
     {
+        brokenLevel = 0;
         isBurning = false;
+        isFurniture = type == TaskType.Furniture;
         isInteractable = false;
         taskCollider = GetComponent<Collider2D>();
         taskRenderer = GetComponent<SpriteRenderer>();
@@ -52,6 +56,10 @@ public class Task : MonoBehaviour
         {
             SpriteRenderer[] renderers = GetComponentsInChildren<SpriteRenderer>();
             childWaterRenderer = renderers[renderers.Length - 1];
+        }
+        else if (isFurniture)
+        {
+            animator.SetInteger("Furniture", (int)furnitureType);
         }
     }
 
@@ -64,25 +72,24 @@ public class Task : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public bool canFix(Item item)
     {
-        if (other.tag.Equals("Player"))
+        if (!item)
+            return false;
+        
+        // furniture has been damaged
+        if (isFurniture && type != TaskType.Furniture)
         {
-            animator.SetBool("Interactable", true);
+            // cant fix if fire is on it
+            Bounds taskBounds = taskCollider.bounds;
+            if (GameManager.Instance.isInFire(taskBounds))
+                return false;
         }
+        return type == item.forTaskType;
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    public Item finishFix(Item item)
     {
-        if (other.tag.Equals("Player"))
-        {
-            animator.SetBool("Interactable", false);
-        }
-    }
-
-    public Tuple<Task, Item> finishFix(Item item)
-    {
-        Task task = this;
         if (type == TaskType.Trash)
         {
             // 80% to burn
@@ -102,37 +109,56 @@ public class Task : MonoBehaviour
         {
             type = TaskType.Trash;
             animator.SetBool("Burning", false);
-            GameManager.Instance.addToTaskCount(-1);
+            GameManager.Instance.FinishTask(this);
         }
-        // else if (type == TaskType.Tape)
-        // {
-        //     // todo: restore sprite to its original state
-        // }
-        // else if (type == TaskType.Fire)
-        // {
-        //     // todo: instantiate ash prefab
-        // }
+        else if (type == TaskType.Tape)
+        {
+            brokenLevel--;
+            if (brokenLevel == 0)
+                type = TaskType.Furniture;
+            animator.SetInteger("BrokenLevel", brokenLevel);
+            GameManager.Instance.FinishTask(this);
+        }
+        else if (type == TaskType.Fire)
+        {
+            GameManager.Instance.removeFire(gameObject);
+            GameManager.Instance.FinishTask(this);
+            // todo: instantiate ash prefab
+        }
         else
         {
             GameManager.Instance.removeTask(this);
             Destroy(gameObject);
             GameManager.Instance.FinishTask(this);
-            task = null;
         }
         
-        return new Tuple<Task, Item>(task, item);
+        return item;
     }
 
-    public void triggerInteractable()
+    public void triggerInteractable(bool interactable)
     {
-        isInteractable = !isInteractable;
-        animator.SetBool("Interactable", isInteractable);
+        isInteractable = interactable;
+        animator.SetBool("Interactable", interactable);
     }
 
     public void burnFurniture()
     {
-        // todo: how to make damaged and how to fix? make method 'can fix'
-        animator.SetInteger("BrokenLevel", 1);
-        isBurning = true;
+        // some furniture don't have 2 broken levels?
+        if (brokenLevel < 2)
+        {
+            brokenLevel++;
+            // todo: how to make damaged and how to fix? make method 'can fix'
+            animator.SetInteger("BrokenLevel", 1);
+            type = TaskType.Tape;
+            GameManager.Instance.addToTaskCount(1);
+        }
+    }
+
+    public int CompareTo(Task other)
+    {
+        Vector3 playerPos = GameManager.Instance.getPlayerScript().gameObject.transform.position;
+        float dist1 = Vector3.Distance(playerPos, gameObject.transform.position);
+        float dist2 = Vector3.Distance(playerPos, other.gameObject.transform.position);
+        return dist1 == dist2 ? 0 : (dist1 < dist2 ? -1 : 1);
     }
 }

@@ -22,9 +22,9 @@ public class GameManager : Singleton<GameManager>
     }
     private Dictionary<GameObject, Item> goToItem;
     private Dictionary<GameObject, Task> goToTask;
-    private ArrayList wallBounds;
-    private ArrayList fireBounds;
-    private ArrayList furnitureTaskBounds;
+    private List<Bounds> wallBounds;
+    private List<(GameObject, Bounds)> fireBounds;
+    private List<(Task, Bounds)> furnitureTaskBounds;
     private PlayerScript playerScript;
     private int curLevel = 1;
 
@@ -35,9 +35,9 @@ public class GameManager : Singleton<GameManager>
         goToTask = new Dictionary<GameObject, Task>();
         timeStarted = -1;
         gameOver = false;
-        wallBounds = new ArrayList();
-        fireBounds = new ArrayList();
-        furnitureTaskBounds = new ArrayList();
+        wallBounds = new List<Bounds>();
+        fireBounds = new List<(GameObject, Bounds)>();
+        furnitureTaskBounds = new List<(Task, Bounds)>();
         taskCount = 0;
     }
     
@@ -56,19 +56,42 @@ public class GameManager : Singleton<GameManager>
         wallBounds.Add(wallBound);
     }
 
-    public void addFire(Bounds fireBound)
+    public void addFire(GameObject fireGO, Bounds fireBound)
     {
-        fireBounds.Add(fireBound);
+        fireBounds.Add((fireGO, fireBound));
+        Task furniture = inFurniture(fireBound);
+        if(furniture)
+            furniture.burnFurniture();
     }
 
-    public bool isInFireOrWall(Bounds other)
+    public void removeFire(GameObject fireGO)
+    {
+        int i = 0;
+        for (; i < fireBounds.Count; i++)
+        {
+            if (fireGO == fireBounds[i].Item1)
+            {
+                Destroy(fireGO);
+                break;
+            }
+        }
+        fireBounds.RemoveAt(i);
+    }
+
+    public bool isInWall(Bounds other)
     {
         foreach (Bounds bounds in wallBounds)
         {
             if (other.Intersects(bounds))
                 return true;
         }
-        foreach (Bounds bounds in fireBounds)
+
+        return false;
+    }
+
+    public bool isInFire(Bounds other)
+    {
+        foreach (var (go, bounds) in fireBounds)
         {
             if (other.Intersects(bounds))
                 return true;
@@ -89,12 +112,13 @@ public class GameManager : Singleton<GameManager>
         goToItem.Add(item.gameObject, item);
     }
 
+    // returns the furniture bounds is on
     public Task inFurniture(Bounds bounds)
     {
-        foreach (Tuple<Task, Bounds> furn in furnitureTaskBounds)
+        foreach (var (furn, furnBounds) in furnitureTaskBounds)
         {
-            if (furn.Item2.Intersects(bounds))
-                return furn.Item1;
+            if (furnBounds.Intersects(bounds))
+                return furn;
         }
 
         return null;
@@ -104,10 +128,15 @@ public class GameManager : Singleton<GameManager>
     {
         if(task.type != TaskType.Trash && task.type != TaskType.Furniture)
             taskCount++;
-        
+
         if (task.type == TaskType.Furniture)
-            furnitureTaskBounds.Add(new Tuple<Task, Bounds>(task,task.GetComponent<Collider2D>().bounds));
-        
+        {
+            Bounds furnitureBounds = task.GetComponent<SpriteRenderer>().bounds;
+            furnitureTaskBounds.Add((task, furnitureBounds));
+            if(isInFire(furnitureBounds))
+                task.burnFurniture();
+        }
+
         goToTask.Add(task.gameObject, task);
     }
 
