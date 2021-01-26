@@ -12,6 +12,10 @@ public class TimeScript : MonoBehaviour
     public Image minuteHand;
     public Image hourHand;
 
+
+    public float speed;
+    public float amount;
+    private Vector3 A0;
     // 360 / 60
     private float anglePerMinute = 6;
     // 360 / 60 / 12
@@ -29,6 +33,8 @@ public class TimeScript : MonoBehaviour
         Vector3 minuteAngle = Vector3.zero;
         minuteAngle += (gameDurationMinutes % 60) * anglePerMinute * Vector3.forward;
         minuteHand.transform.eulerAngles = minuteAngle;
+        
+        A0 = transform.position;
     }
 
     // Update is called once per frame
@@ -38,12 +44,25 @@ public class TimeScript : MonoBehaviour
         Vector3 hourAngle = Time.deltaTime * (gameTimeFactor / 60) * hourAnglePerMinute * Vector3.forward;
         hourHand.transform.eulerAngles -= hourAngle;
 
-        if(GameManager.Instance.elapsedTime >= gameDurationMinutes * (60 / gameTimeFactor))
+        if (GetSecondsLeft() < 30)
+        {
+            //speed = 700;
+            //amount = 1.1f;
+            float shake_x = Mathf.Sin(speed * Time.time) * amount;
+            
+            transform.position = A0 + new Vector3(shake_x,  0, 0);
+        }
+        if(GetSecondsLeft() <= 0)
         {
             GameManager.Instance.timeOver();
         }
 
         Vector3 minuteAngle = Time.deltaTime * (gameTimeFactor / 60) * anglePerMinute * Vector3.forward;
         minuteHand.transform.eulerAngles -= minuteAngle;
+    }
+
+    private float GetSecondsLeft()
+    {
+        return gameDurationMinutes * (60 / gameTimeFactor) - GameManager.Instance.elapsedTime;
     }
 }

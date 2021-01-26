@@ -259,7 +259,9 @@ MonoBehaviour:
   progressBar: {fileID: 0}
   interactKey: 324
   goal_threshold: 0.1
-  speed: 5
+  speed: 7
+  mashingReduce: 0
+  isFixing: 0
   wallBounce: 1
   tx: {fileID: 0}
 --- !u!1 &6024619424947287166

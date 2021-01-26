@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1977427746716988904}
   m_Layer: 0
   m_Name: mat green
-  m_TagString: Task
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721780014158438440}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 7627386937343492066}
   m_Layer: 0
   m_Name: pot big
-  m_TagString: Task
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -277,7 +277,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1630464449592447866}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -661,7 +661,7 @@ GameObject:
   - component: {fileID: 7547598735248070959}
   m_Layer: 0
   m_Name: tub
-  m_TagString: Task
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -781,7 +781,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3892879123512741831}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -829,7 +829,7 @@ GameObject:
   - component: {fileID: 5404093438945879853}
   m_Layer: 0
   m_Name: microwave
-  m_TagString: Task
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -936,7 +936,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -1.16}
@@ -949,7 +949,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4470620031320659518}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -997,7 +997,7 @@ GameObject:
   - component: {fileID: 5570105322246905803}
   m_Layer: 0
   m_Name: washer
-  m_TagString: Task
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1117,7 +1117,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5158158829970453975}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -1164,7 +1164,7 @@ GameObject:
   - component: {fileID: 3252859026286218819}
   m_Layer: 0
   m_Name: mat circle
-  m_TagString: Task
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1258,7 +1258,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5230627351477309921}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -1614,7 +1614,7 @@ GameObject:
   - component: {fileID: 5069098429945801522}
   m_Layer: 0
   m_Name: desk
-  m_TagString: Task
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1734,7 +1734,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5393729974930357956}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -1782,7 +1782,7 @@ GameObject:
   - component: {fileID: 2228605306032063620}
   m_Layer: 0
   m_Name: pot med
-  m_TagString: Task
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1902,7 +1902,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5516986245798550010}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -1950,7 +1950,7 @@ GameObject:
   - component: {fileID: 8135516867092208222}
   m_Layer: 0
   m_Name: Lamp
-  m_TagString: Task
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2070,7 +2070,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6049582117534650257}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -2117,7 +2117,7 @@ GameObject:
   - component: {fileID: 7718659452475870401}
   m_Layer: 0
   m_Name: towel
-  m_TagString: Task
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2211,7 +2211,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6958513987132221004}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -2593,7 +2593,7 @@ GameObject:
   - component: {fileID: 4945547123587533151}
   m_Layer: 0
   m_Name: PC
-  m_TagString: Task
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2712,7 +2712,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7324272637650423334}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -2927,7 +2927,7 @@ GameObject:
   - component: {fileID: 7812961622271820982}
   m_Layer: 0
   m_Name: shower curtain
-  m_TagString: Task
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3046,7 +3046,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7324272637970429045}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -3094,7 +3094,7 @@ GameObject:
   - component: {fileID: 3369025995424594233}
   m_Layer: 0
   m_Name: bed blue
-  m_TagString: Task
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3213,7 +3213,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7324272638167057772}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -3339,6 +3339,10 @@ GameObject:
   - component: {fileID: 7324272638588610706}
   - component: {fileID: 7324272638588610705}
   - component: {fileID: 7324272638588610704}
+  - component: {fileID: 2292726161292910416}
+  - component: {fileID: 1870366780225433993}
+  - component: {fileID: 8454773527605868228}
+  - component: {fileID: 7505245660474159862}
   m_Layer: 0
   m_Name: apartment4
   m_TagString: Wall
@@ -4061,6 +4065,110 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.8960724, y: 29.82}
   m_EdgeRadius: 0
+--- !u!61 &2292726161292910416
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7324272638588610798}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -2.7499003, y: 6.3803067}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 48.701244, y: 29.82}
+    newSize: {x: 48.701244, y: 29.82}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5284643, y: 2.4042578}
+  m_EdgeRadius: 0
+--- !u!61 &1870366780225433993
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7324272638588610798}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -15.056604, y: 6.6387634}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 48.701244, y: 29.82}
+    newSize: {x: 48.701244, y: 29.82}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.7524757, y: 4.913788}
+  m_EdgeRadius: 0
+--- !u!61 &8454773527605868228
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7324272638588610798}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -6.3704214, y: 6.71251}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 48.701244, y: 29.82}
+    newSize: {x: 48.701244, y: 29.82}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.9453564, y: 0.98745537}
+  m_EdgeRadius: 0
+--- !u!61 &7505245660474159862
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7324272638588610798}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -5.0130477, y: 0.73782706}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 48.701244, y: 29.82}
+    newSize: {x: 48.701244, y: 29.82}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.3998172, y: 0.7145009}
+  m_EdgeRadius: 0
 --- !u!1 &7324272638712119851
 GameObject:
   m_ObjectHideFlags: 0
@@ -4076,7 +4184,7 @@ GameObject:
   - component: {fileID: 6109098293398200945}
   m_Layer: 0
   m_Name: mirror
-  m_TagString: Task
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4169,7 +4277,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7324272638712119851}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -4217,7 +4325,7 @@ GameObject:
   - component: {fileID: 8185977945665123619}
   m_Layer: 0
   m_Name: tv
-  m_TagString: Task
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4336,7 +4444,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7324272639117805360}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -4384,7 +4492,7 @@ GameObject:
   - component: {fileID: 5775948161462392673}
   m_Layer: 0
   m_Name: toilet (1)
-  m_TagString: Task
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4503,7 +4611,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7324272639141136022}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -4831,7 +4939,7 @@ GameObject:
   - component: {fileID: 1791122234178693602}
   m_Layer: 0
   m_Name: sink
-  m_TagString: Task
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4925,7 +5033,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7324272639327087869}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -4973,7 +5081,7 @@ GameObject:
   - component: {fileID: 3232553911114632255}
   m_Layer: 0
   m_Name: toilet
-  m_TagString: Task
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5092,7 +5200,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7324272639479854692}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -5140,7 +5248,7 @@ GameObject:
   - component: {fileID: 6610540868729893083}
   m_Layer: 0
   m_Name: bed red
-  m_TagString: Task
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5260,7 +5368,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7628106866936742918}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 

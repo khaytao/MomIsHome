@@ -185,6 +185,15 @@ public class GameManager : Singleton<GameManager>
     public void areTasksOver()
     {
         Debug.Log(taskCount);
+
+        foreach (var pair in goToTask)
+        {
+            if (pair.Key != null)
+            {
+                Debug.Log(pair.Key.name);
+            }
+            
+        }
         if (taskCount <= 0)
         {
             Debug.Log("Game over! You Won");
@@ -214,13 +223,15 @@ public class GameManager : Singleton<GameManager>
         {
             Destroy(item);
         }
+
+        string levelName = "levels/level" + levelNum.ToString();
         
         GameObject cur = GameObject.FindWithTag("level");
         Destroy(cur);
         GameObject house = GameObject.FindWithTag("House");
         Destroy(house);
-        GameObject level = Instantiate(Resources.Load("levels/oneCan", typeof(GameObject)) as GameObject);
-        Instantiate(Resources.Load("House no walls", typeof(GameObject)) as GameObject);
+        GameObject level = Instantiate(Resources.Load(levelName, typeof(GameObject)) as GameObject);
+        //Instantiate(Resources.Load("House no walls", typeof(GameObject)) as GameObject);
         FindObjectOfType<CanvasManager>().GameScreen();
     }
     

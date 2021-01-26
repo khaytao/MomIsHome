@@ -294,7 +294,7 @@ public class PlayerScript : MonoBehaviour
         
         // priority to fixing tasks
         foreach (Task task in curTasks)
-            if (task.type == TaskType.Trash || task.canFix(holdingItem))
+            if (task != null && task.type == TaskType.Trash || task.canFix(holdingItem))
                 tasks.Add(task);
 
         tasks.Sort();
