@@ -24,8 +24,29 @@ public enum FurnitureType
     SofaVertical = 3,
     Stove = 4,
     Toilet = 5,
-    Mat = 6,
+    MatRed = 6,
     Lamp = 7,
+    BedRed = 8,
+    MatBlue = 9,
+    MatBlueSmall = 10,
+    MatGreen = 11,
+    MatCircle = 12,
+    Tub = 13,
+    BedBlue = 14,
+    Table = 15,
+    PotSmall = 16,
+    PotMed = 17,
+    PotBig = 18,
+    Chair = 19,
+    Desk = 20,
+    SofaHor = 21,
+    Washer = 22,
+    TV = 23,
+    ShowerCurtain = 24,
+    PC = 25,
+    Towel = 26,
+    Mirror = 27,
+    Microwave = 28,
 }
 
 public class Task : MonoBehaviour, IComparable<Task>
@@ -33,19 +54,20 @@ public class Task : MonoBehaviour, IComparable<Task>
     public float duration;
     public TaskType type;
     public FurnitureType furnitureType;
+    public int furnitureInitBreakLevel;
     private SpriteRenderer childWaterRenderer;
     private bool isInteractable;
     private Animator animator;
     private bool isBurning;
-    private int brokenLevel;
+    private bool isBroken;
     [HideInInspector] public bool isFurniture;
     [HideInInspector] public Collider2D taskCollider;
     [HideInInspector] public Collider2D circleCollider;
     [HideInInspector] public SpriteRenderer taskRenderer;
     void Start()
     {
-        brokenLevel = 0;
         isBurning = false;
+        isBroken = false;
         isFurniture = type == TaskType.Furniture;
         isInteractable = false;
         taskCollider = GetComponent<Collider2D>();
@@ -57,9 +79,14 @@ public class Task : MonoBehaviour, IComparable<Task>
             SpriteRenderer[] renderers = GetComponentsInChildren<SpriteRenderer>();
             childWaterRenderer = renderers[renderers.Length - 1];
         }
-        else if (isFurniture)
+
+        if (isFurniture)
         {
-            animator.SetInteger("Furniture", (int)furnitureType);
+            animator.SetInteger("Furniture", (int) furnitureType);
+            if (furnitureInitBreakLevel == 1)
+                breakFurniture();
+            else if(furnitureInitBreakLevel == 2)
+                burnFurniture();
         }
     }
 
@@ -113,10 +140,8 @@ public class Task : MonoBehaviour, IComparable<Task>
         }
         else if (type == TaskType.Tape)
         {
-            brokenLevel--;
-            if (brokenLevel == 0)
-                type = TaskType.Furniture;
-            animator.SetInteger("BrokenLevel", brokenLevel);
+            type = TaskType.Furniture;
+            animator.SetInteger("BrokenLevel", 0);
             GameManager.Instance.FinishTask(this);
         }
         else if (type == TaskType.Fire)
@@ -141,17 +166,23 @@ public class Task : MonoBehaviour, IComparable<Task>
         animator.SetBool("Interactable", interactable);
     }
 
+    public void breakFurniture()
+    {
+        if (isBurning)
+            return;
+        
+        animator.SetInteger("BrokenLevel", 1);
+        type = TaskType.Tape;
+        GameManager.Instance.addToTaskCount(!isBroken ? 1 : 0);
+        isBroken = true;
+    }
+
     public void burnFurniture()
     {
-        // some furniture don't have 2 broken levels?
-        if (brokenLevel < 2)
-        {
-            brokenLevel++;
-            // todo: how to make damaged and how to fix? make method 'can fix'
-            animator.SetInteger("BrokenLevel", 1);
-            type = TaskType.Tape;
-            GameManager.Instance.addToTaskCount(1);
-        }
+        animator.SetInteger("BrokenLevel", 2);
+        type = TaskType.Tape;
+        GameManager.Instance.addToTaskCount(!isBroken && !isBurning ? 1 : 0);
+        isBurning = true;
     }
 
     public int CompareTo(Task other)

@@ -9,11 +9,12 @@ public class PlayerScript : MonoBehaviour
     public Slider progressBar;
     public KeyCode interactKey;
     private Rigidbody2D _rb;
-    public Animator _animator;
+    private Animator _animator;
     private SpriteRenderer playerRenderer;
     private Vector2 _goal;
     public float goal_threshold;
     public float speed;
+    public float mashingReduce;
     private float _angle = 0;
     private Item holdingItem;
     private Task holdingBin;
@@ -32,6 +33,7 @@ public class PlayerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _animator = GetComponent<Animator>();
         highlightedTasks = new List<Task>();
         _rb = GetComponent<Rigidbody2D>();
         playerRenderer = GetComponent<SpriteRenderer>();
