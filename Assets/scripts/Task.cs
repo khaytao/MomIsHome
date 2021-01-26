@@ -55,7 +55,6 @@ public class Task : MonoBehaviour, IComparable<Task>
     public TaskType type;
     public FurnitureType furnitureType;
     public int furnitureInitBreakLevel;
-    private SpriteRenderer childWaterRenderer;
     private bool isInteractable;
     private Animator animator;
     private bool isBurning;
@@ -74,11 +73,6 @@ public class Task : MonoBehaviour, IComparable<Task>
         taskRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         GameManager.Instance.addTask(this);
-        if (type == TaskType.Sweep)
-        {
-            SpriteRenderer[] renderers = GetComponentsInChildren<SpriteRenderer>();
-            childWaterRenderer = renderers[renderers.Length - 1];
-        }
 
         if (isFurniture)
         {
@@ -92,11 +86,6 @@ public class Task : MonoBehaviour, IComparable<Task>
 
     private void Update()
     {
-        if (type == TaskType.Sweep)
-        {
-            childWaterRenderer.transform.localScale += Time.deltaTime * 0.05f * (Vector3)Vector2.one;
-            duration += Time.deltaTime * 0.1f;
-        }
     }
 
     public bool canFix(Item item)
@@ -138,7 +127,7 @@ public class Task : MonoBehaviour, IComparable<Task>
             animator.SetBool("Burning", false);
             GameManager.Instance.FinishTask(this);
         }
-        else if (type == TaskType.Tape)
+        else if (type == TaskType.Tape && isFurniture)
         {
             type = TaskType.Furniture;
             animator.SetInteger("BrokenLevel", 0);

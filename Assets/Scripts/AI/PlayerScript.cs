@@ -22,10 +22,11 @@ public class PlayerScript : MonoBehaviour
     private List<Task> curTasks;
     private List<Task> fixingTasks;
     private float taskStarted;
-    private bool isFixing;
+    [HideInInspector] public bool isFixing;
     private bool isHoldingBin;
     private List<Task> highlightedTasks;
     private Item highlightedItem;
+    private Vector3 puddleScaleTaskStart;
 
     public float wallBounce = 1f;
     public Text tx;
@@ -114,10 +115,31 @@ public class PlayerScript : MonoBehaviour
             isFixing = true;
             taskStarted = Time.time;
             progressBar.gameObject.SetActive(true);
+            if (fixingTasks[0].type == TaskType.Sweep)
+                puddleScaleTaskStart = fixingTasks[0].transform.localScale;
+        }
+        // puddle no longer in
+        if (fixingTasks[0].type == TaskType.Sweep)
+        {
+            if (!fixingTasks[0].taskRenderer.bounds.Intersects(playerRenderer.bounds))
+            {
+                isFixing = false;
+                _animator.SetBool("isWorking", false);
+                progressBar.gameObject.SetActive(false);
+                fixingTasks.Clear();
+                return;
+            }
+        }
+        
+        float elapsedPerc = (Time.time - taskStarted) / fixingTasks[0].duration;
+        
+        // make puddle smaller
+        if (fixingTasks[0].type == TaskType.Sweep)
+        {
+            fixingTasks[0].transform.localScale = (1 - elapsedPerc) * puddleScaleTaskStart;
         }
 
         _animator.SetBool("isWorking", true);
-        float elapsedPerc = (Time.time - taskStarted) / fixingTasks[0].duration;
         progressBar.value = elapsedPerc;
 
         if (elapsedPerc >= 1)

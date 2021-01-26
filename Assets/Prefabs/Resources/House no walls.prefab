@@ -117,6 +117,7 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 11
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -284,6 +285,7 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 18
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -451,6 +453,7 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 19
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -618,6 +621,7 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 15
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -785,6 +789,7 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 13
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -952,6 +957,7 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 28
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -1119,6 +1125,7 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 22
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -1259,6 +1266,7 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 12
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -1398,6 +1406,7 @@ MonoBehaviour:
   duration: 4
   type: 6
   furnitureType: 6
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -1565,6 +1574,7 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 16
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -1732,6 +1742,7 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 20
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -1899,6 +1910,7 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 17
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -2066,6 +2078,7 @@ MonoBehaviour:
   duration: 4
   type: 6
   furnitureType: 7
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -2206,6 +2219,7 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 26
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -2372,6 +2386,7 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 21
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -2538,6 +2553,7 @@ MonoBehaviour:
   duration: 4
   type: 6
   furnitureType: 3
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -2704,6 +2720,7 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 25
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -2870,6 +2887,7 @@ MonoBehaviour:
   duration: 4
   type: 6
   furnitureType: 1
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -3036,6 +3054,7 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 24
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -3202,6 +3221,7 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 14
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -3334,7 +3354,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7324272638588610798}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.4791878, y: -1.5928149, z: 27.334393}
+  m_LocalPosition: {x: -1.4791878, y: -1.5928149, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7324272638564214492}
@@ -4157,6 +4177,7 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 27
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -4323,6 +4344,7 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 23
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -4489,6 +4511,7 @@ MonoBehaviour:
   duration: 4
   type: 6
   furnitureType: 5
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -4629,6 +4652,7 @@ MonoBehaviour:
   duration: 4
   type: 6
   furnitureType: 2
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -4768,6 +4792,7 @@ MonoBehaviour:
   duration: 4
   type: 6
   furnitureType: 4
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -4908,6 +4933,7 @@ MonoBehaviour:
   duration: 4
   type: 6
   furnitureType: 2
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -5074,6 +5100,7 @@ MonoBehaviour:
   duration: 4
   type: 6
   furnitureType: 5
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
@@ -5241,6 +5268,7 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 8
+  furnitureInitBreakLevel: 0
   isFurniture: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
