@@ -163,7 +163,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 923662097155605885}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
         m_MethodName: ReplayLevel
         m_Mode: 1
@@ -1096,10 +1096,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3804d21d55f6114882bc6b7ec53b6fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameDurationMinutes: 90
+  gameDurationMinutes: 258
   gameTimeFactor: 120
   minuteHand: {fileID: 345653274860633749}
   hourHand: {fileID: 345653274269482775}
+  speed: 10000
+  amount: 3.5
 --- !u!1 &345653274936666375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,7 +1322,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 923662097155605885}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
         m_MethodName: ReplayLevel
         m_Mode: 1

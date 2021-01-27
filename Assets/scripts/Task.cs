@@ -13,6 +13,7 @@ public enum TaskType
     Sweep = 4,
     Tape = 5,
     Furniture = 6,
+    NPC = 7,
     HoldingBin = 20,
 }
 
@@ -59,6 +60,7 @@ public class Task : MonoBehaviour, IComparable<Task>
     private Animator animator;
     private bool isBurning;
     private bool isBroken;
+    
     [HideInInspector] public bool isFurniture;
     [HideInInspector] public Collider2D taskCollider;
     [HideInInspector] public Collider2D circleCollider;
@@ -90,6 +92,10 @@ public class Task : MonoBehaviour, IComparable<Task>
 
     public bool canFix(Item item)
     {
+        if (type == TaskType.NPC)
+        {
+            return true;
+        }
         if (!item)
             return false;
         
@@ -131,6 +137,7 @@ public class Task : MonoBehaviour, IComparable<Task>
         {
             type = TaskType.Furniture;
             animator.SetInteger("BrokenLevel", 0);
+            furnitureInitBreakLevel = 0;
             GameManager.Instance.FinishTask(this);
         }
         else if (type == TaskType.Fire)
@@ -138,6 +145,14 @@ public class Task : MonoBehaviour, IComparable<Task>
             GameManager.Instance.removeFire(gameObject);
             GameManager.Instance.FinishTask(this);
             // todo: instantiate ash prefab
+        }
+
+        else if (type == TaskType.NPC)
+        {
+            GameManager.Instance.removeTask(this); //todo why this function?
+            GameManager.Instance.FinishTask(this);
+            EnemyAI ai = GetComponent<EnemyAI>();
+            ai.Leave();
         }
         else
         {
@@ -180,5 +195,17 @@ public class Task : MonoBehaviour, IComparable<Task>
         float dist1 = Vector3.Distance(playerPos, gameObject.transform.position);
         float dist2 = Vector3.Distance(playerPos, other.gameObject.transform.position);
         return dist1 == dist2 ? 0 : (dist1 < dist2 ? -1 : 1);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (type == TaskType.NPC && other.gameObject.CompareTag("Task"))
+        {
+            Task sc = other.gameObject.GetComponent<Task>();
+            if (sc.isFurniture && sc.furnitureInitBreakLevel == 0)
+            {
+                Debug.Log("broke" + other.gameObject.name);
+            }
+        }
     }
 }

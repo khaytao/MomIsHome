@@ -185,18 +185,11 @@ public class GameManager : Singleton<GameManager>
     public void areTasksOver()
     {
         Debug.Log(taskCount);
-
-        foreach (var pair in goToTask)
-        {
-            if (pair.Key != null)
-            {
-                Debug.Log(pair.Key.name);
-            }
-            
-        }
-        if (taskCount <= 0)
+        
+        if (taskCount <= 1)
         {
             Debug.Log("Game over! You Won");
+            taskCount--; //this removes the trash can autamatically
             FindObjectOfType<CanvasManager>().WonScreen();
         }
     }

@@ -29,8 +29,7 @@ public class PlayerScript : MonoBehaviour
     private Vector3 puddleScaleTaskStart;
 
     public float wallBounce = 1f;
-    public Text tx;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,10 +51,11 @@ public class PlayerScript : MonoBehaviour
             _goal = _rb.position;
             return;
         }
-        if (Input.GetMouseButtonDown(0))
+        /*if (Input.GetMouseButtonDown(0))
         {
             _goal = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        }
+        }*/
+        
         if (Input.GetKeyDown(interactKey) && highlightedTasks.Count > 0 && highlightedTasks[0].canFix(holdingItem))
         {
             fixingTasks = new List<Task>(highlightedTasks);

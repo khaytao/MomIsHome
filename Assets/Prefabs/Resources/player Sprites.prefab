@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 1519167947468476157}
   - component: {fileID: 391966386106565208}
   - component: {fileID: 4690518394589099846}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: player Sprites
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -256,14 +256,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 107afbf72f7a93b45868d7e21faec200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  progressBar: {fileID: 0}
+  progressBar: {fileID: 7518006941371555659}
   interactKey: 324
   goal_threshold: 0.1
   speed: 7
   mashingReduce: 0
   isFixing: 0
   wallBounce: 1
-  tx: {fileID: 0}
 --- !u!1 &6024619424947287166
 GameObject:
   m_ObjectHideFlags: 0

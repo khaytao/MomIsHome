@@ -16,8 +16,11 @@ public class EnemyAI : MonoBehaviour
     private AIPath path;
     private AIDestinationSetter ds;
 
+    private bool leaving;
     private float movementThreshold = 0.2f;
     private int i;
+
+    public Transform exit;
     
     private Vector2 curPos;
     private float angleAnim;
@@ -38,7 +41,7 @@ public class EnemyAI : MonoBehaviour
         updateAnimator();
         
         
-        if (Vector2.Distance(transform.position, pointsList[i].position) < thresh)
+        if (Vector2.Distance(transform.position, pointsList[i].position) < thresh && !leaving)
         {
             i = (i + 1) % pointsList.Count;
             Invoke(nameof(updateLocation), timeBetweenPoints);
@@ -53,10 +56,6 @@ public class EnemyAI : MonoBehaviour
                     Vector2 spawnLocation = new Vector2(radius * (float)Math.Cos(angle), radius * (float)Math.Sin(angle));
                     spawnLocation += (Vector2) transform.position;
                     spawn.transform.position = spawnLocation;
-                }
-                else
-                {
-                    Debug.Log("here");
                 }
             }
         }
@@ -90,5 +89,15 @@ public class EnemyAI : MonoBehaviour
     private void updateLocation()
     {
         ds.target = pointsList[i];
+    }
+
+    public void Leave()
+    {
+        leaving = true;
+        ds.target = exit;
+        foreach (var comp in GetComponents<Collider2D>())
+        {
+            comp.enabled = false;
+        }
     }
 }
