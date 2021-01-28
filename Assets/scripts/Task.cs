@@ -50,18 +50,28 @@ public enum FurnitureType
     Microwave = 28,
 }
 
+public enum NPCType
+{
+    None = 0,
+    DrunkFriend = 1,
+    Hobo = 2,
+    Racoon = 3,
+}
+
 public class Task : MonoBehaviour, IComparable<Task>
 {
     public float duration;
     public TaskType type;
     public FurnitureType furnitureType;
     public int furnitureInitBreakLevel;
+    public NPCType NPCType;
     private bool isInteractable;
     private Animator animator;
     private bool isBurning;
     private bool isBroken;
     
     [HideInInspector] public bool isFurniture;
+    [HideInInspector] public bool isNPC;
     [HideInInspector] public Collider2D taskCollider;
     [HideInInspector] public Collider2D circleCollider;
     [HideInInspector] public SpriteRenderer taskRenderer;
@@ -70,6 +80,7 @@ public class Task : MonoBehaviour, IComparable<Task>
         isBurning = false;
         isBroken = false;
         isFurniture = type == TaskType.Furniture;
+        isNPC = type == TaskType.NPC;
         isInteractable = false;
         taskCollider = GetComponent<Collider2D>();
         taskRenderer = GetComponent<SpriteRenderer>();
@@ -83,6 +94,11 @@ public class Task : MonoBehaviour, IComparable<Task>
                 breakFurniture();
             else if(furnitureInitBreakLevel == 2)
                 burnFurniture();
+        }
+
+        if (isNPC)
+        {
+            animator.SetInteger("NPC", (int) NPCType);
         }
     }
 

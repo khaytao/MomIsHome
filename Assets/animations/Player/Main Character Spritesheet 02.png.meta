@@ -1,0 +1,1465 @@
+fileFormatVersion: 2
+guid: 666b8c0b4c41ce044a9b03753a18cfc2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1965597448481091243
+    second: Main Character Spritesheet 02_0
+  - first:
+      213: -7618122487792757669
+    second: Main Character Spritesheet 02_1
+  - first:
+      213: -134466778252256123
+    second: Main Character Spritesheet 02_2
+  - first:
+      213: 786822159927327366
+    second: Main Character Spritesheet 02_3
+  - first:
+      213: 2863803637982374736
+    second: Main Character Spritesheet 02_4
+  - first:
+      213: 4014220222352761106
+    second: Main Character Spritesheet 02_5
+  - first:
+      213: -7437999626287797828
+    second: Main Character Spritesheet 02_6
+  - first:
+      213: 730072329462998466
+    second: Main Character Spritesheet 02_7
+  - first:
+      213: 33207685089848544
+    second: Main Character Spritesheet 02_8
+  - first:
+      213: -5171516221035904309
+    second: Main Character Spritesheet 02_9
+  - first:
+      213: -1599928979592308501
+    second: Main Character Spritesheet 02_10
+  - first:
+      213: 1647477984850198829
+    second: Main Character Spritesheet 02_11
+  - first:
+      213: 8979536129851729982
+    second: Main Character Spritesheet 02_12
+  - first:
+      213: 4751665091556859429
+    second: Main Character Spritesheet 02_13
+  - first:
+      213: -3754067258118342680
+    second: Main Character Spritesheet 02_14
+  - first:
+      213: -4876655835546962873
+    second: Main Character Spritesheet 02_15
+  - first:
+      213: 6986676722388707547
+    second: Main Character Spritesheet 02_16
+  - first:
+      213: 9168938243601163680
+    second: Main Character Spritesheet 02_17
+  - first:
+      213: 7872163923067190075
+    second: Main Character Spritesheet 02_18
+  - first:
+      213: -6335331251991461446
+    second: Main Character Spritesheet 02_19
+  - first:
+      213: -5047165978970094154
+    second: Main Character Spritesheet 02_20
+  - first:
+      213: -1761183490389605080
+    second: Main Character Spritesheet 02_21
+  - first:
+      213: 2869299382515707629
+    second: Main Character Spritesheet 02_22
+  - first:
+      213: 2068818092979156717
+    second: Main Character Spritesheet 02_23
+  - first:
+      213: -7738013391321686298
+    second: Main Character Spritesheet 02_24
+  - first:
+      213: 6790250361020882204
+    second: Main Character Spritesheet 02_25
+  - first:
+      213: -2682606471909379747
+    second: Main Character Spritesheet 02_26
+  - first:
+      213: -4350483980085369884
+    second: Main Character Spritesheet 02_27
+  - first:
+      213: 5531247012910515983
+    second: Main Character Spritesheet 02_28
+  - first:
+      213: -2684324916452475004
+    second: Main Character Spritesheet 02_29
+  - first:
+      213: 2886412247420485701
+    second: Main Character Spritesheet 02_30
+  - first:
+      213: -6706862902172476949
+    second: Main Character Spritesheet 02_31
+  - first:
+      213: -3699778883766514234
+    second: Main Character Spritesheet 02_32
+  - first:
+      213: -354989127699650747
+    second: Main Character Spritesheet 02_33
+  - first:
+      213: 3953799872117185377
+    second: Main Character Spritesheet 02_34
+  - first:
+      213: 7809754592795542727
+    second: Main Character Spritesheet 02_35
+  - first:
+      213: -8069129498721949087
+    second: Main Character Spritesheet 02_36
+  - first:
+      213: 7643810311086629348
+    second: Main Character Spritesheet 02_37
+  - first:
+      213: -6400431204257220012
+    second: Main Character Spritesheet 02_38
+  - first:
+      213: -2924180654714282586
+    second: Main Character Spritesheet 02_39
+  - first:
+      213: -4924084771703055959
+    second: Main Character Spritesheet 02_40
+  - first:
+      213: 8312057816206331759
+    second: Main Character Spritesheet 02_41
+  - first:
+      213: 6826073640532111856
+    second: Main Character Spritesheet 02_42
+  - first:
+      213: 7869722010955880249
+    second: Main Character Spritesheet 02_43
+  - first:
+      213: 3680572376061615142
+    second: Main Character Spritesheet 02_44
+  - first:
+      213: -2790992222192640043
+    second: Main Character Spritesheet 02_45
+  - first:
+      213: -4664662994254514645
+    second: Main Character Spritesheet 02_46
+  - first:
+      213: -1864444646277355190
+    second: Main Character Spritesheet 02_47
+  - first:
+      213: 2103733082723445808
+    second: Main Character Spritesheet 02_48
+  - first:
+      213: -312076686590067894
+    second: Main Character Spritesheet 02_49
+  - first:
+      213: -7934929904771787140
+    second: Main Character Spritesheet 02_50
+  - first:
+      213: 6170494583325516784
+    second: Main Character Spritesheet 02_51
+  - first:
+      213: -572262690816615852
+    second: Main Character Spritesheet 02_52
+  - first:
+      213: 4332104274128622985
+    second: Main Character Spritesheet 02_53
+  - first:
+      213: -9092186823958717883
+    second: Main Character Spritesheet 02_54
+  - first:
+      213: 5874548419280313396
+    second: Main Character Spritesheet 02_55
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_0
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 7134
+        width: 1009
+        height: 1004
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae21281774374b10800000000000000
+      internalID: 1965597448481091243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_1
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 7153
+        width: 995
+        height: 985
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5492bbb5fdf64690800000000000000
+      internalID: -7618122487792757669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_2
+      rect:
+        serializedVersion: 2
+        x: 2233
+        y: 7157
+        width: 990
+        height: 980
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58cde287d27422ef0800000000000000
+      internalID: -134466778252256123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_3
+      rect:
+        serializedVersion: 2
+        x: 3271
+        y: 7115
+        width: 1004
+        height: 1014
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68abfdfe59a5bea00800000000000000
+      internalID: 786822159927327366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_4
+      rect:
+        serializedVersion: 2
+        x: 4308
+        y: 7134
+        width: 1014
+        height: 981
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05b29645c364eb720800000000000000
+      internalID: 2863803637982374736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_5
+      rect:
+        serializedVersion: 2
+        x: 5364
+        y: 7113
+        width: 990
+        height: 1016
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 211a683260065b730800000000000000
+      internalID: 4014220222352761106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_6
+      rect:
+        serializedVersion: 2
+        x: 6383
+        y: 7134
+        width: 983
+        height: 1004
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb9a0a38fbae6c890800000000000000
+      internalID: -7437999626287797828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_7
+      rect:
+        serializedVersion: 2
+        x: 7406
+        y: 7120
+        width: 967
+        height: 1023
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c5ebf16aecb12a00800000000000000
+      internalID: 730072329462998466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_8
+      rect:
+        serializedVersion: 2
+        x: 8425
+        y: 7077
+        width: 959
+        height: 1066
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ece791b63af57000800000000000000
+      internalID: 33207685089848544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_9
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 6054
+        width: 741
+        height: 952
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc20cf695651b38b0800000000000000
+      internalID: -5171516221035904309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_10
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 6054
+        width: 731
+        height: 952
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be81c81e119ebc9e0800000000000000
+      internalID: -1599928979592308501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_11
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 6054
+        width: 726
+        height: 948
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d21c54e9f740dd610800000000000000
+      internalID: 1647477984850198829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_12
+      rect:
+        serializedVersion: 2
+        x: 2357
+        y: 6054
+        width: 725
+        height: 948
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e382993d888bd9c70800000000000000
+      internalID: 8979536129851729982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_13
+      rect:
+        serializedVersion: 2
+        x: 3124
+        y: 6054
+        width: 736
+        height: 952
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52eded1b93e41f140800000000000000
+      internalID: 4751665091556859429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_14
+      rect:
+        serializedVersion: 2
+        x: 3921
+        y: 6054
+        width: 736
+        height: 952
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e77ee8f7bfd6ebc0800000000000000
+      internalID: -3754067258118342680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_15
+      rect:
+        serializedVersion: 2
+        x: 4808
+        y: 6063
+        width: 1122
+        height: 962
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 744336eea53a25cb0800000000000000
+      internalID: -4876655835546962873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_16
+      rect:
+        serializedVersion: 2
+        x: 5974
+        y: 6063
+        width: 1116
+        height: 948
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd828764679a5f060800000000000000
+      internalID: 6986676722388707547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_17
+      rect:
+        serializedVersion: 2
+        x: 7137
+        y: 6063
+        width: 1104
+        height: 948
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a56751e0cc9e3f70800000000000000
+      internalID: 9168938243601163680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_18
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 4901
+        width: 749
+        height: 970
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3bb018216b8f3d60800000000000000
+      internalID: 7872163923067190075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_19
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 4900
+        width: 749
+        height: 972
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab14e96dac16418a0800000000000000
+      internalID: -6335331251991461446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_20
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 5792
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b50d0d784dd4f9b0800000000000000
+      internalID: -5047165978970094154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_21
+      rect:
+        serializedVersion: 2
+        x: 1948
+        y: 4903
+        width: 749
+        height: 972
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8258b0752f40f87e0800000000000000
+      internalID: -1761183490389605080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_22
+      rect:
+        serializedVersion: 2
+        x: 2690
+        y: 4908
+        width: 749
+        height: 967
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deea811169cc1d720800000000000000
+      internalID: 2869299382515707629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_24
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 3662
+        width: 773
+        height: 878
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ee1e0f71dd0d9490800000000000000
+      internalID: -7738013391321686298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_25
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 3677
+        width: 759
+        height: 867
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d1e902ab0db3e50800000000000000
+      internalID: 6790250361020882204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_26
+      rect:
+        serializedVersion: 2
+        x: 1724
+        y: 3686
+        width: 764
+        height: 858
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d517da970a775cad0800000000000000
+      internalID: -2682606471909379747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_27
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 3986
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3ebf5bed9ff93c0800000000000000
+      internalID: -4350483980085369884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_28
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 3644
+        width: 780
+        height: 909
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f07c8793adfe2cc40800000000000000
+      internalID: 5531247012910515983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_29
+      rect:
+        serializedVersion: 2
+        x: 3306
+        y: 3662
+        width: 794
+        height: 892
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48fbe1de5bc5fbad0800000000000000
+      internalID: -2684324916452475004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_30
+      rect:
+        serializedVersion: 2
+        x: 4105
+        y: 3639
+        width: 790
+        height: 915
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 540c5da65a89e0820800000000000000
+      internalID: 2886412247420485701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_31
+      rect:
+        serializedVersion: 2
+        x: 4954
+        y: 3662
+        width: 777
+        height: 892
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be993c699bf6ce2a0800000000000000
+      internalID: -6706862902172476949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_32
+      rect:
+        serializedVersion: 2
+        x: 5765
+        y: 3648
+        width: 764
+        height: 904
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cd0b9d15beb7acc0800000000000000
+      internalID: -3699778883766514234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_33
+      rect:
+        serializedVersion: 2
+        x: 6609
+        y: 3606
+        width: 778
+        height: 938
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5472658e443d21bf0800000000000000
+      internalID: -354989127699650747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 2582
+        width: 664
+        height: 953
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b978a1908bed630800000000000000
+      internalID: 3953799872117185377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_35
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 2582
+        width: 664
+        height: 952
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c4cd8e9c62d16c60800000000000000
+      internalID: 7809754592795542727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_36
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 2582
+        width: 674
+        height: 948
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16a6d061971b40090800000000000000
+      internalID: -8069129498721949087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_37
+      rect:
+        serializedVersion: 2
+        x: 2144
+        y: 2582
+        width: 674
+        height: 948
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e169c2baf4441a60800000000000000
+      internalID: 7643810311086629348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_38
+      rect:
+        serializedVersion: 2
+        x: 3233
+        y: 2535
+        width: 664
+        height: 1028
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a3cec0bb91d27a0800000000000000
+      internalID: -6400431204257220012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_39
+      rect:
+        serializedVersion: 2
+        x: 3954
+        y: 2536
+        width: 665
+        height: 1032
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ad9fa000393b67d0800000000000000
+      internalID: -2924180654714282586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_40
+      rect:
+        serializedVersion: 2
+        x: 4765
+        y: 2536
+        width: 661
+        height: 1013
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a99ab23df22aabb0800000000000000
+      internalID: -4924084771703055959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_41
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 1484
+        width: 1005
+        height: 891
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6fcc7f6b8c5a5370800000000000000
+      internalID: 8312057816206331759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_42
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 1502
+        width: 970
+        height: 873
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f1f29a5fc51bbe50800000000000000
+      internalID: 6826073640532111856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_43
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 1507
+        width: 943
+        height: 868
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9371910397ed63d60800000000000000
+      internalID: 7869722010955880249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_44
+      rect:
+        serializedVersion: 2
+        x: 3209
+        y: 1474
+        width: 920
+        height: 914
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62c94455315041330800000000000000
+      internalID: 3680572376061615142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_45
+      rect:
+        serializedVersion: 2
+        x: 4228
+        y: 1465
+        width: 914
+        height: 919
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df54597c576449d0800000000000000
+      internalID: -2790992222192640043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_46
+      rect:
+        serializedVersion: 2
+        x: 5237
+        y: 1465
+        width: 929
+        height: 910
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b26bc8e98b9c34fb0800000000000000
+      internalID: -4664662994254514645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_47
+      rect:
+        serializedVersion: 2
+        x: 6241
+        y: 1465
+        width: 953
+        height: 914
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a496243f8792026e0800000000000000
+      internalID: -1864444646277355190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_48
+      rect:
+        serializedVersion: 2
+        x: 7265
+        y: 1456
+        width: 976
+        height: 914
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03ce7f9b716f13d10800000000000000
+      internalID: 2103733082723445808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_49
+      rect:
+        serializedVersion: 2
+        x: 8274
+        y: 1432
+        width: 1028
+        height: 943
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4b3e1138e74babf0800000000000000
+      internalID: -312076686590067894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_50
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 422
+        width: 1028
+        height: 920
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c76147cea4771e190800000000000000
+      internalID: -7934929904771787140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_51
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 422
+        width: 1028
+        height: 920
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f3e69f712002a550800000000000000
+      internalID: 6170494583325516784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_52
+      rect:
+        serializedVersion: 2
+        x: 2385
+        y: 423
+        width: 1028
+        height: 920
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a9aab5d1aee08f0800000000000000
+      internalID: -572262690816615852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_53
+      rect:
+        serializedVersion: 2
+        x: 3685
+        y: 399
+        width: 953
+        height: 945
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 985536582e9be1c30800000000000000
+      internalID: 4332104274128622985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_54
+      rect:
+        serializedVersion: 2
+        x: 4695
+        y: 403
+        width: 952
+        height: 943
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a147e814012d180800000000000000
+      internalID: -9092186823958717883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main Character Spritesheet 02_55
+      rect:
+        serializedVersion: 2
+        x: 5737
+        y: 403
+        width: 957
+        height: 946
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c1903a9a6968150800000000000000
+      internalID: 5874548419280313396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
