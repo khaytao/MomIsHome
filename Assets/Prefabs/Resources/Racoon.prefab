@@ -144,6 +144,8 @@ MonoBehaviour:
   - TrashWaste
   anim: {fileID: 1935838074337056523}
   exit: {fileID: 0}
+  x_limit: 25
+  y_limit: 17
 --- !u!50 &1757983325302247362
 Rigidbody2D:
   serializedVersion: 4
@@ -152,12 +154,12 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1757983325302247389}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 10
+  m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}

@@ -21,9 +21,14 @@ public class EnemyAI : MonoBehaviour
     private int i;
 
     public Transform exit;
-    
+    public float x_limit;
+    public float y_limit;
+
+
     private Vector2 curPos;
+
     private float angleAnim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,10 +42,14 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!(Mathf.Abs(transform.position.x) < x_limit && Mathf.Abs(transform.position.y) < y_limit))
+        {
+            Destroy(gameObject);
+        }
 
         updateAnimator();
-        
-        
+
+
         if (Vector2.Distance(transform.position, pointsList[i].position) < thresh && !leaving)
         {
             i = (i + 1) % pointsList.Count;
@@ -48,18 +57,23 @@ public class EnemyAI : MonoBehaviour
 
             if (i < spawnList.Count)
             {
-                GameObject spawn =  Instantiate(Resources.Load(spawnList[i])) as GameObject;
+                GameObject spawn = Instantiate(Resources.Load(spawnList[i])) as GameObject;
                 if (!(spawn is null))
                 {
                     float angle = Random.value * 360;
                     float radius = Random.value * dropOffset;
-                    Vector2 spawnLocation = new Vector2(radius * (float)Math.Cos(angle), radius * (float)Math.Sin(angle));
+                    Vector2 spawnLocation = new Vector2(radius * (float) Math.Cos(angle), radius * (float) Math.Sin(angle));
                     spawnLocation += (Vector2) transform.position;
                     spawn.transform.position = spawnLocation;
                 }
             }
         }
+
+        var nn = AstarPath.active.GetNearest(transform.position, NNConstraint.Default);
+        var closestPointOnGraph = nn.clampedPosition;
+        transform.position = (Vector2) closestPointOnGraph;
     }
+    
 
     private void updateAnimator()
     {
@@ -88,7 +102,10 @@ public class EnemyAI : MonoBehaviour
     }
     private void updateLocation()
     {
-        ds.target = pointsList[i];
+        if (!leaving)
+        {
+            ds.target = pointsList[i];
+        } 
     }
 
     public void Leave()
@@ -99,5 +116,12 @@ public class EnemyAI : MonoBehaviour
         {
             comp.enabled = false;
         }
+        
+        //Invoke(nameof(kill), 15 );
+    }
+
+    private void kill()
+    {
+        Destroy(this);
     }
 }
