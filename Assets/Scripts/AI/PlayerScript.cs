@@ -240,6 +240,7 @@ public class PlayerScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         if (collision.tag.Equals("Item"))
         {
             curItem = GameManager.Instance.getItem(collision.gameObject);

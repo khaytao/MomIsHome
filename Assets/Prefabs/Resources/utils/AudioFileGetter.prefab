@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3190566306775348039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3190566306775348038}
+  - component: {fileID: 3190566306775348033}
+  m_Layer: 0
+  m_Name: AudioFileGetter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3190566306775348038
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3190566306775348039}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.85713, y: 1.8648462, z: -19.054659}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3190566306775348033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3190566306775348039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1a9b887f08faa43bae485b22d59275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  s: {fileID: 8300000, guid: 1d4240dd607c54f42bc1732c510b38f2, type: 3}
+  alexaSnarky1: {fileID: 8300000, guid: 22e2079c21552594ebc90fd9d46e3e37, type: 3}
+  alexaSnarky2: {fileID: 8300000, guid: 52eb357788a921c439f50dfa02cea81e, type: 3}
+  alexaSnarky3: {fileID: 8300000, guid: b525b4c0275bc04418c37082a09ea52f, type: 3}
+  alexaSnarky4: {fileID: 8300000, guid: 36bc19c50be79504c9e83bb7aad21fa7, type: 3}
+  alexaSnarky5: {fileID: 8300000, guid: 8d690325083e5eb46ab7fbb5909a901c, type: 3}
+  alexaSnarky6: {fileID: 8300000, guid: 7784e7838ca741a4bab35203dfb37ceb, type: 3}
+  alexaSnarky7: {fileID: 8300000, guid: 74276dd86326dfd4a84a0e5c08f22586, type: 3}
+  alexaSnarky8: {fileID: 8300000, guid: 2f36a1bc8b870a544acc3d2595673652, type: 3}
+  alexaSnarky9: {fileID: 8300000, guid: 520c789068b2b1d47aa48314efe9f39d, type: 3}
+  alexaSnarky10: {fileID: 8300000, guid: 0220fbb246967b646b9fb18419472875, type: 3}
+  timeLeft90: {fileID: 8300000, guid: f3e3a1e803a9c2d4cb811712702b12c9, type: 3}
+  timeLeft60: {fileID: 8300000, guid: d10dd44ca1d905f4087e7e9bef8559db, type: 3}
+  timeLeft30: {fileID: 8300000, guid: d63d2653bdfd7b94a96ec9d313faf2e0, type: 3}
+  timeLeft15: {fileID: 8300000, guid: d1778e01b94b12a4caf616ca3580e00d, type: 3}
