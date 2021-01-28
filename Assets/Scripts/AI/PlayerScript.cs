@@ -200,12 +200,12 @@ public class PlayerScript : MonoBehaviour
             _rb.velocity = Vector2.zero;
         }
 
-        if (_rb.velocity.x > 0 && !playerRenderer.flipX)
+        if (_rb.velocity.x > 0.01f && !playerRenderer.flipX)
         {
             playerRenderer.flipX = true;
         }
 
-        if (_rb.velocity.x < 0 && playerRenderer.flipX)
+        if (_rb.velocity.x < -0.01f && playerRenderer.flipX)
         {
             playerRenderer.flipX = false;
         }

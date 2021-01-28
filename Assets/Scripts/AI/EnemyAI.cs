@@ -5,6 +5,15 @@ using Pathfinding;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+
+enum ActionType
+{
+    Idle = 0,
+    Move = 1,
+    Dirty = 2,
+    Break = 3,
+}
+
 public class EnemyAI : MonoBehaviour
 {
     public float thresh = 0.1f;
@@ -29,14 +38,20 @@ public class EnemyAI : MonoBehaviour
 
     private float angleAnim;
 
+    private SpriteRenderer renderer;
+    
+
+    private bool isMoving;
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         i = 0;
         ds = GetComponent<AIDestinationSetter>();
         path = GetComponent<AIPath>();
         ds.target = pointsList[i];
         curPos = transform.position;
+        renderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -80,25 +95,27 @@ public class EnemyAI : MonoBehaviour
         Vector2 pos = transform.position;
         Vector2 movementDirection = pos - curPos;
         curPos = pos;
-        if (Vector2.Distance(pos, movementDirection) < movementThreshold)
+        float dist = Vector2.Distance(pos, movementDirection);
+        if (isMoving && dist < movementThreshold)
         {
-            anim.SetBool("moving", false);
+            isMoving = false;
+            anim.SetInteger("Action", (int) ActionType.Idle);
         }
-        else
+        else if(!isMoving && dist >= movementThreshold)
         {
-            anim.SetBool("moving", true);
+            isMoving = true;
+            anim.SetInteger("Action", (int) ActionType.Move);
         }
         
         angleAnim = Vector2.Angle(Vector2.up, movementDirection);
-        if (movementDirection.x > 0)
+        if (movementDirection.x > 0.001f)
         {
-            anim.SetBool("movingRight", true);
+            renderer.flipX = true;
         }
-        if (movementDirection.x < 0)
+        if (movementDirection.x < -0.001f)
         {
-            anim.SetBool("movingRight", false);
+            renderer.flipX = false;
         }
-        anim.SetFloat("angle", angleAnim);
     }
     private void updateLocation()
     {

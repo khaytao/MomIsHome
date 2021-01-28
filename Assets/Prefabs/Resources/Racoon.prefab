@@ -142,7 +142,7 @@ MonoBehaviour:
   - TrashWaste
   - TrashWaste
   - TrashWaste
-  anim: {fileID: 1935838074337056523}
+  anim: {fileID: 0}
   exit: {fileID: 0}
   x_limit: 25
   y_limit: 17
@@ -225,7 +225,9 @@ MonoBehaviour:
   type: 7
   furnitureType: 0
   furnitureInitBreakLevel: 0
+  NPCType: 3
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -291,7 +293,7 @@ Animator:
   m_GameObject: {fileID: 1757983325302247389}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5f947c2ec55eaf94c8183b2a6687e48b, type: 2}
+  m_Controller: {fileID: 9100000, guid: aab618c21f68d8d479cf73f6c7831704, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -310,7 +312,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1935838074337056516}
   - component: {fileID: 1935838074337056522}
-  - component: {fileID: 1935838074337056523}
   m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
@@ -339,7 +340,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1935838074337056517}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -384,22 +385,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1935838074337056523
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1935838074337056517}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5f947c2ec55eaf94c8183b2a6687e48b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
