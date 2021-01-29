@@ -8,8 +8,9 @@ using UnityEngine.UI;
 
 public class GameManager : Singleton<GameManager>
 {
+    public const int NumOfLevels = 2;
     private float timeStarted;
-    private bool gameOver;
+    public bool gameOver;
     
     private int taskCount;
     // how much time has elapsed since the start of game (in case there is an opening scene its not equal to Time.time)
@@ -26,7 +27,7 @@ public class GameManager : Singleton<GameManager>
     private List<(GameObject, Bounds)> fireBounds;
     private List<(Task, Bounds)> furnitureTaskBounds;
     private PlayerScript playerScript;
-    private int curLevel = 1;
+    private int curLevel = 0;
 
     
     public GameManager()
@@ -167,19 +168,29 @@ public class GameManager : Singleton<GameManager>
 
     public void timeOver()
     {
-        Debug.Log("Game over!  You lost");
-        gameOver = true;
-        FindObjectOfType<CanvasManager>().LostScreen();
-        //timeStarted = -1;
-        //endGame();
+        Debug.Log("Game over!  You lost" + Time.timeScale);
+        endGame(false);
     }
     
-    public void endGame()
+    private void endGame(bool GameWon)
+    {
+        Time.timeScale = 0;
+        gameOver = true;
+        if (GameWon)
+        {
+            FindObjectOfType<CanvasManager>().WonScreen();
+        }
+        else
+        {
+            FindObjectOfType<CanvasManager>().LostScreen();
+        }
+        
+    }
+
+    public void reloadLevel()
     {
         gameOver = false;
-        timeStarted = -1;
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        LoadLevelPrefabs(1);
+        LoadLevelPrefabs(curLevel);
     }
 
     public void areTasksOver()
@@ -190,7 +201,7 @@ public class GameManager : Singleton<GameManager>
         {
             Debug.Log("Game over! You Won");
             taskCount--; //this removes the trash can autamatically
-            FindObjectOfType<CanvasManager>().WonScreen();
+            endGame(true);
         }
     }
 
@@ -207,6 +218,12 @@ public class GameManager : Singleton<GameManager>
 
     public void LoadLevelPrefabs(int levelNum)
     {
+        Time.timeScale = 1;
+        if (levelNum > NumOfLevels)
+        {
+            MainMenu();
+        }
+        
         foreach (var task in goToTask.Keys)
         {
             Destroy(task);
@@ -217,15 +234,55 @@ public class GameManager : Singleton<GameManager>
             Destroy(item);
         }
 
-        string levelName = "levels/level" + levelNum.ToString();
+        string levelName = "levels/Demolevel" + levelNum.ToString();
         
         GameObject cur = GameObject.FindWithTag("level");
         Destroy(cur);
         GameObject house = GameObject.FindWithTag("House");
         Destroy(house);
+        
         GameObject level = Instantiate(Resources.Load(levelName, typeof(GameObject)) as GameObject);
         //Instantiate(Resources.Load("House no walls", typeof(GameObject)) as GameObject);
-        FindObjectOfType<CanvasManager>().GameScreen();
+        CanvasManager.instance.GameScreen();
     }
-    
+
+    IEnumerator LoadScene()
+    {
+        
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(1);
+
+        // Wait until the asynchronous scene fully loads
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+
+        LoadLevelPrefabs(1);
+
+    }
+
+    IEnumerator SceneLoadVarifier()
+    {
+        string levelName = "levels/Demolevel" + curLevel.ToString();
+        yield return new WaitUntil(() => SceneManager.GetActiveScene().handle == 1);
+        GameObject level = Instantiate(Resources.Load(levelName, typeof(GameObject)) as GameObject);
+    }
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void NextLevel()
+    {
+        gameOver = false;
+        curLevel++;
+        LoadLevelPrefabs(curLevel);
+    }
+
+    public void FirstLevel()
+    {
+        StartCoroutine(LoadScene());
+        //curLevel = 0;
+        //NextLevel();
+    }
 }

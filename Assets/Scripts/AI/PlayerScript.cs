@@ -100,6 +100,7 @@ public class PlayerScript : MonoBehaviour
                 updateHighlighted();
             }
         }
+        
     }
 
     private void doTask()

@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/finishedGame/OpeningScreen.unity
     guid: b0d3669d68c4bf44f940616c6d465b3c
+  - enabled: 1
+    path: Assets/Scenes/finishedGame/Kfir.unity
+    guid: 1d858bf725a23034dae58511c3b3ec2d
   - enabled: 1
     path: Assets/Scenes/finishedGame/Levels.unity
     guid: be0c6afeaa472e94ebd49f8d6ecfc7f3

@@ -8,7 +8,7 @@ public class StartMenu : MonoBehaviour
 
     public void StartPlaying()
     {
-        SceneManager.LoadScene("Levels");
+        GameManager.Instance.FirstLevel();
         //GameManager.Instance.LoadLevelPrefabs(1);
         //Instantiate(Resources.Load("levels/level1", typeof(GameObject)) as GameObject);
     }
