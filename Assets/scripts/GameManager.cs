@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Resources;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -27,7 +28,7 @@ public class GameManager : Singleton<GameManager>
     private List<(GameObject, Bounds)> fireBounds;
     private List<(Task, Bounds)> furnitureTaskBounds;
     private PlayerScript playerScript;
-    private int curLevel = 0;
+    private int curLevel = 1;
 
     
     public GameManager()
@@ -281,8 +282,20 @@ public class GameManager : Singleton<GameManager>
 
     public void FirstLevel()
     {
+        ResetVals();
         StartCoroutine(LoadScene());
-        //curLevel = 0;
-        //NextLevel();
+    }
+
+    private void ResetVals()
+    {
+        goToItem = new Dictionary<GameObject, Item>();
+        goToTask = new Dictionary<GameObject, Task>();
+        timeStarted = -1;
+        gameOver = false;
+        wallBounds = new List<Bounds>();
+        fireBounds = new List<(GameObject, Bounds)>();
+        furnitureTaskBounds = new List<(Task, Bounds)>();
+        taskCount = 0;
+        curLevel = 1;
     }
 }
