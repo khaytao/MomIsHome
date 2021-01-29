@@ -58,3 +58,8 @@ MonoBehaviour:
   timeLeft60: {fileID: 8300000, guid: d10dd44ca1d905f4087e7e9bef8559db, type: 3}
   timeLeft30: {fileID: 8300000, guid: d63d2653bdfd7b94a96ec9d313faf2e0, type: 3}
   timeLeft15: {fileID: 8300000, guid: d1778e01b94b12a4caf616ca3580e00d, type: 3}
+  BackGroundMainMenu: {fileID: 8300000, guid: 727a102452527f64a8394b56980164a0, type: 3}
+  BackGroundLevel: {fileID: 8300000, guid: 727a102452527f64a8394b56980164a0, type: 3}
+  BackGroundLevelWon: {fileID: 8300000, guid: 727a102452527f64a8394b56980164a0, type: 3}
+  BackGroundLevelLost: {fileID: 8300000, guid: 727a102452527f64a8394b56980164a0, type: 3}
+  BackGroundEndGame: {fileID: 8300000, guid: 727a102452527f64a8394b56980164a0, type: 3}

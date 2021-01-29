@@ -179,7 +179,7 @@ public class GameManager : Singleton<GameManager>
         gameOver = true;
         if (GameWon)
         {
-            FindObjectOfType<CanvasManager>().WonScreen();
+            FindObjectOfType<CanvasManager>().WonScreenFade();
         }
         else
         {
@@ -259,15 +259,9 @@ public class GameManager : Singleton<GameManager>
         }
 
         LoadLevelPrefabs(1);
-
+        SoundManager.PlaySound(AudioFileGetter.i.BackGroundLevel);
     }
-
-    IEnumerator SceneLoadVarifier()
-    {
-        string levelName = "levels/Demolevel" + curLevel.ToString();
-        yield return new WaitUntil(() => SceneManager.GetActiveScene().handle == 1);
-        GameObject level = Instantiate(Resources.Load(levelName, typeof(GameObject)) as GameObject);
-    }
+    
     public void MainMenu()
     {
         SceneManager.LoadScene(0);

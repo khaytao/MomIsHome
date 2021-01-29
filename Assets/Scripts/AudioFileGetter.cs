@@ -36,7 +36,11 @@ public class AudioFileGetter : MonoBehaviour
     public AudioClip timeLeft60;
     public AudioClip timeLeft30;
     public AudioClip timeLeft15;
-    
-    
+
+    public AudioClip BackGroundMainMenu;
+    public AudioClip BackGroundLevel;
+    public AudioClip BackGroundLevelWon;
+    public AudioClip BackGroundLevelLost;
+    public AudioClip BackGroundEndGame;
 
 }

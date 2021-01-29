@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CanvasManager : MonoBehaviour
 {
@@ -54,6 +55,26 @@ public class CanvasManager : MonoBehaviour
     {
         midgame.SetActive(false);
         won.SetActive(true);
+    }
+
+    public void WonScreenFade()
+    {
+        midgame.SetActive(false);
+        
+        Image BG_IM =  won.transform.GetChild(0).GetComponent<Image>();
+        BG_IM.color = new Color(1, 1, 1, 0);
+        won.SetActive(true);
+        StartCoroutine(FadeBackGroundIn(BG_IM));
+    }
+
+    private IEnumerator FadeBackGroundIn(Image img)
+    {
+        for (float i = 1; i >= 0; i -= Time.deltaTime)
+        {
+            // set color with i as alpha
+            img.color = new Color(1, 1, 1, i);
+            yield return null;
+        }
     }
     public void LostScreen()
     {
