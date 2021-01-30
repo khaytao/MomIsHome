@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2529913526026583778}
   m_Layer: 0
   m_Name: Lamp
-  m_TagString: Untagged
+  m_TagString: Task
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4302854924446509}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -145,7 +145,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 7
   furnitureInitBreakLevel: 0
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -184,7 +186,7 @@ GameObject:
   - component: {fileID: 2213478300283960183}
   m_Layer: 0
   m_Name: washer
-  m_TagString: Untagged
+  m_TagString: Task
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -304,7 +306,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472203937222300011}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -313,7 +315,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 22
   furnitureInitBreakLevel: 0
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -352,7 +356,7 @@ GameObject:
   - component: {fileID: 1558854205510717326}
   m_Layer: 0
   m_Name: desk
-  m_TagString: Untagged
+  m_TagString: Task
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -472,7 +476,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810806985548257912}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -481,7 +485,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 20
   furnitureInitBreakLevel: 0
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -520,7 +526,7 @@ GameObject:
   - component: {fileID: 8868916167021794863}
   m_Layer: 0
   m_Name: pot small
-  m_TagString: Untagged
+  m_TagString: Task
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -640,7 +646,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1900293728698431196}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -649,7 +655,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 16
   furnitureInitBreakLevel: 1
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -789,7 +797,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 6
   furnitureInitBreakLevel: 0
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -827,7 +837,7 @@ GameObject:
   - component: {fileID: 9142128585644534527}
   m_Layer: 0
   m_Name: mat circle
-  m_TagString: Untagged
+  m_TagString: Task
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -921,7 +931,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1976460467488470365}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -930,7 +940,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 12
   furnitureInitBreakLevel: 0
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -969,7 +981,7 @@ GameObject:
   - component: {fileID: 5554837445749006392}
   m_Layer: 0
   m_Name: pot med
-  m_TagString: Untagged
+  m_TagString: Task
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1089,7 +1101,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2264011318857448774}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -1098,7 +1110,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 17
   furnitureInitBreakLevel: 0
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -1136,7 +1150,7 @@ GameObject:
   - component: {fileID: 4099692305663322237}
   m_Layer: 0
   m_Name: towel
-  m_TagString: Untagged
+  m_TagString: Task
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1230,7 +1244,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3704980438757245680}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -1239,7 +1253,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 26
   furnitureInitBreakLevel: 2
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -2269,7 +2285,7 @@ GameObject:
   - component: {fileID: 9023534446534008197}
   m_Layer: 0
   m_Name: bed blue
-  m_TagString: Untagged
+  m_TagString: Task
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2388,7 +2404,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3917617819959714256}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -2397,7 +2413,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 14
   furnitureInitBreakLevel: 0
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -2436,7 +2454,7 @@ GameObject:
   - component: {fileID: 4581868076495691786}
   m_Layer: 0
   m_Name: shower curtain
-  m_TagString: Untagged
+  m_TagString: Task
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2555,7 +2573,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3917617820022132937}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -2564,7 +2582,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 24
   furnitureInitBreakLevel: 0
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -2603,7 +2623,7 @@ GameObject:
   - component: {fileID: 7176119936701754923}
   m_Layer: 0
   m_Name: sofa hor
-  m_TagString: Untagged
+  m_TagString: Task
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2722,7 +2742,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3917617820422217173}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -2731,7 +2751,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 21
   furnitureInitBreakLevel: 1
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -2898,7 +2920,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 3
   furnitureInitBreakLevel: 0
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -2937,7 +2961,7 @@ GameObject:
   - component: {fileID: 1682441246030441955}
   m_Layer: 0
   m_Name: PC
-  m_TagString: Untagged
+  m_TagString: Task
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3056,7 +3080,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3917617820509907610}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -3065,7 +3089,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 25
   furnitureInitBreakLevel: 0
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -3232,7 +3258,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 1
   furnitureInitBreakLevel: 1
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -3271,7 +3299,7 @@ GameObject:
   - component: {fileID: 9162416392064362627}
   m_Layer: 0
   m_Name: toilet
-  m_TagString: Untagged
+  m_TagString: Task
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3390,7 +3418,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3917617820727300824}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -3399,7 +3427,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 5
   furnitureInitBreakLevel: 0
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -3437,7 +3467,7 @@ GameObject:
   - component: {fileID: 5413467079921208670}
   m_Layer: 0
   m_Name: sink
-  m_TagString: Untagged
+  m_TagString: Task
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3531,7 +3561,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3917617820846508097}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -3540,7 +3570,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 2
   furnitureInitBreakLevel: 0
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -3681,7 +3713,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 4
   furnitureInitBreakLevel: 0
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -3719,7 +3753,7 @@ GameObject:
   - component: {fileID: 8770513599444147674}
   m_Layer: 0
   m_Name: sink (1)
-  m_TagString: Untagged
+  m_TagString: Task
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3813,7 +3847,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3917617821073777884}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -3822,7 +3856,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 2
   furnitureInitBreakLevel: 0
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -3861,7 +3897,7 @@ GameObject:
   - component: {fileID: 2477340556182868383}
   m_Layer: 0
   m_Name: tv
-  m_TagString: Untagged
+  m_TagString: Task
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3980,7 +4016,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3917617821173228428}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -3989,7 +4025,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 23
   furnitureInitBreakLevel: 0
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -4028,7 +4066,7 @@ GameObject:
   - component: {fileID: 275684734224741341}
   m_Layer: 0
   m_Name: toilet (1)
-  m_TagString: Untagged
+  m_TagString: Task
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4147,7 +4185,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3917617821200228906}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -4156,7 +4194,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 5
   furnitureInitBreakLevel: 0
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -4194,7 +4234,7 @@ GameObject:
   - component: {fileID: 521510502422939341}
   m_Layer: 0
   m_Name: mirror
-  m_TagString: Untagged
+  m_TagString: Task
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4287,7 +4327,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3917617821578913431}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -4296,7 +4336,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 27
   furnitureInitBreakLevel: 0
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -4335,7 +4377,7 @@ GameObject:
   - component: {fileID: 596300801381962855}
   m_Layer: 0
   m_Name: bed red
-  m_TagString: Untagged
+  m_TagString: Task
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4455,7 +4497,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4190420548687519930}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -4464,7 +4506,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 8
   furnitureInitBreakLevel: 1
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -4503,7 +4547,7 @@ GameObject:
   - component: {fileID: 4189134406582000478}
   m_Layer: 0
   m_Name: pot big
-  m_TagString: Untagged
+  m_TagString: Task
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4623,7 +4667,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4997787538658932678}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -4632,7 +4676,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 18
   furnitureInitBreakLevel: 0
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -4670,7 +4716,7 @@ GameObject:
   - component: {fileID: 5227020559261290836}
   m_Layer: 0
   m_Name: mat green
-  m_TagString: Untagged
+  m_TagString: Task
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4764,7 +4810,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6485008192200508564}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -4773,7 +4819,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 11
   furnitureInitBreakLevel: 0
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -4812,7 +4860,7 @@ GameObject:
   - component: {fileID: 4270910538484678035}
   m_Layer: 0
   m_Name: tub
-  m_TagString: Untagged
+  m_TagString: Task
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4932,7 +4980,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7349152632679508859}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -4941,7 +4989,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 13
   furnitureInitBreakLevel: 0
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -4980,7 +5030,7 @@ GameObject:
   - component: {fileID: 1802589768196588433}
   m_Layer: 0
   m_Name: microwave
-  m_TagString: Untagged
+  m_TagString: Task
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5100,7 +5150,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7922380080148574850}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -5109,7 +5159,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 28
   furnitureInitBreakLevel: 0
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -5277,7 +5329,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 19
   furnitureInitBreakLevel: 1
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
@@ -5445,7 +5499,9 @@ MonoBehaviour:
   type: 6
   furnitureType: 15
   furnitureInitBreakLevel: 1
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
