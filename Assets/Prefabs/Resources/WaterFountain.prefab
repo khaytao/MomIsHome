@@ -119,10 +119,13 @@ MonoBehaviour:
   type: 5
   furnitureType: 0
   furnitureInitBreakLevel: 0
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  initialDuration: 0
 --- !u!114 &5417847431984762099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8c5101d94d472443bd538abafd6f5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondsToMax: 15
+  secondsToMax: 45
 --- !u!95 &7873984872864120275
 Animator:
   serializedVersion: 3

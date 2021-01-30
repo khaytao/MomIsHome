@@ -124,11 +124,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 3
+  duration: 1.5
   type: 4
   furnitureType: 0
   furnitureInitBreakLevel: 0
+  NPCType: 0
   isFurniture: 0
+  isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}

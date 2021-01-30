@@ -118,11 +118,13 @@ public class PlayerScript : MonoBehaviour
             if (fixingTasks[0].type == TaskType.Sweep)
                 puddleScaleTaskStart = fixingTasks[0].transform.localScale;
         }
+        float elapsedPerc = (Time.time - taskStarted) / fixingTasks[0].duration;
         // puddle no longer in
         if (fixingTasks[0].type == TaskType.Sweep)
         {
             if (!fixingTasks[0].taskRenderer.bounds.Intersects(playerRenderer.bounds))
             {
+                fixingTasks[0].duration *= (1 - elapsedPerc);
                 isFixing = false;
                 _animator.SetBool("isWorking", false);
                 progressBar.gameObject.SetActive(false);
@@ -130,13 +132,12 @@ public class PlayerScript : MonoBehaviour
                 return;
             }
         }
-        
-        float elapsedPerc = (Time.time - taskStarted) / fixingTasks[0].duration;
-        
+
         // make puddle smaller
         if (fixingTasks[0].type == TaskType.Sweep)
         {
-            fixingTasks[0].transform.localScale = (1 - elapsedPerc) * puddleScaleTaskStart;
+            // goal scale is the initial scale in the inspector
+            fixingTasks[0].transform.localScale =  puddleScaleTaskStart - elapsedPerc * (puddleScaleTaskStart - new Vector3(0.045f, 0.045f));
         }
 
         _animator.SetBool("isWorking", true);
