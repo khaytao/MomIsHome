@@ -213,6 +213,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 345653274269482768, guid: ddef6f33dce894443af9b37b5d24f45f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.16999817
+      objectReference: {fileID: 0}
     - target: {fileID: 345653274686668382, guid: ddef6f33dce894443af9b37b5d24f45f,
         type: 3}
       propertyPath: m_RootOrder
@@ -273,20 +278,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasManager
       objectReference: {fileID: 0}
-    - target: {fileID: 345653274886921209, guid: ddef6f33dce894443af9b37b5d24f45f,
+    - target: {fileID: 345653274860633750, guid: ddef6f33dce894443af9b37b5d24f45f,
         type: 3}
-      propertyPath: shakeLength
-      value: 5
+      propertyPath: m_AnchoredPosition.x
+      value: -0.24000168
       objectReference: {fileID: 0}
-    - target: {fileID: 345653274886921209, guid: ddef6f33dce894443af9b37b5d24f45f,
+    - target: {fileID: 345653274886921210, guid: ddef6f33dce894443af9b37b5d24f45f,
         type: 3}
-      propertyPath: gameTimeFactor
-      value: 60
+      propertyPath: m_LocalPosition.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 345653274886921209, guid: ddef6f33dce894443af9b37b5d24f45f,
+    - target: {fileID: 345653274886921210, guid: ddef6f33dce894443af9b37b5d24f45f,
         type: 3}
-      propertyPath: gameDurationMinutes
-      value: 100
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddef6f33dce894443af9b37b5d24f45f, type: 3}

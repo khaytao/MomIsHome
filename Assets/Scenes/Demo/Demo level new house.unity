@@ -151,6 +151,11 @@ PrefabInstance:
       propertyPath: duration
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1425715214743220959, guid: 444fd3037b421c743ab71b149258fe72,
+        type: 3}
+      propertyPath: furnitureInitBreakLevel
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1690429572937499813, guid: 444fd3037b421c743ab71b149258fe72,
         type: 3}
       propertyPath: duration
@@ -753,6 +758,11 @@ PrefabInstance:
       propertyPath: camOver
       value: 
       objectReference: {fileID: 1313723476}
+    - target: {fileID: 1160415201367262989, guid: e5c56030de7f53e4aaf5f9bef9c7eca0,
+        type: 3}
+      propertyPath: m_Name
+      value: Fire (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 2809711408836645570, guid: e5c56030de7f53e4aaf5f9bef9c7eca0,
         type: 3}
       propertyPath: m_Name
