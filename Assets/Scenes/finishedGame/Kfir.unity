@@ -273,6 +273,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasManager
       objectReference: {fileID: 0}
+    - target: {fileID: 345653274886921209, guid: ddef6f33dce894443af9b37b5d24f45f,
+        type: 3}
+      propertyPath: shakeLength
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 345653274886921209, guid: ddef6f33dce894443af9b37b5d24f45f,
+        type: 3}
+      propertyPath: gameTimeFactor
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 345653274886921209, guid: ddef6f33dce894443af9b37b5d24f45f,
+        type: 3}
+      propertyPath: gameDurationMinutes
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddef6f33dce894443af9b37b5d24f45f, type: 3}
 --- !u!1001 &3190566306687742949
@@ -414,7 +429,7 @@ PrefabInstance:
     - target: {fileID: 7515789967485159428, guid: 798601f1de9901946a7b51ad7c85b7d1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 798601f1de9901946a7b51ad7c85b7d1, type: 3}
