@@ -30,7 +30,6 @@ public class FountainScript : MonoBehaviour
         if (!puddle)
         {
             puddle = Instantiate(Resources.Load("Puddle")) as GameObject;
-            GameManager.Instance.addToTaskCount(1);
             // position
             puddleRenderer = puddle.GetComponent<SpriteRenderer>();
             puddleTask = puddle.GetComponent<Task>();

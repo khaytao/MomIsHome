@@ -105,12 +105,13 @@ public class GameManager : Singleton<GameManager>
     public void addToTaskCount(int num)
     {
         taskCount += num;
+        Debug.Log(taskCount);
     }
 
     public void addItem(Item item)
     {
         if (item.forTaskType == TaskType.Trash)
-            taskCount++;
+            addToTaskCount(1);
         goToItem.Add(item.gameObject, item);
     }
 
@@ -128,8 +129,8 @@ public class GameManager : Singleton<GameManager>
 
     public void addTask(Task task)
     {
-        if(task.type != TaskType.Trash && task.type != TaskType.Furniture)
-            taskCount++;
+        if (task.type != TaskType.Trash && task.type != TaskType.Furniture)
+            addToTaskCount(1);
 
         if (task.type == TaskType.Furniture)
         {
@@ -213,7 +214,7 @@ public class GameManager : Singleton<GameManager>
         //Destroy(holdingItem.gameObject);
         //holdingItem.transform.parent = null;
         //holdingItem = null;
-        taskCount--;
+        addToTaskCount(-1);
         areTasksOver();
     }
 
