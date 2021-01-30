@@ -17,13 +17,12 @@ public class PlayerScript : MonoBehaviour
     public float mashingReduce;
     private float _angle = 0;
     private Item holdingItem;
-    private Task holdingBin;
+    [HideInInspector] public Task holdingBin;
     private Item curItem;
     private List<Task> curTasks;
     private List<Task> fixingTasks;
     private float taskStarted;
     [HideInInspector] public bool isFixing;
-    private bool isHoldingBin;
     private List<Task> highlightedTasks;
     private Item highlightedItem;
     private Vector3 puddleScaleTaskStart;

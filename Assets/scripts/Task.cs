@@ -106,13 +106,12 @@ public class Task : MonoBehaviour, IComparable<Task>
     {
     }
 
-    public bool canFix(Item item)
+    public bool canFix(Item heldItem)
     {
-        if (type == TaskType.NPC)
-        {
+        if (type == TaskType.NPC && !heldItem && !GameManager.Instance.getPlayerScript().holdingBin)
             return true;
-        }
-        if (!item)
+
+        if (!heldItem)
             return false;
         
         // furniture has been damaged
@@ -123,7 +122,7 @@ public class Task : MonoBehaviour, IComparable<Task>
             if (GameManager.Instance.isInFire(taskBounds))
                 return false;
         }
-        return type == item.forTaskType;
+        return type == heldItem.forTaskType;
     }
 
     public Item finishFix(Item item)
