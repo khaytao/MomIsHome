@@ -151,7 +151,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1795343319
   m_SortingLayer: 1
-  m_SortingOrder: 10
+  m_SortingOrder: 0
   m_Sprite: {fileID: -779330576612496733, guid: 2c3e5a65beda9204a981d9c0ec6da054,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -261,6 +261,7 @@ MonoBehaviour:
   goal_threshold: 0.1
   speed: 7
   mashingReduce: 0
+  holdingBin: {fileID: 0}
   isFixing: 0
   wallBounce: 1
 --- !u!1 &6024619424947287166

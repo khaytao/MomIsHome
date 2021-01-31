@@ -289,6 +289,7 @@ public class GameManager : Singleton<GameManager>
     public void FirstLevel()
     {
         ResetVals();
+        curLevel = 1;
         StartCoroutine(LoadScene());
     }
 
@@ -302,6 +303,5 @@ public class GameManager : Singleton<GameManager>
         fireBounds = new List<(GameObject, Bounds)>();
         furnitureTaskBounds = new List<(Task, Bounds)>();
         taskCount = 0;
-        curLevel = 1;
     }
 }
