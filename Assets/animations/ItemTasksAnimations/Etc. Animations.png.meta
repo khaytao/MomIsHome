@@ -1,0 +1,1630 @@
+fileFormatVersion: 2
+guid: 9362bbc3504462c449a7c3d0cb6d6a06
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8369094583962844221
+    second: Etc. Animations_0
+  - first:
+      213: 4779499909073154900
+    second: Etc. Animations_1
+  - first:
+      213: 3336296326906600122
+    second: Etc. Animations_2
+  - first:
+      213: -459490759142104667
+    second: Etc. Animations_3
+  - first:
+      213: 1086152768733369125
+    second: Etc. Animations_4
+  - first:
+      213: -5495047595809147986
+    second: Etc. Animations_5
+  - first:
+      213: -7857946884819796555
+    second: Etc. Animations_6
+  - first:
+      213: -1107305908929978546
+    second: Etc. Animations_7
+  - first:
+      213: -5564326009617337558
+    second: Etc. Animations_8
+  - first:
+      213: 1625423827020996270
+    second: Etc. Animations_9
+  - first:
+      213: 3850271918048273092
+    second: Etc. Animations_10
+  - first:
+      213: 8821470841970938637
+    second: Etc. Animations_11
+  - first:
+      213: 8605288676460963765
+    second: Etc. Animations_12
+  - first:
+      213: -2916038507637528643
+    second: Etc. Animations_13
+  - first:
+      213: 4760684194102047651
+    second: Etc. Animations_14
+  - first:
+      213: 7528960974103521400
+    second: Etc. Animations_15
+  - first:
+      213: -6059345323434134444
+    second: Etc. Animations_16
+  - first:
+      213: 5331199865268042358
+    second: Etc. Animations_17
+  - first:
+      213: 7710467437873040816
+    second: Etc. Animations_18
+  - first:
+      213: 1323941591230717041
+    second: Etc. Animations_19
+  - first:
+      213: -4919475229972195141
+    second: Etc. Animations_20
+  - first:
+      213: -3288201087563633034
+    second: Etc. Animations_21
+  - first:
+      213: 2932713794816167133
+    second: Etc. Animations_22
+  - first:
+      213: 7065953929808631971
+    second: Etc. Animations_23
+  - first:
+      213: 2686072343067228514
+    second: Etc. Animations_24
+  - first:
+      213: 1113831519963335809
+    second: Etc. Animations_25
+  - first:
+      213: 7058183814244253894
+    second: Etc. Animations_26
+  - first:
+      213: 8674008868376516059
+    second: Etc. Animations_27
+  - first:
+      213: 4379842162824308388
+    second: Etc. Animations_28
+  - first:
+      213: 1572011950046876045
+    second: Etc. Animations_29
+  - first:
+      213: -147521022474794802
+    second: Etc. Animations_30
+  - first:
+      213: -5585943313445559093
+    second: Etc. Animations_31
+  - first:
+      213: -3858453687590346627
+    second: Etc. Animations_32
+  - first:
+      213: -5669607706397784586
+    second: Etc. Animations_33
+  - first:
+      213: -6951754555066318654
+    second: Etc. Animations_34
+  - first:
+      213: 3966050039391738696
+    second: Etc. Animations_35
+  - first:
+      213: -5472715346830755939
+    second: Etc. Animations_36
+  - first:
+      213: -151293788226840137
+    second: Etc. Animations_37
+  - first:
+      213: 7731849288479735843
+    second: Etc. Animations_38
+  - first:
+      213: 7174169349322786484
+    second: Etc. Animations_39
+  - first:
+      213: 1392220551365006557
+    second: Etc. Animations_40
+  - first:
+      213: 6246962377321550609
+    second: Etc. Animations_41
+  - first:
+      213: 4956359157139682807
+    second: Etc. Animations_42
+  - first:
+      213: 1845936057883913213
+    second: Etc. Animations_43
+  - first:
+      213: 3117933026444131077
+    second: Etc. Animations_44
+  - first:
+      213: -5485024160605341110
+    second: Etc. Animations_45
+  - first:
+      213: 2335136640952616749
+    second: Etc. Animations_46
+  - first:
+      213: 4145824866536398679
+    second: Etc. Animations_47
+  - first:
+      213: -856448587075470261
+    second: Etc. Animations_48
+  - first:
+      213: -2499230301466378865
+    second: Etc. Animations_49
+  - first:
+      213: -4168083412978184607
+    second: Etc. Animations_50
+  - first:
+      213: 2244188602574621777
+    second: Etc. Animations_51
+  - first:
+      213: 5205280111684218463
+    second: Etc. Animations_52
+  - first:
+      213: -4313435067167313215
+    second: Etc. Animations_53
+  - first:
+      213: -6024590662415390163
+    second: Etc. Animations_54
+  - first:
+      213: -7695177337365251467
+    second: Etc. Animations_55
+  - first:
+      213: -874040224947199655
+    second: Etc. Animations_56
+  - first:
+      213: -606773744092918916
+    second: Etc. Animations_57
+  - first:
+      213: -1344261347351516320
+    second: Etc. Animations_58
+  - first:
+      213: -8916356069171523722
+    second: Etc. Animations_59
+  - first:
+      213: 1920133018548904116
+    second: Etc. Animations_60
+  - first:
+      213: -8093867389077563738
+    second: Etc. Animations_61
+  - first:
+      213: -9002474283466758947
+    second: Etc. Animations_62
+  - first:
+      213: 7853299075716589931
+    second: Etc. Animations_63
+  - first:
+      213: -4793996693839896645
+    second: Etc. Animations_64
+  - first:
+      213: -8847880641672484724
+    second: Etc. Animations_65
+  - first:
+      213: -7127039828917246189
+    second: Etc. Animations_66
+  - first:
+      213: -8759254122797185853
+    second: Etc. Animations_67
+  - first:
+      213: -7442671830950444609
+    second: Etc. Animations_68
+  - first:
+      213: 7785811734190233859
+    second: Etc. Animations_69
+  - first:
+      213: -5027023518268805349
+    second: Etc. Animations_70
+  - first:
+      213: 1086095463255201306
+    second: Etc. Animations_71
+  - first:
+      213: -6685092034860253043
+    second: Etc. Animations_72
+  - first:
+      213: -1056861069841707736
+    second: Etc. Animations_73
+  - first:
+      213: 3131366303338769887
+    second: Etc. Animations_74
+  - first:
+      213: -1172552288521153096
+    second: Etc. Animations_75
+  - first:
+      213: 3019098063521770041
+    second: Etc. Animations_76
+  - first:
+      213: -3113203407933379689
+    second: Etc. Animations_77
+  - first:
+      213: -5563817796222762806
+    second: Etc. Animations_78
+  - first:
+      213: -6982440419743084218
+    second: Etc. Animations_79
+  - first:
+      213: 191107342063059237
+    second: Etc. Animations_80
+  - first:
+      213: 6527231659200176346
+    second: Etc. Animations_81
+  - first:
+      213: 6557255742346491620
+    second: Etc. Animations_82
+  - first:
+      213: 6172475413166895323
+    second: Etc. Animations_83
+  - first:
+      213: 495005058605174122
+    second: Etc. Animations_84
+  - first:
+      213: -7039401754043884496
+    second: Etc. Animations_85
+  - first:
+      213: 3242363784676095005
+    second: Etc. Animations_86
+  - first:
+      213: 1039536834594499934
+    second: Etc. Animations_87
+  - first:
+      213: 9214807664617828863
+    second: Etc. Animations_88
+  - first:
+      213: -8166382972696794326
+    second: Etc. Animations_89
+  - first:
+      213: 9176874072869346948
+    second: Etc. Animations_90
+  - first:
+      213: -7911091230867356309
+    second: Etc. Animations_91
+  - first:
+      213: 6042693727667319239
+    second: Etc. Animations_92
+  - first:
+      213: -2053381123539468656
+    second: Etc. Animations_93
+  - first:
+      213: -5046235403178667229
+    second: Etc. Animations_94
+  - first:
+      213: 8240091704161004790
+    second: Etc. Animations_95
+  - first:
+      213: 7701477190123750897
+    second: Etc. Animations_96
+  - first:
+      213: 7151003912382623325
+    second: Etc. Animations_97
+  - first:
+      213: -3133880120689174842
+    second: Etc. Animations_98
+  - first:
+      213: -1890069629785251883
+    second: Etc. Animations_99
+  - first:
+      213: -6383070189905787391
+    second: Etc. Animations_100
+  - first:
+      213: -190516504964876056
+    second: Etc. Animations_101
+  - first:
+      213: -1323235114643172923
+    second: Etc. Animations_102
+  - first:
+      213: 9219362070881333461
+    second: Etc. Animations_103
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Etc. Animations_0
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 6473
+        width: 2243
+        height: 2109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c3cf3731d00bdb80800000000000000
+      internalID: -8369094583962844221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_1
+      rect:
+        serializedVersion: 2
+        x: 2512
+        y: 6475
+        width: 2244
+        height: 2107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 453315c28d1345240800000000000000
+      internalID: 4779499909073154900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_2
+      rect:
+        serializedVersion: 2
+        x: 4869
+        y: 6475
+        width: 2243
+        height: 2107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba55b635d7ec4e20800000000000000
+      internalID: 3336296326906600122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_3
+      rect:
+        serializedVersion: 2
+        x: 7306
+        y: 6473
+        width: 2245
+        height: 2109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a1a2cbc69f8f99f0800000000000000
+      internalID: -459490759142104667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_4
+      rect:
+        serializedVersion: 2
+        x: 9826
+        y: 6475
+        width: 2244
+        height: 2107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 523d820403ac21f00800000000000000
+      internalID: 1086152768733369125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_6
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 4403
+        width: 2236
+        height: 1945
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bdbd6201f6f2f290800000000000000
+      internalID: -7857946884819796555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_8
+      rect:
+        serializedVersion: 2
+        x: 2522
+        y: 4403
+        width: 2236
+        height: 1945
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a23ba4ea9fa87c2b0800000000000000
+      internalID: -5564326009617337558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_9
+      rect:
+        serializedVersion: 2
+        x: 4872
+        y: 4403
+        width: 2236
+        height: 1945
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaeda0bdb5aae8610800000000000000
+      internalID: 1625423827020996270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_11
+      rect:
+        serializedVersion: 2
+        x: 7315
+        y: 4403
+        width: 2236
+        height: 1945
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03d42c1ef82c6a70800000000000000
+      internalID: 8821470841970938637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_13
+      rect:
+        serializedVersion: 2
+        x: 9832
+        y: 4407
+        width: 2236
+        height: 1945
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db7a7e85d662887d0800000000000000
+      internalID: -2916038507637528643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_14
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 2983
+        width: 693
+        height: 1202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a3f4452d09511240800000000000000
+      internalID: 4760684194102047651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_15
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 2991
+        width: 666
+        height: 1202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8782835ad1e3c7860800000000000000
+      internalID: 7528960974103521400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_16
+      rect:
+        serializedVersion: 2
+        x: 1897
+        y: 2965
+        width: 694
+        height: 1202
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 454b8493881e8eba0800000000000000
+      internalID: -6059345323434134444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_17
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 3055
+        width: 1408
+        height: 1256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a79e3180a3cf940800000000000000
+      internalID: 5331199865268042358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_18
+      rect:
+        serializedVersion: 2
+        x: 4261
+        y: 3069
+        width: 1408
+        height: 1230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd83ae6845110b60800000000000000
+      internalID: 7710467437873040816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_20
+      rect:
+        serializedVersion: 2
+        x: 5805
+        y: 3042
+        width: 1395
+        height: 1257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb89c24c7538abbb0800000000000000
+      internalID: -4919475229972195141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_30
+      rect:
+        serializedVersion: 2
+        x: 10513
+        y: 1831
+        width: 739
+        height: 1905
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2472974}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec8cc726966e3fdf0800000000000000
+      internalID: -147521022474794802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_31
+      rect:
+        serializedVersion: 2
+        x: 11419
+        y: 1836
+        width: 739
+        height: 1905
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2472974}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc4eb9ae62eba72b0800000000000000
+      internalID: -5585943313445559093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_32
+      rect:
+        serializedVersion: 2
+        x: 12292
+        y: 1831
+        width: 739
+        height: 1905
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2472974}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d70a1e860d4047ac0800000000000000
+      internalID: -3858453687590346627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_33
+      rect:
+        serializedVersion: 2
+        x: 7641
+        y: 1831
+        width: 675
+        height: 1895
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2472974}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f5c75474d18151b0800000000000000
+      internalID: -5669607706397784586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_35
+      rect:
+        serializedVersion: 2
+        x: 8549
+        y: 1831
+        width: 675
+        height: 1895
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2472974}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b5e5f6f7d3a0730800000000000000
+      internalID: 3966050039391738696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_36
+      rect:
+        serializedVersion: 2
+        x: 9419
+        y: 1831
+        width: 675
+        height: 1895
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2472974}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d97f25343620d04b0800000000000000
+      internalID: -5472715346830755939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_42
+      rect:
+        serializedVersion: 2
+        x: 2746
+        y: 1712
+        width: 1380
+        height: 1209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f5b09cb46688c440800000000000000
+      internalID: 4956359157139682807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_43
+      rect:
+        serializedVersion: 2
+        x: 4255
+        y: 1731
+        width: 1420
+        height: 1185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfb614080151e9910800000000000000
+      internalID: 1845936057883913213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_44
+      rect:
+        serializedVersion: 2
+        x: 5810
+        y: 1738
+        width: 1386
+        height: 1171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b39aa619f154b20800000000000000
+      internalID: 3117933026444131077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_45
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1831
+        width: 695
+        height: 1149
+      alignment: 9
+      pivot: {x: 0.5, y: 0.36}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4afeaa369741e3b0800000000000000
+      internalID: -5485024160605341110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_47
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 1831
+        width: 695
+        height: 1156
+      alignment: 9
+      pivot: {x: 0.5, y: 0.36}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f12e620cde88930800000000000000
+      internalID: 4145824866536398679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_48
+      rect:
+        serializedVersion: 2
+        x: 1897
+        y: 1831
+        width: 695
+        height: 1161
+      alignment: 9
+      pivot: {x: 0.5, y: 0.36}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4c3bf63c884d14f0800000000000000
+      internalID: -856448587075470261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_64
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 911
+        width: 605
+        height: 727
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf9649186d487db0800000000000000
+      internalID: -4793996693839896645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_65
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 932
+        width: 702
+        height: 705
+      alignment: 9
+      pivot: {x: 0.5374182, y: 0.4380205}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c886e0a3f63063580800000000000000
+      internalID: -8847880641672484724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_67
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 931
+        width: 702
+        height: 705
+      alignment: 9
+      pivot: {x: 0.5563787, y: 0.44026884}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c44c49a8c0e07680800000000000000
+      internalID: -8759254122797185853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_68
+      rect:
+        serializedVersion: 2
+        x: 2502
+        y: 930
+        width: 702
+        height: 705
+      alignment: 9
+      pivot: {x: 0.56197834, y: 0.44145024}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb18468176156b890800000000000000
+      internalID: -7442671830950444609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_70
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 931
+        width: 702
+        height: 705
+      alignment: 9
+      pivot: {x: 0.58397114, y: 0.44004253}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1fad049ebc6c3ab0800000000000000
+      internalID: -5027023518268805349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_71
+      rect:
+        serializedVersion: 2
+        x: 4061
+        y: 931
+        width: 702
+        height: 705
+      alignment: 9
+      pivot: {x: 0.6221746, y: 0.4398299}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a165d77c116921f00800000000000000
+      internalID: 1086095463255201306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_72
+      rect:
+        serializedVersion: 2
+        x: 4869
+        y: 930
+        width: 702
+        height: 705
+      alignment: 9
+      pivot: {x: 0.56545544, y: 0.44155464}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d808c53a638c933a0800000000000000
+      internalID: -6685092034860253043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_73
+      rect:
+        serializedVersion: 2
+        x: 5684
+        y: 937
+        width: 639
+        height: 575
+      alignment: 9
+      pivot: {x: 0.68215334, y: 0.47142175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82d452bd4764551f0800000000000000
+      internalID: -1056861069841707736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_74
+      rect:
+        serializedVersion: 2
+        x: 6484
+        y: 937
+        width: 634
+        height: 555
+      alignment: 9
+      pivot: {x: 0.67854995, y: 0.4884858}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdda22cef09d47b20800000000000000
+      internalID: 3131366303338769887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_75
+      rect:
+        serializedVersion: 2
+        x: 7304
+        y: 937
+        width: 675
+        height: 609
+      alignment: 9
+      pivot: {x: 0.639979, y: 0.4445358}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b51022f7e14abfe0800000000000000
+      internalID: -1172552288521153096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_76
+      rect:
+        serializedVersion: 2
+        x: 12222
+        y: 175
+        width: 490
+        height: 1437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ae84261bdf5e920800000000000000
+      internalID: 3019098063521770041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_77
+      rect:
+        serializedVersion: 2
+        x: 12831
+        y: 110
+        width: 543
+        height: 1492
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79b6894befdabc4d0800000000000000
+      internalID: -3113203407933379689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_78
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 202
+        width: 470
+        height: 582
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac04525513959c2b0800000000000000
+      internalID: -5563817796222762806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_81
+      rect:
+        serializedVersion: 2
+        x: 2502
+        y: 163
+        width: 702
+        height: 705
+      alignment: 9
+      pivot: {x: 0.56171054, y: 0.40143034}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad06f4d7c92659a50800000000000000
+      internalID: 6527231659200176346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_83
+      rect:
+        serializedVersion: 2
+        x: 3301
+        y: 162
+        width: 702
+        height: 705
+      alignment: 9
+      pivot: {x: 0.57371724, y: 0.40422922}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd035a26fa909a550800000000000000
+      internalID: 6172475413166895323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_84
+      rect:
+        serializedVersion: 2
+        x: 4061
+        y: 165
+        width: 702
+        height: 705
+      alignment: 9
+      pivot: {x: 0.6126789, y: 0.39975232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6dce286a7c9ed600800000000000000
+      internalID: 495005058605174122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_85
+      rect:
+        serializedVersion: 2
+        x: 4869
+        y: 167
+        width: 702
+        height: 705
+      alignment: 9
+      pivot: {x: 0.5653984, y: 0.39672834}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03cd3faa6650f4e90800000000000000
+      internalID: -7039401754043884496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_86
+      rect:
+        serializedVersion: 2
+        x: 7311
+        y: 239
+        width: 672
+        height: 563
+      alignment: 9
+      pivot: {x: 0.6406039, y: 0.39216948}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d14b532fea03ffc20800000000000000
+      internalID: 3242363784676095005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_87
+      rect:
+        serializedVersion: 2
+        x: 8122
+        y: 620
+        width: 817
+        height: 337
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d60fc4e3d2d6e00800000000000000
+      internalID: 1039536834594499934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_88
+      rect:
+        serializedVersion: 2
+        x: 9092
+        y: 182
+        width: 535
+        height: 887
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff1b713bfb291ef70800000000000000
+      internalID: 9214807664617828863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_89
+      rect:
+        serializedVersion: 2
+        x: 9734
+        y: 156
+        width: 598
+        height: 938
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2beb9424fd2bae80800000000000000
+      internalID: -8166382972696794326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_90
+      rect:
+        serializedVersion: 2
+        x: 10528
+        y: 156
+        width: 675
+        height: 880
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48e9edd195eca5f70800000000000000
+      internalID: 9176874072869346948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_91
+      rect:
+        serializedVersion: 2
+        x: 11337
+        y: 123
+        width: 732
+        height: 939
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b658176b078263290800000000000000
+      internalID: -7911091230867356309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_92
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 165
+        width: 702
+        height: 705
+      alignment: 9
+      pivot: {x: 0.53954315, y: 0.39947203}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c177140ee5fbd350800000000000000
+      internalID: 6042693727667319239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_93
+      rect:
+        serializedVersion: 2
+        x: 1712
+        y: 165
+        width: 702
+        height: 705
+      alignment: 9
+      pivot: {x: 0.54591686, y: 0.39926827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09effe65fbce083e0800000000000000
+      internalID: -2053381123539468656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_95
+      rect:
+        serializedVersion: 2
+        x: 5682
+        y: 232
+        width: 642
+        height: 544
+      alignment: 9
+      pivot: {x: 0.68059105, y: 0.41944897}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fce82f3fbfaa5270800000000000000
+      internalID: 8240091704161004790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_98
+      rect:
+        serializedVersion: 2
+        x: 6494
+        y: 232
+        width: 642
+        height: 544
+      alignment: 9
+      pivot: {x: 0.6542847, y: 0.41944897}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6d9ad52a83284d0800000000000000
+      internalID: -3133880120689174842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Etc. Animations_103
+      rect:
+        serializedVersion: 2
+        x: 8158
+        y: 197
+        width: 761
+        height: 290
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d0779a05f0c1ff70800000000000000
+      internalID: 9219362070881333461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
