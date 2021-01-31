@@ -111,7 +111,10 @@ public class GameManager : Singleton<GameManager>
     public void addItem(Item item)
     {
         if (item.forTaskType == TaskType.Trash)
+        {
+            //Debug.Log(item.name);
             addToTaskCount(1);
+        }
         goToItem.Add(item.gameObject, item);
     }
 
@@ -130,8 +133,10 @@ public class GameManager : Singleton<GameManager>
     public void addTask(Task task)
     {
         if (task.type != TaskType.Trash && task.type != TaskType.Furniture)
+        {
+            //Debug.Log(task.name);
             addToTaskCount(1);
-
+        }
         if (task.type == TaskType.Furniture)
         {
             Bounds furnitureBounds = task.GetComponent<SpriteRenderer>().bounds;
@@ -139,7 +144,7 @@ public class GameManager : Singleton<GameManager>
             if(isInFire(furnitureBounds))
                 task.burnFurniture();
         }
-
+        
         goToTask.Add(task.gameObject, task);
     }
 
@@ -180,19 +185,23 @@ public class GameManager : Singleton<GameManager>
         gameOver = true;
         if (GameWon)
         {
-            FindObjectOfType<CanvasManager>().WonScreenFade();
+            AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevelWon);
+            CanvasManager.instance.WonScreenFade();
         }
         else
         {
-            FindObjectOfType<CanvasManager>().LostScreen();
+            AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevelWon);
+            CanvasManager.instance.LostScreen();
         }
         
     }
 
     public void reloadLevel()
     {
-        gameOver = false;
+        ResetVals();
         LoadLevelPrefabs(curLevel);
+        CanvasManager.instance.ResetClock();
+        AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevel);
     }
 
     public void areTasksOver()
@@ -236,7 +245,7 @@ public class GameManager : Singleton<GameManager>
             Destroy(item);
         }
 
-        string levelName = "levels/Demolevel" + levelNum.ToString();
+        string levelName = "levels/Demolevel " + levelNum;
         
         GameObject cur = GameObject.FindWithTag("level");
         Destroy(cur);
@@ -260,7 +269,8 @@ public class GameManager : Singleton<GameManager>
         }
 
         LoadLevelPrefabs(1);
-        SoundManager.PlaySound(AudioFileGetter.i.BackGroundLevel);
+        //SoundManager.PlayBackGround(AudioFileGetter.i.BackGroundLevel);
+        AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevel);
     }
     
     public void MainMenu()
@@ -270,9 +280,10 @@ public class GameManager : Singleton<GameManager>
 
     public void NextLevel()
     {
-        gameOver = false;
+        ResetVals();
         curLevel++;
         LoadLevelPrefabs(curLevel);
+        AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevel);
     }
 
     public void FirstLevel()

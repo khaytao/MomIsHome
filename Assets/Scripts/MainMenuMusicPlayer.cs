@@ -7,6 +7,6 @@ public class MainMenuMusicPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SoundManager.PlayBackGround(AudioFileGetter.i.BackGroundMainMenu);
+        AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundMainMenu);
     }
 }

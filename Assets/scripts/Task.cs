@@ -101,11 +101,7 @@ public class Task : MonoBehaviour, IComparable<Task>
             animator.SetInteger("NPC", (int) NPCType);
         }
     }
-
-    private void Update()
-    {
-    }
-
+    
     public bool canFix(Item heldItem)
     {
         if (type == TaskType.NPC && !heldItem && !GameManager.Instance.getPlayerScript().holdingBin)

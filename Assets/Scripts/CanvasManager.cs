@@ -10,6 +10,8 @@ public class CanvasManager : MonoBehaviour
     public GameObject lost;
     public GameObject won;
     public GameObject pause;
+
+    public GameObject clock;
     
     public static bool isPaused;
     public float menuDelay;
@@ -76,10 +78,21 @@ public class CanvasManager : MonoBehaviour
             yield return null;
         }
     }
+    
+    public void LostScreenFade()
+    {
+        midgame.SetActive(false);
+        
+        Image BG_IM =  lost.transform.GetChild(0).GetComponent<Image>();
+        BG_IM.color = new Color(1, 1, 1, 0);
+        won.SetActive(true);
+        StartCoroutine(FadeBackGroundIn(BG_IM));
+    }
+
     public void LostScreen()
     {
+        midgame.SetActive(false);
         lost.SetActive(true);
-
     }
 
     public void Pause()
@@ -111,5 +124,10 @@ public class CanvasManager : MonoBehaviour
                 Invoke(nameof(Pause), menuDelay);
             }
         }
+    }
+
+    public void ResetClock()
+    {
+        clock = Instantiate(Resources.Load("utils/AudioFileGetter")) as GameObject;
     }
 }

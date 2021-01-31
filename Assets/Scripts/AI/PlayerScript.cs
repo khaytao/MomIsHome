@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {
+    
     public Slider progressBar;
     public KeyCode interactKey;
     private Rigidbody2D _rb;
@@ -64,7 +65,7 @@ public class PlayerScript : MonoBehaviour
         {
             if (holdingBin)
             {
-                holdingBin.transform.parent = null;
+                holdingBin.transform.parent = transform.parent;;
                 holdingBin.gameObject.SetActive(true);
                 holdingBin = null;
                 _animator.SetInteger("HoldingItem", 0);
@@ -76,7 +77,7 @@ public class PlayerScript : MonoBehaviour
                 {
                     _animator.SetInteger("HoldingItem", 0);
                     holdingItem.gameObject.SetActive(true);
-                    holdingItem.transform.parent = null;
+                    holdingItem.transform.parent = transform.parent;
                     holdingItem = null;
                 }
                 if(highlightedTasks.Count > 0 && highlightedTasks[0].type == TaskType.Trash)
