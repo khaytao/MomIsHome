@@ -157,8 +157,8 @@ public class CanvasManager : MonoBehaviour
             return;
         }
         
-        Alexa.gameObject.SetActive(true);
-        Alexa.Find("Text").GetComponent<TMP_Text>().text = txt;
+        // Alexa.gameObject.SetActive(true);
+        // Alexa.Find("Text").GetComponent<TMP_Text>().text = txt;
         
     }
     

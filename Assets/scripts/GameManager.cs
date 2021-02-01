@@ -28,6 +28,7 @@ public class GameManager : Singleton<GameManager>
     private List<(GameObject, Bounds)> fireBounds;
     private List<(Task, Bounds)> furnitureTaskBounds;
     private PlayerScript playerScript;
+    private TimeScript clockScript;
     private int curLevel = 1;
 
     public bool TrashCanOnFire = false;
@@ -67,6 +68,11 @@ public class GameManager : Singleton<GameManager>
         fireBounds = new List<(GameObject, Bounds)>();
         furnitureTaskBounds = new List<(Task, Bounds)>();
         taskCount = 0;
+    }
+
+    public void setClock(TimeScript clock)
+    {
+        clockScript = clock;
     }
     
     public PlayerScript getPlayerScript()
@@ -364,6 +370,9 @@ public class GameManager : Singleton<GameManager>
         fireBounds = new List<(GameObject, Bounds)>();
         furnitureTaskBounds = new List<(Task, Bounds)>();
         taskCount = 0;
+        timeStarted = -1;
+        if(clockScript)
+            clockScript.resetClock();
     }
 
     public bool isAlexaPlaying;

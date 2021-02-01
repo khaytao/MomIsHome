@@ -18,8 +18,6 @@ public class TimeScript : MonoBehaviour
     public float volumeScaleEnd;
     
     public float speed;
-    public float amount;
-    private Vector3 A0;
     // 360 / 60
     private float anglePerMinute = 6;
     // 360 / 60 / 12
@@ -37,8 +35,16 @@ public class TimeScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameManager.Instance.setClock(this);
         goalHourAngle = -90 * Vector3.forward;
 
+        resetClock();
+        
+        AudioManager.i.InitClockSound(AudioFileGetter.i.clock, volumeScaleIdle);
+    }
+
+    public void resetClock()
+    {
         Vector3 hourAngle = goalHourAngle;
         hourAngle += gameDurationMinutes * hourAnglePerMinute * Vector3.forward;
         hourHand.transform.eulerAngles = hourAngle;
@@ -47,10 +53,7 @@ public class TimeScript : MonoBehaviour
         minuteAngle += (gameDurationMinutes % 60) * anglePerMinute * Vector3.forward;
         minuteHand.transform.eulerAngles = minuteAngle;
         
-        A0 = transform.position;
         shakeStarted = -1;
-        
-        AudioManager.i.InitClockSound(AudioFileGetter.i.clock, volumeScaleIdle);
     }
 
     // Update is called once per frame
@@ -75,12 +78,13 @@ public class TimeScript : MonoBehaviour
         if (shakeStarted >= 0 && elapsedTime - shakeStarted < shakeLength)
         {
             float shake_x = Mathf.Sin(speed * Time.time) * shakeForce;
-            transform.position = A0 + new Vector3(shake_x,  0, 0);
+            transform.position = new Vector3(shake_x,  transform.position.y, 0);
             return;
         }
+        
 
         float timeLeft = GetSecondsLeft();
-        transform.position = A0;
+        
         // 90 seconds left
         if (timeLeft <= 90 && timeLeft >= 90 - shakeLength)
             startShake(1, AudioFileGetter.i.timeLeft90);
