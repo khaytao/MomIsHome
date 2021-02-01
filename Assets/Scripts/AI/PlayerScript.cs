@@ -55,52 +55,62 @@ public class PlayerScript : MonoBehaviour
         {
             _goal = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }*/
-        
+
+        if (Input.GetKeyDown(interactKey))
+        {
+            handleInteract();
+        }
+    }
+
+    private void handleInteract()
+    {
         if (Input.GetKeyDown(interactKey) && highlightedTasks.Count > 0 && highlightedTasks[0].canFix(holdingItem))
         {
             fixingTasks = new List<Task>(highlightedTasks);
             doTask();
-        }
-        else if (Input.GetKeyDown(interactKey))
-        {
-            if (holdingBin)
-            {
-                holdingBin.transform.parent = transform.parent;;
-                holdingBin.gameObject.SetActive(true);
-                holdingBin = null;
-                _animator.SetInteger("HoldingItem", 0);
-                updateHighlighted();
-            }
-            else
-            {
-                if (holdingItem)
-                {
-                    _animator.SetInteger("HoldingItem", 0);
-                    holdingItem.gameObject.SetActive(true);
-                    holdingItem.transform.parent = transform.parent;
-                    holdingItem = null;
-                }
-                if(highlightedTasks.Count > 0 && highlightedTasks[0].type == TaskType.Trash)
-                {
-                    holdingBin = highlightedTasks[0];
-                    holdingBin.gameObject.transform.parent = gameObject.transform;
-                    // 20 for holding bin in animator
-                    _animator.SetInteger("HoldingItem", 20);
-                    holdingBin.gameObject.SetActive(false);
-                }
-
-                if (!holdingBin && highlightedItem)
-                {
-                    holdingItem = highlightedItem;
-                    holdingItem.gameObject.transform.parent = gameObject.transform;
-                    _animator.SetInteger("HoldingItem", (int) holdingItem.forTaskType);
-                    holdingItem.gameObject.SetActive(false);
-                    highlightedItem = null;
-                }
-                updateHighlighted();
-            }
+            return;
         }
         
+        // TODO: KFIR -  DROP BIN (needed?)
+        if (holdingBin)
+        {
+            holdingBin.transform.parent = transform.parent;;
+            holdingBin.gameObject.SetActive(true);
+            holdingBin = null;
+            _animator.SetInteger("HoldingItem", 0);
+            updateHighlighted();
+            return;
+        }
+        
+        // TODO: KFIR - DROP ITEM
+        if (holdingItem)
+        {
+            _animator.SetInteger("HoldingItem", 0);
+            holdingItem.gameObject.SetActive(true);
+            holdingItem.transform.parent = transform.parent;
+            holdingItem = null;
+        }
+        
+        // TODO: PICKUP TRASH BIN (needed?)
+        if(highlightedTasks.Count > 0 && highlightedTasks[0].type == TaskType.Trash)
+        {
+            holdingBin = highlightedTasks[0];
+            holdingBin.gameObject.transform.parent = gameObject.transform;
+            // 20 for holding bin in animator
+            _animator.SetInteger("HoldingItem", 20);
+            holdingBin.gameObject.SetActive(false);
+        }
+
+        // TODO: KFIR - PICK UP ITEM
+        if (!holdingBin && highlightedItem)
+        {
+            holdingItem = highlightedItem;
+            holdingItem.gameObject.transform.parent = gameObject.transform;
+            _animator.SetInteger("HoldingItem", (int) holdingItem.forTaskType);
+            holdingItem.gameObject.SetActive(false);
+            highlightedItem = null;
+        }
+        updateHighlighted();
     }
 
     private void doTask()
@@ -112,6 +122,7 @@ public class PlayerScript : MonoBehaviour
         }
         if (!isFixing)
         {
+            playFixSound();
             _animator.SetBool("isMoving", false);
             isFixing = true;
             taskStarted = Time.time;
@@ -160,6 +171,19 @@ public class PlayerScript : MonoBehaviour
                 _animator.SetInteger("HoldingItem", 0);
             }
             updateHighlighted();
+        }
+    }
+
+    private void playFixSound()
+    {
+        TaskType type = fixingTasks[0].type;
+        if (type == TaskType.Trash)
+        {
+            // TODO: KFIR - THROWING TRASH
+        }
+        else if (type == TaskType.NPC)
+        {
+            // TODO: KFIR - KICKING OUT NPC
         }
     }
 
@@ -287,7 +311,8 @@ public class PlayerScript : MonoBehaviour
         
         // clear interactables
         foreach (Task task in highlightedTasks)
-            task.triggerInteractable(false);
+            if(task)
+                task.triggerInteractable(false);
         highlightedTasks.Clear();
         if (highlightedItem)
         {

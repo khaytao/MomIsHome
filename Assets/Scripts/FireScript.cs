@@ -51,9 +51,8 @@ public class FireScript : MonoBehaviour
                 
                 // center.x -= dir.x * boxBounds.extents.x * 0.5f;
                 // center.y -= dir.y * boxBounds.extents.y * 0.5f;
-                GameObject newFire = Instantiate(Resources.Load("Fire")) as GameObject;
-                newFire.transform.position = center;
-                
+                GameObject newFire = Instantiate(Resources.Load("Fire"), new Vector3(center.x, center.y), Quaternion.identity) as GameObject;
+
                 // burn furniture if on them
                 // Task furniture = GameManager.Instance.inFurniture(new Bounds(center, boxBounds.extents));
                 // if (furniture != null)
