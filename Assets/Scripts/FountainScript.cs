@@ -19,6 +19,7 @@ public class FountainScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        secondsToMax = 45;
         renderer = GetComponent<SpriteRenderer>();
         
         initialPuddleScale = Vector2.zero;

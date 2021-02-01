@@ -747,6 +747,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1091994130676965246, guid: cc530a5e5d6377748be8f7f778f38b79,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370683874796223239, guid: cc530a5e5d6377748be8f7f778f38b79,
+        type: 3}
+      propertyPath: m_TagString
+      value: Task
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370683875181633950, guid: cc530a5e5d6377748be8f7f778f38b79,
+        type: 3}
+      propertyPath: m_TagString
+      value: Task
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389659301145821116, guid: cc530a5e5d6377748be8f7f778f38b79,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389659301145821116, guid: cc530a5e5d6377748be8f7f778f38b79,
+        type: 3}
+      propertyPath: furnitureInitBreakLevel
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6413903204169546771, guid: cc530a5e5d6377748be8f7f778f38b79,
         type: 3}
       propertyPath: m_RootOrder
@@ -816,6 +841,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 6.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 7562893133656857020, guid: cc530a5e5d6377748be8f7f778f38b79,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7562893133656857020, guid: cc530a5e5d6377748be8f7f778f38b79,
+        type: 3}
+      propertyPath: furnitureInitBreakLevel
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc530a5e5d6377748be8f7f778f38b79, type: 3}

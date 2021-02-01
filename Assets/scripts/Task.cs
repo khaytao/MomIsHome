@@ -69,6 +69,7 @@ public class Task : MonoBehaviour, IComparable<Task>
     private Animator animator;
     private bool isBurning;
     private bool isBroken;
+    private FountainScript fountainScript;
     
     [HideInInspector] public bool isFurniture;
     [HideInInspector] public bool isNPC;
@@ -79,6 +80,7 @@ public class Task : MonoBehaviour, IComparable<Task>
     {
         isBurning = false;
         isBroken = false;
+        fountainScript = null;
         isFurniture = type == TaskType.Furniture;
         isNPC = type == TaskType.NPC;
         isInteractable = false;
@@ -90,6 +92,11 @@ public class Task : MonoBehaviour, IComparable<Task>
         if (isFurniture)
         {
             animator.SetInteger("Furniture", (int) furnitureType);
+            if (furnitureType == FurnitureType.Sink || furnitureType == FurnitureType.Toilet)
+            {
+                fountainScript = gameObject.AddComponent<FountainScript>();
+                fountainScript.enabled = false;
+            }
             if (furnitureInitBreakLevel == 1)
                 breakFurniture();
             else if(furnitureInitBreakLevel == 2)
@@ -146,6 +153,8 @@ public class Task : MonoBehaviour, IComparable<Task>
         }
         else if (type == TaskType.Tape && isFurniture)
         {
+            if (furnitureType == FurnitureType.Sink || furnitureType == FurnitureType.Toilet)
+                fountainScript.enabled = false;
             type = TaskType.Furniture;
             animator.SetInteger("BrokenLevel", 0);
             furnitureInitBreakLevel = 0;
@@ -185,6 +194,9 @@ public class Task : MonoBehaviour, IComparable<Task>
     {
         if (isBurning)
             return;
+
+        if (furnitureType == FurnitureType.Sink || furnitureType == FurnitureType.Toilet)
+            fountainScript.enabled = true;
         
         animator.SetInteger("BrokenLevel", 1);
         type = TaskType.Tape;
