@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {
+    [Range(1, 4)]
+    public int SimFires = 4;
     
     public Slider progressBar;
     public KeyCode interactKey;
@@ -328,7 +330,7 @@ public class PlayerScript : MonoBehaviour
         
         // priority to fixing tasks
         foreach (Task task in curTasks)
-            if (task != null && task.type == TaskType.Trash || task.canFix(holdingItem))
+            if (task != null && (task.type == TaskType.Trash || task.canFix(holdingItem)))
                 tasks.Add(task);
 
         tasks.Sort();
@@ -356,7 +358,7 @@ public class PlayerScript : MonoBehaviour
                 {
                     fires++;
                     highlightedTasks.Add(tasks[i]);
-                    if (fires >= 4)
+                    if (fires >= SimFires)
                         break;
                 }
         }

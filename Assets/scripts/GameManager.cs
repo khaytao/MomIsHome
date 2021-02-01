@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 public class GameManager : Singleton<GameManager>
 {
-    public const int NumOfLevels = 2;
+    public const int NumOfLevels = 5;
     private float timeStarted;
     public bool gameOver;
     
@@ -211,13 +211,13 @@ public class GameManager : Singleton<GameManager>
         if (GameWon)
         {
             //AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevelWon);
-            AudioManager.i.PlaySound(AudioFileGetter.i.winGame);
+            AudioManager.i.PlayBackGround(AudioFileGetter.i.winGame);
             CanvasManager.instance.WonScreenFade();
         }
         else
         {
             //AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevelWon);
-            AudioManager.i.PlaySound(AudioFileGetter.i.loseGame);
+            AudioManager.i.PlayBackGround(AudioFileGetter.i.loseGame);
             CanvasManager.instance.LostScreen();
         }
         
@@ -235,10 +235,10 @@ public class GameManager : Singleton<GameManager>
     {
         Debug.Log(taskCount);
         
-        if (taskCount <= 1)
+        if (taskCount <= 0)
         {
             Debug.Log("Game over! You Won");
-            taskCount--; //this removes the trash can autamatically
+            //taskCount--; //this removes the trash can autamatically
             endGame(true);
         }
     }
@@ -272,12 +272,18 @@ public class GameManager : Singleton<GameManager>
             Destroy(item);
         }
 
-        string levelName = "levels/Demolevel " + levelNum;
+        string levelName = "levels/level " + 4;//levelNum;
         
         GameObject cur = GameObject.FindWithTag("level");
         Destroy(cur);
         GameObject house = GameObject.FindWithTag("House");
         Destroy(house);
+        GameObject AI = GameObject.FindWithTag("AI");
+        //Destroy(AI);
+        foreach (GameObject unfinishedTask in GameObject.FindGameObjectsWithTag("Task"))
+        {
+            Destroy(unfinishedTask);
+        }
         
         GameObject level = Instantiate(Resources.Load(levelName, typeof(GameObject)) as GameObject);
         //Instantiate(Resources.Load("House no walls", typeof(GameObject)) as GameObject);
@@ -288,12 +294,14 @@ public class GameManager : Singleton<GameManager>
     {
         
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(1);
-
+        Debug.Log("Started loading Scene");
         // Wait until the asynchronous scene fully loads
         while (!asyncLoad.isDone)
         {
             yield return null;
         }
+        
+        //AsyncOperation unload = SceneManager.UnloadSceneAsync(currentScene.scene.buildIndex);
 
         LoadLevelPrefabs(1);
         AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevel, 0.5f);
@@ -310,14 +318,36 @@ public class GameManager : Singleton<GameManager>
         curLevel++;
         LoadLevelPrefabs(curLevel);
         AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevel, 0.5f);
- 
     }
 
+    private void loadFisrt()
+    {
+        LoadLevelPrefabs(1);
+    }
+
+    private bool firstTime = true;
     public void FirstLevel()
     {
+        
         ResetVals();
         curLevel = 1;
-        StartCoroutine(LoadScene());
+        
+        if (firstTime)
+        {
+            StartCoroutine(LoadScene());
+            firstTime = false;
+        }
+        else
+        {
+            
+            StopCoroutine(LoadScene());
+            StartCoroutine(LoadScene());
+        }
+
+        /*SceneManager.LoadScene(1);
+        LoadLevelPrefabs(1);
+        //Invoke(nameof(loadFisrt), 0.2f);
+        AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevel, 0.5f);*/
     }
 
     private void ResetVals()

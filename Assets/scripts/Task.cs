@@ -76,6 +76,9 @@ public class Task : MonoBehaviour, IComparable<Task>
     [HideInInspector] public Collider2D taskCollider;
     [HideInInspector] public Collider2D circleCollider;
     [HideInInspector] public SpriteRenderer taskRenderer;
+
+    [Range(0, 10)]
+    public int burnChance;
     void Start()
     {
         isBurning = false;
@@ -88,6 +91,9 @@ public class Task : MonoBehaviour, IComparable<Task>
         taskRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         GameManager.Instance.addTask(this);
+        
+        
+        duration = duration / 2;
 
         if (isFurniture)
         {
@@ -133,7 +139,7 @@ public class Task : MonoBehaviour, IComparable<Task>
         if (type == TaskType.Trash)
         {
             // 80% to burn
-            if (item.canBurn && UnityEngine.Random.Range(0, 10) < 8)
+            if (item.canBurn && UnityEngine.Random.Range(0, 10) < burnChance)
             {
                 type = TaskType.Fire;
                 animator.SetBool("Burning", true);
