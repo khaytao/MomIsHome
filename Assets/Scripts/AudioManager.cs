@@ -25,6 +25,33 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (GameManager.Instance.FireCount() > 0)
+        {
+            if (!AS_fire.isPlaying)
+            {
+                fireSound(AudioFileGetter.i.fire);
+            }
+        }
+        else
+        {
+            stopfire();
+        }
+
+        if (GameManager.Instance.leakCount > 0)
+        {
+            if (!AS_water.isPlaying)
+            {
+                waterSound(AudioFileGetter.i.water);
+            }
+        }
+        else
+        {
+            stopWater();
+        }
+    }
+
     public bool isPlayingSound;
     
     public AudioSource AS_background;
@@ -108,6 +135,7 @@ public class AudioManager : MonoBehaviour
     
     public void fireSound(AudioClip clip)
     {
+        //AS_fire.volume = 0.2f;
         PlayLooped(AS_fire, clip);
     }
 

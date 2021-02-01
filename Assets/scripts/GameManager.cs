@@ -30,6 +30,10 @@ public class GameManager : Singleton<GameManager>
     private PlayerScript playerScript;
     private int curLevel = 1;
 
+    public bool TrashCanOnFire = false;
+    public int leakCount = 0;
+    
+
     private const string NOT_INITIALIZED = "not_initialized";
     private Dictionary<string, string> alexaTexts = new Dictionary<string, string>()
     {
@@ -272,7 +276,7 @@ public class GameManager : Singleton<GameManager>
             Destroy(item);
         }
 
-        string levelName = "levels/level " + 4;//levelNum;
+        string levelName = "levels/level " + 7;//levelNum;
         
         GameObject cur = GameObject.FindWithTag("level");
         Destroy(cur);
@@ -391,6 +395,21 @@ public class GameManager : Singleton<GameManager>
         isAlexaPlaying = false;
     }
 
+    public bool IsThereAFire()
+    {
+        return (TrashCanOnFire || fireBounds.Count > 0);
+    }
+
+    public int FireCount()
+    {
+        int count = fireBounds.Count;
+        if (TrashCanOnFire)
+        {
+            count++;
+        }
+
+        return count;
+    }
 
     public void makeRandomAlexaComment()
     {

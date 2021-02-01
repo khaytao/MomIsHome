@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 
 public enum TaskType
@@ -70,6 +71,8 @@ public class Task : MonoBehaviour, IComparable<Task>
     private bool isBurning;
     private bool isBroken;
     private FountainScript fountainScript;
+
+    
     
     [HideInInspector] public bool isFurniture;
     [HideInInspector] public bool isNPC;
@@ -145,6 +148,7 @@ public class Task : MonoBehaviour, IComparable<Task>
                 animator.SetBool("Burning", true);
                 isBurning = true;
                 GameManager.Instance.addToTaskCount(1);
+                GameManager.Instance.TrashCanOnFire = true;
             }
             GameManager.Instance.removeItem(item);
             Destroy(item.gameObject);
@@ -155,12 +159,18 @@ public class Task : MonoBehaviour, IComparable<Task>
         {
             type = TaskType.Trash;
             animator.SetBool("Burning", false);
+            GameManager.Instance.TrashCanOnFire = false;
             GameManager.Instance.FinishTask(this);
         }
         else if (type == TaskType.Tape && isFurniture)
         {
             if (furnitureType == FurnitureType.Sink || furnitureType == FurnitureType.Toilet)
+            {
                 fountainScript.enabled = false;
+                GameManager.Instance.leakCount--;
+            }
+                
+            
             type = TaskType.Furniture;
             animator.SetInteger("BrokenLevel", 0);
             furnitureInitBreakLevel = 0;
@@ -202,7 +212,10 @@ public class Task : MonoBehaviour, IComparable<Task>
             return;
 
         if (furnitureType == FurnitureType.Sink || furnitureType == FurnitureType.Toilet)
+        {
+            GameManager.Instance.leakCount++;
             fountainScript.enabled = true;
+        }
         
         animator.SetInteger("BrokenLevel", 1);
         type = TaskType.Tape;
@@ -237,4 +250,5 @@ public class Task : MonoBehaviour, IComparable<Task>
             }
         }
     }
+    
 }

@@ -180,6 +180,12 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+    private void makeContinousSound(AudioClip c, float delay)
+    {
+        AudioManager.i.playerActionSound(c);
+        StartCoroutine(stopSound(delay));
+    }
+    
     private void playFixSound()
     {
         TaskType type = fixingTasks[0].type;
@@ -193,8 +199,28 @@ public class PlayerScript : MonoBehaviour
             // TODO: KFIR - KICKING OUT NPC
             AudioManager.i.PlaySound(AudioFileGetter.i.angry);
         }
+
+        else if (type == TaskType.Sweep)
+        {
+            makeContinousSound(AudioFileGetter.i.mop, fixingTasks[0].duration);
+        }
+        
+        else if (type == TaskType.Fire)
+        {
+            makeContinousSound(AudioFileGetter.i.fireEx, fixingTasks[0].duration);
+        }
+        else if (type == TaskType.Furniture)
+        {
+            makeContinousSound(AudioFileGetter.i.fix, fixingTasks[0].duration);
+        }
+        
     }
 
+    private IEnumerator stopSound(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        AudioManager.i.stopPlayerActionSound();
+    }
 
     void FixedUpdate()
     {
@@ -246,10 +272,16 @@ public class PlayerScript : MonoBehaviour
         if (_rb.velocity.magnitude == 0)
         {
             _animator.SetBool("isMoving", false);
+            if (!isFixing)
+            {
+                AudioManager.i.stopPlayerActionSound();
+            }
+            
         }
         else
         {
             _animator.SetBool("isMoving", true);
+            AudioManager.i.playerActionSound(AudioFileGetter.i.run);
         }
         
         _angle = Vector2.Angle(direction, -transform.up);
