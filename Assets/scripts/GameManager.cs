@@ -30,6 +30,28 @@ public class GameManager : Singleton<GameManager>
     private PlayerScript playerScript;
     private int curLevel = 1;
 
+    private const string NOT_INITIALIZED = "not_initialized";
+    private Dictionary<string, string> alexaTexts = new Dictionary<string, string>()
+    {
+        {"alexaIn", NOT_INITIALIZED},
+        {"alexaOut", NOT_INITIALIZED},
+        {"alexaPlaceHolder1", NOT_INITIALIZED},
+        {"alexaPlaceHolder2", NOT_INITIALIZED},
+        {"alexaSnarky1", NOT_INITIALIZED},
+        {"alexaSnarky2", NOT_INITIALIZED},
+        {"alexaSnarky3", NOT_INITIALIZED},
+        {"alexaSnarky4", NOT_INITIALIZED},
+        {"alexaSnarky5", NOT_INITIALIZED},
+        {"alexaSnarky6", NOT_INITIALIZED},
+        {"alexaSnarky7", NOT_INITIALIZED},
+        {"alexaSnarky8", NOT_INITIALIZED},
+        {"alexaSnarky9", NOT_INITIALIZED},
+        {"alexaSnarky10", NOT_INITIALIZED},
+        {"timeLeft90", NOT_INITIALIZED},
+        {"timeLeft60", NOT_INITIALIZED},
+        {"timeLeft30", NOT_INITIALIZED},
+        {"timeLeft15", NOT_INITIALIZED}
+    };
     
     public GameManager()
     {
@@ -183,14 +205,17 @@ public class GameManager : Singleton<GameManager>
     {
         Time.timeScale = 0;
         gameOver = true;
+        AudioManager.i.StopClock();
         if (GameWon)
         {
-            AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevelWon);
+            //AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevelWon);
+            AudioManager.i.PlaySound(AudioFileGetter.i.winGame);
             CanvasManager.instance.WonScreenFade();
         }
         else
         {
-            AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevelWon);
+            //AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevelWon);
+            AudioManager.i.PlaySound(AudioFileGetter.i.loseGame);
             CanvasManager.instance.LostScreen();
         }
         
@@ -270,7 +295,7 @@ public class GameManager : Singleton<GameManager>
 
         LoadLevelPrefabs(1);
         //SoundManager.PlayBackGround(AudioFileGetter.i.BackGroundLevel);
-        AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevel);
+        //AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevel);
     }
     
     public void MainMenu()
@@ -283,7 +308,8 @@ public class GameManager : Singleton<GameManager>
         ResetVals();
         curLevel++;
         LoadLevelPrefabs(curLevel);
-        AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevel);
+        //AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevel);
+        //AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevel);
     }
 
     public void FirstLevel()
@@ -309,14 +335,34 @@ public class GameManager : Singleton<GameManager>
 
     public void ActivateAlexa(AudioClip comment, string message)
     {
-        isAlexaPlaying = true;
+        /*isAlexaPlaying = true;
         SoundManager.PlaySound(comment);
+        CanvasManager.instance.alexa(message);
+        Invoke(nameof(alexaDone), comment.length);*/
+        StartCoroutine(_ActivateAlexa(comment, message));
+    }
+
+    private IEnumerator _ActivateAlexa(AudioClip comment, string message)
+    {
+        yield return new WaitUntil(() => isAlexaPlaying == false);
+        isAlexaPlaying = true;
+        AudioManager.i.PlaySound(comment);
         CanvasManager.instance.alexa(message);
         Invoke(nameof(alexaDone), comment.length);
     }
 
+    public string getAlexaText(string clipName)
+    {
+        return alexaTexts.ContainsKey(clipName) ? alexaTexts[clipName] : NOT_INITIALIZED;
+    }
     private void alexaDone()
     {
         isAlexaPlaying = false;
+    }
+
+
+    public void makeRandomAlexaComment()
+    {
+        
     }
 }

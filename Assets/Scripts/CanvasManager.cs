@@ -120,6 +120,11 @@ public class CanvasManager : MonoBehaviour
     private void Update()
     {
 
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            GameManager.Instance.ActivateAlexa(AudioFileGetter.i.alexaSnarky1, "WOW!");
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape) && !GameManager.Instance.gameOver)
         {
             if (isPaused)

@@ -81,6 +81,7 @@ public class EnemyAI : MonoBehaviour
                     spawnLocation += (Vector2) transform.position;
                     spawn.transform.position = spawnLocation;
                 }
+                AudioManager.i.PlaySound(AudioFileGetter.i.vomit);
             }
         }
 

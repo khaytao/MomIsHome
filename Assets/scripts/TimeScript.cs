@@ -12,7 +12,11 @@ public class TimeScript : MonoBehaviour
     public Image minuteHand;
     public Image hourHand;
 
-
+    [Range(0, 1)]
+    public float volumeScaleIdle;
+    [Range(0, 1)]
+    public float volumeScaleEnd;
+    
     public float speed;
     public float amount;
     private Vector3 A0;
@@ -27,6 +31,9 @@ public class TimeScript : MonoBehaviour
     private float shakeForce;
 
     public float shakeLength;
+    
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +49,8 @@ public class TimeScript : MonoBehaviour
         
         A0 = transform.position;
         shakeStarted = -1;
+        
+        AudioManager.i.InitClockSound(AudioFileGetter.i.clock, volumeScaleIdle);
     }
 
     // Update is called once per frame
@@ -79,24 +88,67 @@ public class TimeScript : MonoBehaviour
         // 60 seconds
         if (timeLeft <= 60 && timeLeft >= 60 - shakeLength)
             startShake(3, AudioFileGetter.i.timeLeft60);
+        
 
         // 30 seconds
         if (timeLeft <= 30 && timeLeft >= 30 - shakeLength)
+        {
             startShake(5, AudioFileGetter.i.timeLeft30);
+        }
+            
 
         // 15 seconds
         if (timeLeft <= 15 && timeLeft >= 15 - shakeLength)
+        {
             startShake(7, AudioFileGetter.i.timeLeft15);
+            AudioManager.i.InitClockSound(AudioFileGetter.i.clock, volumeScaleEnd);
+        }
     }
 
     private void startShake(float shakeForce, AudioClip clip)
     {
         shakeStarted = GameManager.Instance.elapsedTime;
         this.shakeForce = shakeForce;
-        SoundManager.PlaySound(clip);
+        
+        GameManager.Instance.ActivateAlexa(clip, "");
+        //SoundManager.PlaySound(clip);
         // todo: should shakeLength change per frame?
     }
+    
+    private void startShake(float shakeForce, int timeLeft)
+    {
+        shakeStarted = GameManager.Instance.elapsedTime;
+        this.shakeForce = shakeForce;
 
+        AudioClip clip;
+        string comment;
+        if (timeLeft == 90)
+        {
+            clip = AudioFileGetter.i.timeLeft90;
+            comment = GameManager.Instance.getAlexaText("timeLeft90");
+        }
+        else if (timeLeft == 60)
+        {
+            clip = AudioFileGetter.i.timeLeft60;
+            comment = GameManager.Instance.getAlexaText("timeLeft60");
+        }
+        else if (timeLeft == 30)
+        {
+            clip = AudioFileGetter.i.timeLeft30;
+            comment = GameManager.Instance.getAlexaText("timeLeft30");
+        }
+        else
+        {
+            clip = AudioFileGetter.i.timeLeft15;
+            comment = GameManager.Instance.getAlexaText("timeLeft15");
+        }
+        
+        GameManager.Instance.ActivateAlexa(clip, GameManager.Instance.getAlexaText(nameof(clip)));
+        //SoundManager.PlaySound(clip);
+        // todo: should shakeLength change per frame?
+    }
+    
+    
     private float GetSecondsLeft()
     {
         return gameDurationMinutes * (60 / gameTimeFactor) - GameManager.Instance.elapsedTime;

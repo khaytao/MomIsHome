@@ -38,4 +38,14 @@ public class Buttons : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void OnHover()
+    {
+        AudioManager.i.PlaySound(AudioFileGetter.i.menuMove);
+    }
+    
+    public void OnClick()
+    {
+        AudioManager.i.PlaySound(AudioFileGetter.i.menuSelect);
+    }
 }

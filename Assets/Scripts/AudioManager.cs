@@ -28,7 +28,30 @@ public class AudioManager : MonoBehaviour
     public bool isPlayingSound;
     
     public AudioSource AS_background;
+    public AudioSource AS_clock;
+    
+    public AudioSource AS_playerActions;
+    public AudioSource AS_fire;
+    public AudioSource AS_water;
+    public AudioSource AS_mom;
+    
     //public AudioSource AS_shorts;
+
+    public void InitClockSound(AudioClip s, float scale)
+    {
+        AS_clock.clip = s;
+        if (0 <= scale && scale <= 1)
+        {
+            AS_clock.volume = scale;
+        }
+        AS_clock.loop = true;
+        AS_clock.Play();
+    }
+
+    public void StopClock()
+    {
+        AS_clock.Stop();
+    }
     
     public void PlayBackGround(AudioClip s)
     {
@@ -44,10 +67,10 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySound(AudioClip s)
     {
-        isPlayingSound = true;
+        //isPlayingSound = true;
         AS_background.PlayOneShot(s);
-        float t = s.length;
-        Invoke(nameof(donePlaying), t);
+        //float t = s.length;
+        //Invoke(nameof(donePlaying), t);
     }
     
     public void PlaySound(AudioClip s, float scale)

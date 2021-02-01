@@ -9,7 +9,7 @@ public class MainMenuLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundMainMenu);
+        //AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundMainMenu);
     }
     
     // Update is called once per frame
