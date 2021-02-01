@@ -72,6 +72,7 @@ public class PlayerScript : MonoBehaviour
         }
         
         // TODO: KFIR -  DROP BIN (needed?)
+        AudioManager.i.PlaySound(AudioFileGetter.i.drop);
         if (holdingBin)
         {
             holdingBin.transform.parent = transform.parent;;
@@ -83,6 +84,7 @@ public class PlayerScript : MonoBehaviour
         }
         
         // TODO: KFIR - DROP ITEM
+        AudioManager.i.PlaySound(AudioFileGetter.i.drop);
         if (holdingItem)
         {
             _animator.SetInteger("HoldingItem", 0);
@@ -92,6 +94,7 @@ public class PlayerScript : MonoBehaviour
         }
         
         // TODO: PICKUP TRASH BIN (needed?)
+        AudioManager.i.PlaySound(AudioFileGetter.i.pick);
         if(highlightedTasks.Count > 0 && highlightedTasks[0].type == TaskType.Trash)
         {
             holdingBin = highlightedTasks[0];
@@ -102,6 +105,7 @@ public class PlayerScript : MonoBehaviour
         }
 
         // TODO: KFIR - PICK UP ITEM
+        AudioManager.i.PlaySound(AudioFileGetter.i.pick);
         if (!holdingBin && highlightedItem)
         {
             holdingItem = highlightedItem;
@@ -179,11 +183,13 @@ public class PlayerScript : MonoBehaviour
         TaskType type = fixingTasks[0].type;
         if (type == TaskType.Trash)
         {
+            AudioManager.i.PlaySound(AudioFileGetter.i.trash);
             // TODO: KFIR - THROWING TRASH
         }
         else if (type == TaskType.NPC)
         {
             // TODO: KFIR - KICKING OUT NPC
+            AudioManager.i.PlaySound(AudioFileGetter.i.angry);
         }
     }
 

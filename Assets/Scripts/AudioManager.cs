@@ -57,7 +57,23 @@ public class AudioManager : MonoBehaviour
     {
         AS_background.clip = s;
         AS_background.loop = true;
+        AS_background.volume = 1;
         AS_background.Play();
+    }
+
+    public void PlayBackGround(AudioClip s, float scale)
+    {
+        AS_background.clip = s;
+        AS_background.loop = true;
+        if (0 <= scale && scale <= 1)
+        {
+            AS_background.volume = scale;
+        }
+        AS_background.Play();
+    }
+    public void stopBackGround()
+    {
+        stopSound(AS_background);
     }
 
     private void donePlaying()
@@ -75,10 +91,7 @@ public class AudioManager : MonoBehaviour
     
     public void PlaySound(AudioClip s, float scale)
     {
-        isPlayingSound = true;
         AS_background.PlayOneShot(s, scale);
-        float t = s.length;
-        Invoke(nameof(donePlaying), t);
     }
 
     public void PlayLooped(AudioSource s, AudioClip c)

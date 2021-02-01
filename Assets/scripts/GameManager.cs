@@ -206,6 +206,8 @@ public class GameManager : Singleton<GameManager>
         Time.timeScale = 0;
         gameOver = true;
         AudioManager.i.StopClock();
+        AudioManager.i.stopBackGround();
+        
         if (GameWon)
         {
             //AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevelWon);
@@ -226,7 +228,7 @@ public class GameManager : Singleton<GameManager>
         ResetVals();
         LoadLevelPrefabs(curLevel);
         CanvasManager.instance.ResetClock();
-        AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevel);
+        AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevel, 0.5f);
     }
 
     public void areTasksOver()
@@ -294,8 +296,7 @@ public class GameManager : Singleton<GameManager>
         }
 
         LoadLevelPrefabs(1);
-        //SoundManager.PlayBackGround(AudioFileGetter.i.BackGroundLevel);
-        //AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevel);
+        AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevel, 0.5f);
     }
     
     public void MainMenu()
@@ -308,8 +309,8 @@ public class GameManager : Singleton<GameManager>
         ResetVals();
         curLevel++;
         LoadLevelPrefabs(curLevel);
-        //AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevel);
-        //AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevel);
+        AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevel, 0.5f);
+ 
     }
 
     public void FirstLevel()

@@ -24,8 +24,8 @@ public class AudioFileGetter : MonoBehaviour
     [Header("Alexa")]
     public AudioClip alexaIn;
     public AudioClip alexaout;
-    public AudioClip alexaPlaceHolder1;
-    public AudioClip alexaPlaceHolder2;
+    public AudioClip alexaWin;
+    public AudioClip alexaLose;
     
     
     public AudioClip alexaSnarky1;
