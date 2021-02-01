@@ -28,7 +28,7 @@ public class EnemyAI : MonoBehaviour
     private Rigidbody2D rb;
 
     private bool leaving;
-    private float movementThreshold = 0.1f;
+    private float movementThreshold = 0.05f;
     private int i;
 
     public Transform exit;
@@ -45,6 +45,7 @@ public class EnemyAI : MonoBehaviour
 
     private SpriteRenderer renderer;
     private Task task;
+    private Vector3 lastVel;
     
 
     private bool isMoving;
@@ -65,6 +66,7 @@ public class EnemyAI : MonoBehaviour
         startedAction = -1;
         isInAction = false;
         updatingLocation = false;
+        lastVel = Vector3.zero;
     }
 
     // Update is called once per frame
@@ -139,24 +141,27 @@ public class EnemyAI : MonoBehaviour
         Vector2 movementDirection = pos - curPos;
 
         curPos = pos;
-        if (isMoving && (path.velocity == Vector3.zero || path.velocity.magnitude < movementThreshold))
+        Vector3 velocity = path.velocity;
+        if (isMoving && (velocity == Vector3.zero || path.velocity.magnitude < movementThreshold))
         {
             isMoving = false;
             anim.SetInteger("Action", (int) ActionType.Idle);
         }
-        else if (!isMoving && (path.velocity != Vector3.zero && path.velocity.magnitude > movementThreshold))
+        else if (!isMoving && (velocity != Vector3.zero && path.velocity.magnitude > movementThreshold))
         {
             isMoving = true;
             anim.SetInteger("Action", (int) ActionType.Move);
         }
 
+        // lastVel = path.velocity;
+
         angleAnim = Vector2.Angle(Vector2.up, movementDirection);
-        if (path.velocity.x > 0.01f)
+        if (velocity.x > 0.01f)
         {
             renderer.flipX = true;
         }
 
-        if (path.velocity.x < -0.01f)
+        if (velocity.x < -0.01f)
         {
             renderer.flipX = false;
         }
