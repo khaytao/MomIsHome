@@ -81,4 +81,46 @@ public class AudioManager : MonoBehaviour
         Invoke(nameof(donePlaying), t);
     }
 
+    public void PlayLooped(AudioSource s, AudioClip c)
+    {
+        s.clip = c;
+        s.loop = true;
+        s.Play();
+    }
+
+    public void stopSound(AudioSource s)
+    {
+        s.Stop();
+    }
+    
+    public void fireSound(AudioClip clip)
+    {
+        PlayLooped(AS_fire, clip);
+    }
+
+    public void stopfire()
+    {
+        stopSound(AS_fire);
+    }
+    public void waterSound(AudioClip clip)
+    {
+        PlayLooped(AS_water, clip);
+    }
+
+    public void stopWater()
+    {
+        stopSound(AS_water);
+    }
+
+    public void playerActionSound(AudioClip clip)
+    {
+        PlayLooped(AS_playerActions, clip);
+    }
+
+    public void stopPlayerActionSound()
+    {
+        stopSound(AS_playerActions);
+    }
+
+
 }
