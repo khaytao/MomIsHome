@@ -24,14 +24,38 @@ public class AudioManager : MonoBehaviour
             return _i;
         }
     }
-    
-    public AudioSource AS;
 
+    public bool isPlayingSound;
+    
+    public AudioSource AS_background;
+    //public AudioSource AS_shorts;
+    
     public void PlayBackGround(AudioClip s)
     {
-        AS.clip = s;
-        AS.loop = true;
-        AS.Play();
+        AS_background.clip = s;
+        AS_background.loop = true;
+        AS_background.Play();
+    }
+
+    private void donePlaying()
+    {
+        isPlayingSound = false;
+    }
+
+    public void PlaySound(AudioClip s)
+    {
+        isPlayingSound = true;
+        AS_background.PlayOneShot(s);
+        float t = s.length;
+        Invoke(nameof(donePlaying), t);
+    }
+    
+    public void PlaySound(AudioClip s, float scale)
+    {
+        isPlayingSound = true;
+        AS_background.PlayOneShot(s, scale);
+        float t = s.length;
+        Invoke(nameof(donePlaying), t);
     }
 
 }

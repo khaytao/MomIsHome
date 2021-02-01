@@ -44,6 +44,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   s: {fileID: 8300000, guid: 1d4240dd607c54f42bc1732c510b38f2, type: 3}
+  alexaIn: {fileID: 8300000, guid: e9cbd3e419d3b3b43b3722c551c64236, type: 3}
+  alexaout: {fileID: 8300000, guid: 8193298f66f584747ad626817b62761c, type: 3}
+  alexaPlaceHolder1: {fileID: 8300000, guid: 1d4240dd607c54f42bc1732c510b38f2, type: 3}
+  alexaPlaceHolder2: {fileID: 8300000, guid: 1d4240dd607c54f42bc1732c510b38f2, type: 3}
   alexaSnarky1: {fileID: 8300000, guid: 22e2079c21552594ebc90fd9d46e3e37, type: 3}
   alexaSnarky2: {fileID: 8300000, guid: 52eb357788a921c439f50dfa02cea81e, type: 3}
   alexaSnarky3: {fileID: 8300000, guid: b525b4c0275bc04418c37082a09ea52f, type: 3}
@@ -63,3 +67,25 @@ MonoBehaviour:
   BackGroundLevelWon: {fileID: 8300000, guid: fc6282d078130de41bc5883ff26488e1, type: 3}
   BackGroundLevelLost: {fileID: 8300000, guid: fc6282d078130de41bc5883ff26488e1, type: 3}
   BackGroundEndGame: {fileID: 8300000, guid: fc6282d078130de41bc5883ff26488e1, type: 3}
+  winGame: {fileID: 8300000, guid: 21ec1f8fa788d77438d5bc8cfaba2f5f, type: 3}
+  loseGame: {fileID: 8300000, guid: 9492ed30768cb3d4b941d235f843361e, type: 3}
+  PlaceHolder1: {fileID: 8300000, guid: 1d4240dd607c54f42bc1732c510b38f2, type: 3}
+  clock: {fileID: 8300000, guid: 81263eb2f41025a4eb75a3b67eb56bdd, type: 3}
+  menuMove: {fileID: 8300000, guid: 822f29edf5a84f64a896bd82247cc5c4, type: 3}
+  menuSelect: {fileID: 8300000, guid: 9bb8ef90e13d8194f86e1000f91164de, type: 3}
+  run: {fileID: 8300000, guid: a180ae9104f3d7b498da26e8a7a5c52c, type: 3}
+  pick: {fileID: 8300000, guid: 69bbe88cfbde0a0469a21e5c12c40671, type: 3}
+  drop: {fileID: 8300000, guid: cb566b9169de7e844bcfc26ef5d1b0f2, type: 3}
+  fireEx: {fileID: 8300000, guid: f55af4a5ec823c34f951c259f869babb, type: 3}
+  mop: {fileID: 8300000, guid: 36ceed452196f0449bd84b675adbfa39, type: 3}
+  fix: {fileID: 8300000, guid: bccb5e8b9adcff645bb3a4226c66b432, type: 3}
+  trash: {fileID: 8300000, guid: ddaeefe87be6fd142bfcc9377a73f667, type: 3}
+  angry: {fileID: 8300000, guid: 891cb5c0f602f36479bd1d4da71a29c2, type: 3}
+  vomit: {fileID: 8300000, guid: 02118a90cd7460e4886df82d8e997da2, type: 3}
+  Break: {fileID: 8300000, guid: 42df6efa25eb03d4e880f7811fd8f2e9, type: 3}
+  water: {fileID: 8300000, guid: 827f93ff5c8ec4f4195d4def04d553f4, type: 3}
+  fire: {fileID: 8300000, guid: 5f41b5d1b723cdc42bf36e86c3310153, type: 3}
+  momCar: {fileID: 8300000, guid: 5799316207b9a154e9504f0ec868a3c9, type: 3}
+  momPhone: {fileID: 8300000, guid: 5d5f4ebaf5718ae4c94aafb7fe26a8b5, type: 3}
+  momWin: {fileID: 8300000, guid: 545805776ed189d45b25a1f0d5cacce4, type: 3}
+  momLose: {fileID: 8300000, guid: e488f550baf608642a750d024084ed78, type: 3}

@@ -304,4 +304,19 @@ public class GameManager : Singleton<GameManager>
         furnitureTaskBounds = new List<(Task, Bounds)>();
         taskCount = 0;
     }
+
+    public bool isAlexaPlaying;
+
+    public void ActivateAlexa(AudioClip comment, string message)
+    {
+        isAlexaPlaying = true;
+        SoundManager.PlaySound(comment);
+        CanvasManager.instance.alexa(message);
+        Invoke(nameof(alexaDone), comment.length);
+    }
+
+    private void alexaDone()
+    {
+        isAlexaPlaying = false;
+    }
 }

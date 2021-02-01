@@ -2,11 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainMenuMusicPlayer : MonoBehaviour
+public class CanvasMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundMainMenu);
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }
