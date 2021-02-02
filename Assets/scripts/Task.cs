@@ -225,6 +225,9 @@ public class Task : MonoBehaviour, IComparable<Task>
 
     public void burnFurniture()
     {
+        if (!canBurn())
+            return;
+        
         animator.SetInteger("BrokenLevel", 2);
         type = TaskType.Tape;
         GameManager.Instance.addToTaskCount(!isBroken && !isBurning ? 1 : 0);
@@ -260,6 +263,18 @@ public class Task : MonoBehaviour, IComparable<Task>
     {
         return furnitureType == FurnitureType.Sink || furnitureType == FurnitureType.Toilet ||
                furnitureType == FurnitureType.Tub;
+    }
+
+    private bool canBurn()
+    {
+        return furnitureType == FurnitureType.BedRed || furnitureType == FurnitureType.Chair ||
+               furnitureType == FurnitureType.Desk || furnitureType == FurnitureType.Lamp ||
+               furnitureType == FurnitureType.MatBlue || furnitureType == FurnitureType.MatBlueSmall ||
+               furnitureType == FurnitureType.MatCircle || furnitureType == FurnitureType.MatGreen ||
+               furnitureType == FurnitureType.MatRed || furnitureType == FurnitureType.Microwave ||
+               furnitureType == FurnitureType.SofaHor || furnitureType == FurnitureType.SofaVertical ||
+               furnitureType == FurnitureType.Stove || furnitureType == FurnitureType.Table ||
+               furnitureType == FurnitureType.Towel || furnitureType == FurnitureType.TV;
     }
     
 }
