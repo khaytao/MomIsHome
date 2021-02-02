@@ -201,7 +201,7 @@ MonoBehaviour:
   type: 7
   furnitureType: 0
   furnitureInitBreakLevel: 0
-  NPCType: 3
+  NPCType: 1
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}

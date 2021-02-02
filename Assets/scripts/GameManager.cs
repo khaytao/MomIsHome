@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 public class GameManager : Singleton<GameManager>
 {
-    public const int NumOfLevels = 5;
+    public const int NumOfLevels = 9;
     private float timeStarted;
     public bool gameOver;
     
@@ -282,7 +282,7 @@ public class GameManager : Singleton<GameManager>
         }
 
 
-        string levelName = "levels/level " + 3;//levelNum;
+        string levelName = "levels/level " + 10;//levelNum;
 
         GameObject cur = GameObject.FindWithTag("level");
         Destroy(cur);
