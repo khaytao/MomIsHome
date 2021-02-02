@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 1519167947468476157}
   - component: {fileID: 391966386106565208}
   - component: {fileID: 4690518394589099846}
+  - component: {fileID: 8743135364443022232}
   m_Layer: 10
   m_Name: player Sprites
   m_TagString: Player
@@ -256,6 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 107afbf72f7a93b45868d7e21faec200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SimFires: 4
   progressBar: {fileID: 7518006941371555659}
   interactKey: 324
   goal_threshold: 0.1
@@ -264,6 +266,22 @@ MonoBehaviour:
   holdingBin: {fileID: 0}
   isFixing: 0
   wallBounce: 1
+--- !u!70 &8743135364443022232
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519167947468476150}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.35272983, y: 0.6326667}
+  m_Direction: 0
 --- !u!1 &6024619424947287166
 GameObject:
   m_ObjectHideFlags: 0
