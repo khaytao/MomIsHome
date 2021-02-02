@@ -282,8 +282,9 @@ public class GameManager : Singleton<GameManager>
             Destroy(item);
         }
 
-        string levelName = "levels/level " + 8;//levelNum;
-        
+
+        string levelName = "levels/level " + 4;//levelNum;
+
         GameObject cur = GameObject.FindWithTag("level");
         Destroy(cur);
         GameObject house = GameObject.FindWithTag("House");

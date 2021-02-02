@@ -134,8 +134,7 @@ MonoBehaviour:
   volumeScaleIdle: 0.2
   volumeScaleEnd: 1
   speed: 10000
-  amount: 3.5
-  shakeLength: 4
+  defaultShakeDuration: 4
 --- !u!1 &6921442500984075411
 GameObject:
   m_ObjectHideFlags: 0
