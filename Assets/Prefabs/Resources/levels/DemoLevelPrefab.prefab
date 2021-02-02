@@ -526,7 +526,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2809711408836645570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 296.0376, y: 99.77396, z: -167.59865}
+  m_LocalPosition: {x: 296.0376, y: 99.77396, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2008140720275597842}
@@ -565,7 +565,7 @@ PrefabInstance:
     - target: {fileID: 770151626007251839, guid: db3d954b88250e44f914da30ad61d3d2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 167.59865
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 770151626007251839, guid: db3d954b88250e44f914da30ad61d3d2,
         type: 3}
@@ -635,7 +635,7 @@ PrefabInstance:
     - target: {fileID: 1519167947468476144, guid: b74c87dbb0675c54085d251c5bad153a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 167.59865
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1519167947468476144, guid: b74c87dbb0675c54085d251c5bad153a,
         type: 3}
@@ -718,6 +718,11 @@ PrefabInstance:
       propertyPath: progressBar
       value: 
       objectReference: {fileID: 1066071541325574073}
+    - target: {fileID: 6190041660129162961, guid: b74c87dbb0675c54085d251c5bad153a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1519167947468476147, guid: b74c87dbb0675c54085d251c5bad153a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b74c87dbb0675c54085d251c5bad153a, type: 3}
@@ -758,7 +763,7 @@ PrefabInstance:
     - target: {fileID: 7435836724462186814, guid: 1142c7c1d8f8cbe4480d8fb387df0d84,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 167.59865
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7435836724462186814, guid: 1142c7c1d8f8cbe4480d8fb387df0d84,
         type: 3}
