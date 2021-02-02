@@ -274,7 +274,8 @@ public class Task : MonoBehaviour, IComparable<Task>
                furnitureType == FurnitureType.MatRed || furnitureType == FurnitureType.Microwave ||
                furnitureType == FurnitureType.SofaHor || furnitureType == FurnitureType.SofaVertical ||
                furnitureType == FurnitureType.Stove || furnitureType == FurnitureType.Table ||
-               furnitureType == FurnitureType.Towel || furnitureType == FurnitureType.TV;
+               furnitureType == FurnitureType.Towel || furnitureType == FurnitureType.TV ||
+               furnitureType == FurnitureType.ShowerCurtain;
     }
     
 }
