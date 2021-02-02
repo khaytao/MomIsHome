@@ -40,8 +40,8 @@ public class GameManager : Singleton<GameManager>
     {
         {"alexaIn", NOT_INITIALIZED},
         {"alexaOut", NOT_INITIALIZED},
-        {"alexaPlaceHolder1", NOT_INITIALIZED},
-        {"alexaPlaceHolder2", NOT_INITIALIZED},
+        {"alexaWin", "Don't worry, I won't tell... We should do this again"},
+        {"alexaLose", "I told you. But you didn't listen"},
         {"alexaSnarky1", NOT_INITIALIZED},
         {"alexaSnarky2", NOT_INITIALIZED},
         {"alexaSnarky3", NOT_INITIALIZED},
@@ -52,10 +52,10 @@ public class GameManager : Singleton<GameManager>
         {"alexaSnarky8", NOT_INITIALIZED},
         {"alexaSnarky9", NOT_INITIALIZED},
         {"alexaSnarky10", NOT_INITIALIZED},
-        {"timeLeft90", NOT_INITIALIZED},
-        {"timeLeft60", NOT_INITIALIZED},
-        {"timeLeft30", NOT_INITIALIZED},
-        {"timeLeft15", NOT_INITIALIZED}
+        {"timeLeft90", "mom will be home in 1 minute and 30 seconds. every thing is going to be alright I'm sure"},
+        {"timeLeft60", "mom will be home in 1 minute, oh sure, plenty of time, why not crack a beer and relax"},
+        {"timeLeft30", "Mom will be home in 30 seconds. She will be so happy to see… er… you"},
+        {"timeLeft15", "Mom will be home in 15 seconds. It was nice knowing you"}
     };
     
     public GameManager()
@@ -215,19 +215,19 @@ public class GameManager : Singleton<GameManager>
     {
         Time.timeScale = 0;
         gameOver = true;
-        AudioManager.i.StopClock();
-        AudioManager.i.stopBackGround();
-        
+        AudioManager.i.stopAll();
         if (GameWon)
         {
             //AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevelWon);
             AudioManager.i.PlayBackGround(AudioFileGetter.i.winGame);
+            AudioManager.i.PlaySound(AudioFileGetter.i.momWin);
             CanvasManager.instance.WonScreenFade();
         }
         else
         {
             //AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevelWon);
             AudioManager.i.PlayBackGround(AudioFileGetter.i.loseGame);
+            AudioManager.i.PlaySound(AudioFileGetter.i.momLose);
             CanvasManager.instance.LostScreen();
         }
         
@@ -282,7 +282,7 @@ public class GameManager : Singleton<GameManager>
             Destroy(item);
         }
 
-        string levelName = "levels/level " + 7;//levelNum;
+        string levelName = "levels/level " + 8;//levelNum;
         
         GameObject cur = GameObject.FindWithTag("level");
         Destroy(cur);

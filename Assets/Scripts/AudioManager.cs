@@ -163,5 +163,12 @@ public class AudioManager : MonoBehaviour
         stopSound(AS_playerActions);
     }
 
-
+    public void stopAll()
+    {
+        stopfire();
+        stopWater();
+        stopPlayerActionSound();
+        stopBackGround();
+        StopClock();
+    }
 }

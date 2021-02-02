@@ -31,7 +31,6 @@ public class TimeScript : MonoBehaviour
     public float shakeLength;
     
     
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -147,7 +146,7 @@ public class TimeScript : MonoBehaviour
             comment = GameManager.Instance.getAlexaText("timeLeft15");
         }
         
-        GameManager.Instance.ActivateAlexa(clip, GameManager.Instance.getAlexaText(nameof(clip)));
+        GameManager.Instance.ActivateAlexa(clip, comment);
         //SoundManager.PlaySound(clip);
         // todo: should shakeLength change per frame?
     }

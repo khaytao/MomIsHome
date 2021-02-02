@@ -73,10 +73,10 @@ public class PlayerScript : MonoBehaviour
             return;
         }
         
-        // TODO: KFIR -  DROP BIN (needed?)
-        AudioManager.i.PlaySound(AudioFileGetter.i.drop);
+        
         if (holdingBin)
         {
+            AudioManager.i.PlaySound(AudioFileGetter.i.drop);
             holdingBin.transform.parent = transform.parent;;
             holdingBin.gameObject.SetActive(true);
             holdingBin = null;
@@ -85,20 +85,19 @@ public class PlayerScript : MonoBehaviour
             return;
         }
         
-        // TODO: KFIR - DROP ITEM
-        AudioManager.i.PlaySound(AudioFileGetter.i.drop);
+        
         if (holdingItem)
         {
+            AudioManager.i.PlaySound(AudioFileGetter.i.drop);
             _animator.SetInteger("HoldingItem", 0);
             holdingItem.gameObject.SetActive(true);
             holdingItem.transform.parent = transform.parent;
             holdingItem = null;
         }
         
-        // TODO: PICKUP TRASH BIN (needed?)
-        AudioManager.i.PlaySound(AudioFileGetter.i.pick);
         if(highlightedTasks.Count > 0 && highlightedTasks[0].type == TaskType.Trash)
         {
+            AudioManager.i.PlaySound(AudioFileGetter.i.pick);
             holdingBin = highlightedTasks[0];
             holdingBin.gameObject.transform.parent = gameObject.transform;
             // 20 for holding bin in animator
@@ -106,10 +105,10 @@ public class PlayerScript : MonoBehaviour
             holdingBin.gameObject.SetActive(false);
         }
 
-        // TODO: KFIR - PICK UP ITEM
-        AudioManager.i.PlaySound(AudioFileGetter.i.pick);
+        
         if (!holdingBin && highlightedItem)
         {
+            AudioManager.i.PlaySound(AudioFileGetter.i.pick);
             holdingItem = highlightedItem;
             holdingItem.gameObject.transform.parent = gameObject.transform;
             _animator.SetInteger("HoldingItem", (int) holdingItem.forTaskType);

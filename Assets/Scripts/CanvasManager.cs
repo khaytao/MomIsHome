@@ -149,6 +149,12 @@ public class CanvasManager : MonoBehaviour
     {
         clock = Instantiate(Resources.Load("utils/AudioFileGetter")) as GameObject;
     }
+    
+    public void ResetClock(float levelSeconds)
+    {
+        clock = Instantiate(Resources.Load("utils/AudioFileGetter")) as GameObject;
+        clock.GetComponent<TimeScript>().gameDurationMinutes = levelSeconds;
+    }
 
     public void alexa(string txt)
     {
@@ -156,10 +162,9 @@ public class CanvasManager : MonoBehaviour
         {
             return;
         }
-        
-        // Alexa.gameObject.SetActive(true);
-        // Alexa.Find("Text").GetComponent<TMP_Text>().text = txt;
-        
+        Debug.Log(txt);
+        Alexa.gameObject.SetActive(true);
+        Alexa.Find("Text").GetComponent<TMP_Text>().text = txt;
     }
     
     private IEnumerator EaseScreenIn(GameObject im)
