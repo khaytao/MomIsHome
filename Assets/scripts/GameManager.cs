@@ -55,7 +55,7 @@ public class GameManager : Singleton<GameManager>
         {"alexaSnarky10", NOT_INITIALIZED},
         {"timeLeft90", "mom will be home in 1 minute and 30 seconds. every thing is going to be alright I'm sure"},
         {"timeLeft60", "mom will be home in 1 minute, oh sure, plenty of time, why not crack a beer and relax"},
-        {"timeLeft30", "Mom will be home in 30 seconds. She will be so happy to see… er… you"},
+        {"timeLeft30", "Mom will be home in 30 seconds. She will be so happy to see... er... you"},
         {"timeLeft15", "Mom will be home in 15 seconds. It was nice knowing you"}
     };
     
@@ -282,7 +282,7 @@ public class GameManager : Singleton<GameManager>
         }
 
 
-        string levelName = "levels/level " + 9;//levelNum;
+        string levelName = "levels/level " + 3;//levelNum;
 
         GameObject cur = GameObject.FindWithTag("level");
         Destroy(cur);

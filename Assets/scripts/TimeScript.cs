@@ -30,7 +30,9 @@ public class TimeScript : MonoBehaviour
 
     public float defaultShakeDuration;
     private float shakeDuration;
-    
+
+    private float x_original;
+    private float y_original;
     
     // Start is called before the first frame update
     void Start()
@@ -41,6 +43,10 @@ public class TimeScript : MonoBehaviour
         resetClock();
         
         AudioManager.i.InitClockSound(AudioFileGetter.i.clock, volumeScaleIdle);
+
+        var t = transform.position;
+        x_original = t.x;
+        y_original = t.y;
     }
 
     public void resetClock()
@@ -95,7 +101,7 @@ public class TimeScript : MonoBehaviour
         // 60 seconds
         if (timeLeft <= 60 && timeLeft >= 60 - defaultShakeDuration)
         {
-            comment = GameManager.Instance.getAlexaText("timeLeft90");
+            comment = GameManager.Instance.getAlexaText("timeLeft60");
             startShake(3, AudioFileGetter.i.timeLeft60, defaultShakeDuration, comment);
         }
         
@@ -103,7 +109,7 @@ public class TimeScript : MonoBehaviour
         // 30 seconds
         if (timeLeft <= 30 && timeLeft >= 30 - defaultShakeDuration)
         {
-            comment = GameManager.Instance.getAlexaText("timeLeft90");
+            comment = GameManager.Instance.getAlexaText("timeLeft30");
             startShake(5, AudioFileGetter.i.timeLeft30, defaultShakeDuration, comment);
         }
             
@@ -111,10 +117,12 @@ public class TimeScript : MonoBehaviour
         // 15 seconds
         if (timeLeft <= 15 && timeLeft >= 0)
         {
-            comment = GameManager.Instance.getAlexaText("timeLeft90");
+            comment = GameManager.Instance.getAlexaText("timeLeft15");
             startShake(7, AudioFileGetter.i.timeLeft15, 15, comment);
             AudioManager.i.InitClockSound(AudioFileGetter.i.clock, volumeScaleEnd);
         }
+        
+        transform.position = new Vector3(x_original, y_original);
     }
 
     private void startShake(float shakeForce, AudioClip clip, float shakeDuration, string comment)
