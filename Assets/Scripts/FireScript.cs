@@ -43,24 +43,13 @@ public class FireScript : MonoBehaviour
                 Vector2 dir = new Vector2(Random.Range(-1, 2), Random.Range(-1, 2));
                 Bounds temp = boxBounds;
                 Vector2 center = gameObject.transform.position;
-                // center.x += dir.x * spreadDistance.x;
-                // center.y += dir.y * spreadDistance.y;
                 center.x += dir.x * boxBounds.size.x;
                 center.y += dir.y * boxBounds.size.y;
                 temp.center = center;
                 if (GameManager.Instance.isInFire(temp) || GameManager.Instance.isInWall(temp))
                     return;
-                
-                // center.x -= dir.x * boxBounds.extents.x * 0.5f;
-                // center.y -= dir.y * boxBounds.extents.y * 0.5f;
-                GameObject newFire = Instantiate(Resources.Load("Fire"), new Vector3(center.x, center.y), Quaternion.identity) as GameObject;
 
-                // burn furniture if on them
-                // Task furniture = GameManager.Instance.inFurniture(new Bounds(center, boxBounds.extents));
-                // if (furniture != null)
-                // {
-                //     furniture.burnFurniture();
-                // }
+                GameObject newFire = Instantiate(Resources.Load("Fire"), new Vector3(center.x, center.y), Quaternion.identity) as GameObject;
             }
         }
     }

@@ -247,18 +247,12 @@ public class GameManager : Singleton<GameManager>
         if (taskCount <= 0)
         {
             Debug.Log("Game over! You Won");
-            //taskCount--; //this removes the trash can autamatically
             endGame(true);
         }
     }
 
     public void FinishTask(Task curTask)
     {
-        //progressBar.enabled = false;
-        
-        //Destroy(holdingItem.gameObject);
-        //holdingItem.transform.parent = null;
-        //holdingItem = null;
         addToTaskCount(-1);
         areTasksOver();
     }
