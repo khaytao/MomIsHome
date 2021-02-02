@@ -137,18 +137,18 @@ public class PlayerScript : MonoBehaviour
         }
         float elapsedPerc = (Time.time - taskStarted) / fixingTasks[0].duration;
         // puddle no longer in
-        if (fixingTasks[0].type == TaskType.Sweep)
-        {
-            if (!fixingTasks[0].taskRenderer.bounds.Intersects(playerRenderer.bounds))
-            {
-                fixingTasks[0].duration *= (1 - elapsedPerc);
-                isFixing = false;
-                _animator.SetBool("isWorking", false);
-                progressBar.gameObject.SetActive(false);
-                fixingTasks.Clear();
-                return;
-            }
-        }
+        // if (fixingTasks[0].type == TaskType.Sweep)
+        // {
+        //     if (!fixingTasks[0].taskRenderer.bounds.Intersects(playerRenderer.bounds))
+        //     {
+        //         fixingTasks[0].duration *= (1 - elapsedPerc);
+        //         isFixing = false;
+        //         _animator.SetBool("isWorking", false);
+        //         progressBar.gameObject.SetActive(false);
+        //         fixingTasks.Clear();
+        //         return;
+        //     }
+        // }
 
         // make puddle smaller
         if (fixingTasks[0].type == TaskType.Sweep)
