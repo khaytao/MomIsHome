@@ -67,6 +67,11 @@ public class FireScript : MonoBehaviour
 
     private void OnDestroy()
     {
+        // weird exception
+        if (!gameObject)
+            return;
+        if (!GameManager.Instance)
+            return;
         GameManager.Instance.removeFire(gameObject);
     }
 }
