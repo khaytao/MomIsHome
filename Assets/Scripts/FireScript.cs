@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class FireScript : MonoBehaviour
 {
@@ -61,5 +63,10 @@ public class FireScript : MonoBehaviour
                 // }
             }
         }
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.Instance.removeFire(gameObject);
     }
 }
