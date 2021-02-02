@@ -27,6 +27,7 @@ public class GameManager : Singleton<GameManager>
     private List<Bounds> wallBounds;
     private List<(GameObject, Bounds)> fireBounds;
     private List<(Task, Bounds)> furnitureTaskBounds;
+    private List<Task> furnitureTasks;
     private PlayerScript playerScript;
     private TimeScript clockScript;
     private int curLevel = 1;
@@ -60,14 +61,7 @@ public class GameManager : Singleton<GameManager>
     
     public GameManager()
     {
-        goToItem = new Dictionary<GameObject, Item>();
-        goToTask = new Dictionary<GameObject, Task>();
-        timeStarted = -1;
-        gameOver = false;
-        wallBounds = new List<Bounds>();
-        fireBounds = new List<(GameObject, Bounds)>();
-        furnitureTaskBounds = new List<(Task, Bounds)>();
-        taskCount = 0;
+        ResetVals();
     }
 
     public void setClock(TimeScript clock)
@@ -162,17 +156,22 @@ public class GameManager : Singleton<GameManager>
         return null;
     }
 
+    public List<Task> getFurnitures()
+    {
+        return furnitureTasks;
+    }
+
     public void addTask(Task task)
     {
         if (task.type != TaskType.Trash && task.type != TaskType.Furniture)
         {
-            //Debug.Log(task.name);
             addToTaskCount(1);
         }
         if (task.type == TaskType.Furniture)
         {
             Bounds furnitureBounds = task.GetComponent<SpriteRenderer>().bounds;
             furnitureTaskBounds.Add((task, furnitureBounds));
+            furnitureTasks.Add(task);
             if(isInFire(furnitureBounds))
                 task.burnFurniture();
         }
@@ -363,6 +362,7 @@ public class GameManager : Singleton<GameManager>
 
     private void ResetVals()
     {
+        furnitureTasks = new List<Task>();
         goToItem = new Dictionary<GameObject, Item>();
         goToTask = new Dictionary<GameObject, Task>();
         timeStarted = -1;
@@ -371,7 +371,6 @@ public class GameManager : Singleton<GameManager>
         fireBounds = new List<(GameObject, Bounds)>();
         furnitureTaskBounds = new List<(Task, Bounds)>();
         taskCount = 0;
-        timeStarted = -1;
         if(clockScript)
             clockScript.resetClock();
     }

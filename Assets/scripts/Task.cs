@@ -231,6 +231,11 @@ public class Task : MonoBehaviour, IComparable<Task>
         isBurning = true;
     }
 
+    public bool canBreak()
+    {
+        return isFurniture && !isBroken && !isBurning;
+    }
+
     public int CompareTo(Task other)
     {
         Vector3 playerPos = GameManager.Instance.getPlayerScript().gameObject.transform.position;

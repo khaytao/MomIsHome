@@ -17,18 +17,26 @@ enum ActionType
 
 public class EnemyAI : MonoBehaviour
 {
+    public float lookForFurnitureDistance;
+    public float furnitureSearchCooldown;
+    public float actionCooldown;
+    private float lastActionTime;
+    private float lastFurnitureSearch;
     public float thresh = 0.1f;
-    public float dropOffset;
     public float timeBetweenPoints;
     public List<Transform> pointsList;
+    private List<Transform> lastThreePoints;
     public List<string> spawnList;
     public Animator anim;
     private AIPath path;
     private AIDestinationSetter ds;
-    private Rigidbody2D rb;
+    private Vector3 lastLocation; // to check if stuck
+    private float lastLocationChecked;
+    private int sameLocationStrikes;
 
+    private Transform nextDestination;
     private bool leaving;
-    private float movementThreshold = 0.05f;
+    private float movementThreshold = 0.001f;
     private int i;
 
     public Transform exit;
@@ -38,15 +46,11 @@ public class EnemyAI : MonoBehaviour
     private bool actionIsDirty;
     public float idleTimeBeforeAction;
     private bool isInAction;
-
-    private Vector2 curPos;
-
-    private float angleAnim;
+    private Task curFurniture;
 
     private SpriteRenderer renderer;
     private Task task;
-    private Vector3 lastVel;
-    
+
 
     private bool isMoving;
 
@@ -54,19 +58,19 @@ public class EnemyAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        lastActionTime = -1;
+        lastThreePoints = new List<Transform>();
         anim = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
         i = 0;
+        nextDestination = pointsList[i];
         ds = GetComponent<AIDestinationSetter>();
         path = GetComponent<AIPath>();
         task = GetComponent<Task>();
-        ds.target = pointsList[i];
-        curPos = transform.position;
+        ds.target = nextDestination;
         renderer = GetComponent<SpriteRenderer>();
         startedAction = -1;
         isInAction = false;
         updatingLocation = false;
-        lastVel = Vector3.zero;
     }
 
     // Update is called once per frame
@@ -75,6 +79,22 @@ public class EnemyAI : MonoBehaviour
         if (!(Mathf.Abs(transform.position.x) < x_limit && Mathf.Abs(transform.position.y) < y_limit))
         {
             Destroy(gameObject);
+        }
+
+        // check if stuck
+        if (Time.time - lastLocationChecked >= 0.5f)
+        {
+            if (lastLocation == transform.position)
+            {
+                sameLocationStrikes++;
+                if (sameLocationStrikes >= 4)
+                    pickNextRandomDest();
+            }
+            else
+                sameLocationStrikes = 0;
+            
+            lastLocationChecked = Time.time;
+            lastLocation = transform.position;
         }
 
         if (isInAction)
@@ -88,16 +108,48 @@ public class EnemyAI : MonoBehaviour
 
         
         // do something
-        if (!isInAction && !updatingLocation && pointsList[i] && Vector2.Distance(transform.position, pointsList[i].position) < thresh && !leaving)
+        if (!isInAction && !updatingLocation && pointsList[i] && Vector2.Distance(transform.position, ds.target.position) < thresh && !leaving)
         {
-            i = (i + 1) % pointsList.Count;
-            Invoke(nameof(updateLocation), timeBetweenPoints);
-            startAction(true);
+            pickNextRandomDest();
+            // 30% to make dirty action
+            if(Time.time - lastActionTime > actionCooldown && Random.Range(0, 10) < 3)
+                startAction(true);
         }
 
-        var nn = AstarPath.active.GetNearest(transform.position, NNConstraint.Default);
-        var closestPointOnGraph = nn.clampedPosition;
-        transform.position = (Vector2) closestPointOnGraph;
+        // var nn = AstarPath.active.GetNearest(transform.position, NNConstraint.Default);
+        // var closestPointOnGraph = nn.clampedPosition;
+        // transform.position = (Vector2) closestPointOnGraph;
+    }
+
+    private void pickNextRandomDest()
+    {
+        if (Time.time - lastFurnitureSearch > furnitureSearchCooldown)
+        {
+            lastFurnitureSearch = Time.time;
+            // 50% to go to close furniture
+            if (Random.Range(0, 10) < 5)
+            {
+                if (goClosestFurniture())
+                {
+                    Invoke(nameof(updateLocation), timeBetweenPoints);
+                    return;
+                }
+            }
+        }
+        int nextIndex = Random.Range(0, pointsList.Count);
+        int tries = 0;
+        while (tries++ < 20 && lastThreePoints.Contains(pointsList[nextIndex]))
+        {
+            nextIndex = Random.Range(0, pointsList.Count);
+        }
+        
+        i = nextIndex;
+        nextDestination = pointsList[nextIndex];
+        lastThreePoints.Add(nextDestination);
+        if (lastThreePoints.Count > 3)
+            lastThreePoints.RemoveAt(3);
+        
+        Invoke(nameof(updateLocation), timeBetweenPoints);
     }
 
     IEnumerator doAction()
@@ -107,23 +159,42 @@ public class EnemyAI : MonoBehaviour
             startedAction = -1;
             anim.SetInteger("Action", (int) ActionType.Idle);
             yield return new WaitForSeconds(idleTimeBeforeAction);
-            anim.SetInteger("Action", (int) ActionType.Dirty);
-            AudioManager.i.PlaySound(AudioFileGetter.i.vomit);
-            // wait for animation to end
-            yield return new WaitForSeconds(18f / 24f);
-            if (task.NPCType == NPCType.DrunkFriend || task.NPCType == NPCType.Hobo)
-            {
-                GameObject puddle = Instantiate(Resources.Load("Puddle")) as GameObject;
-                Vector2 puddleExtents = puddle.GetComponent<SpriteRenderer>().bounds.extents;
-                // calc puddle location
-                int dirX = renderer.flipX ? 1 : -1;
-                Vector2 rendExtents = renderer.bounds.extents;
-                Vector3 newPos = new Vector3(transform.position.x + dirX * (rendExtents.x - puddleExtents.x * 1.5f), transform.position.y - rendExtents.y, transform.position.z);
-                puddle.transform.position = newPos;
-            }
+            
+            if (actionIsDirty)
+                yield return dirtyAction();
+            else
+                yield return breakAction();
+            
             anim.SetInteger("Action", (int) ActionType.Idle);
+            isMoving = false;
             path.canMove = true;
             isInAction = false;
+        }
+    }
+
+    private IEnumerator breakAction()
+    {
+        anim.SetInteger("Action", (int) ActionType.Break);
+        AudioManager.i.PlaySound(AudioFileGetter.i.Break);
+        yield return new WaitForSeconds(18f / 24f);
+        curFurniture.breakFurniture();
+    }
+
+    private IEnumerator dirtyAction()
+    {
+        anim.SetInteger("Action", (int) ActionType.Dirty);
+        AudioManager.i.PlaySound(AudioFileGetter.i.vomit);
+        // wait for animation to end
+        yield return new WaitForSeconds(18f / 24f);
+        if (task.NPCType == NPCType.DrunkFriend || task.NPCType == NPCType.Hobo)
+        {
+            GameObject puddle = Instantiate(Resources.Load("Puddle")) as GameObject;
+            Vector2 puddleExtents = puddle.GetComponent<SpriteRenderer>().bounds.extents;
+            // calc puddle location
+            int dirX = renderer.flipX ? 1 : -1;
+            Vector2 rendExtents = renderer.bounds.extents;
+            Vector3 newPos = new Vector3(transform.position.x + dirX * (rendExtents.x - puddleExtents.x * 1.5f), transform.position.y - rendExtents.y, transform.position.z);
+            puddle.transform.position = newPos;
         }
     }
 
@@ -132,15 +203,12 @@ public class EnemyAI : MonoBehaviour
         isInAction = true;
         startedAction = Time.time;
         actionIsDirty = actionDirty;
+        lastActionTime = Time.time;
     }
 
 
     private void updateAnimator()
     {
-        Vector2 pos = transform.position;
-        Vector2 movementDirection = pos - curPos;
-
-        curPos = pos;
         Vector3 velocity = path.velocity;
         if (isMoving && (velocity == Vector3.zero || path.velocity.magnitude < movementThreshold))
         {
@@ -153,18 +221,11 @@ public class EnemyAI : MonoBehaviour
             anim.SetInteger("Action", (int) ActionType.Move);
         }
 
-        // lastVel = path.velocity;
-
-        angleAnim = Vector2.Angle(Vector2.up, movementDirection);
         if (velocity.x > 0.01f)
-        {
             renderer.flipX = true;
-        }
 
         if (velocity.x < -0.01f)
-        {
             renderer.flipX = false;
-        }
     }
 
     private void FixedUpdate()
@@ -176,8 +237,25 @@ public class EnemyAI : MonoBehaviour
     {
         if (!leaving)
         {
-            ds.target = pointsList[i];
+            ds.target = nextDestination;
         }
+    }
+
+    private bool goClosestFurniture()
+    {
+        List<Task> furnitures = GameManager.Instance.getFurnitures();
+        List<Task> closeBreakableFurnitures = new List<Task>();
+        foreach(Task furniture in furnitures)
+            if(furniture.canBreak() && Vector3.Distance(gameObject.transform.position, furniture.gameObject.transform.position) < lookForFurnitureDistance)
+                closeBreakableFurnitures.Add(furniture);
+        
+        if (closeBreakableFurnitures.Count == 0)
+            return false;
+        
+        // pick random furniture to go to
+        int destIndex = Random.Range(0, closeBreakableFurnitures.Count);
+        nextDestination = closeBreakableFurnitures[destIndex].transform;
+        return true;
     }
 
 
@@ -208,5 +286,22 @@ public class EnemyAI : MonoBehaviour
     private void kill()
     {
         Destroy(this);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag.Equals("Task"))
+        {
+            Task otherTask = GameManager.Instance.getTask(other.gameObject);
+            if (otherTask.type != TaskType.Furniture)
+                return;
+
+            // 50% chance to break
+            if (Time.time - lastActionTime > actionCooldown && otherTask.canBreak() && Random.Range(0, 10) < 5)
+            {
+                curFurniture = otherTask;
+                startAction(false);
+            }
+        }
     }
 }

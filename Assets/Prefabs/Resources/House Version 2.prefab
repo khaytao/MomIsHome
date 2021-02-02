@@ -2378,7 +2378,7 @@ GameObject:
   - component: {fileID: 9023534446534008197}
   m_Layer: 0
   m_Name: bed blue
-  m_TagString: Task
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2497,7 +2497,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3917617819959714256}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -2521,7 +2521,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3917617819959714256}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 95a4bad0fc048e44e94da1896ba2c979, type: 2}
   m_CullingMode: 0
@@ -3058,7 +3058,7 @@ GameObject:
   - component: {fileID: 1682441246030441955}
   m_Layer: 0
   m_Name: PC
-  m_TagString: Task
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3177,7 +3177,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3917617820509907610}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
@@ -3201,7 +3201,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3917617820509907610}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 95a4bad0fc048e44e94da1896ba2c979, type: 2}
   m_CullingMode: 0
