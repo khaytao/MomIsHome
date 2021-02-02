@@ -212,14 +212,14 @@ AnimatorStateMachine:
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: 2744661549325023863}
-    second:
-    - {fileID: 306683181462644136}
-    - {fileID: 5976167356880740549}
   - first: {fileID: 1192639045369040979}
     second:
     - {fileID: -4774520150305550440}
     - {fileID: 7393412276599960023}
+  - first: {fileID: 2744661549325023863}
+    second:
+    - {fileID: 306683181462644136}
+    - {fileID: 5976167356880740549}
   - first: {fileID: 8885252937957276307}
     second:
     - {fileID: 8700971527383446568}
@@ -1226,14 +1226,14 @@ AnimatorStateMachine:
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: 8197060223612117147}
-    second:
-    - {fileID: 1139652065169846722}
-    - {fileID: 4107999220646664956}
   - first: {fileID: -7660618672531965043}
     second:
     - {fileID: 6828806959741508130}
     - {fileID: -5549233966355260615}
+  - first: {fileID: 8197060223612117147}
+    second:
+    - {fileID: 1139652065169846722}
+    - {fileID: 4107999220646664956}
   - first: {fileID: 76893802065865086}
     second:
     - {fileID: -1052611104562901840}
@@ -3324,14 +3324,14 @@ AnimatorStateMachine:
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: 6584231464056221022}
-    second:
-    - {fileID: 7425794466403744663}
-    - {fileID: -8552384000335591250}
   - first: {fileID: 7717361668288106573}
     second:
     - {fileID: 617354443973224786}
     - {fileID: -4113818373679157193}
+  - first: {fileID: 6584231464056221022}
+    second:
+    - {fileID: 7425794466403744663}
+    - {fileID: -8552384000335591250}
   - first: {fileID: 4717734625350793842}
     second:
     - {fileID: 5265733948841099057}
@@ -3479,14 +3479,14 @@ AnimatorStateMachine:
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: -1445826868294505451}
-    second:
-    - {fileID: -4470809446480165393}
-    - {fileID: 5385465650346771254}
   - first: {fileID: -5894067916387887553}
     second:
     - {fileID: 797650891393015061}
     - {fileID: -2039175771074370705}
+  - first: {fileID: -1445826868294505451}
+    second:
+    - {fileID: -4470809446480165393}
+    - {fileID: 5385465650346771254}
   - first: {fileID: 6109791695476353668}
     second:
     - {fileID: -1859000540660465021}
