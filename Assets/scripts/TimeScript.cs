@@ -28,7 +28,8 @@ public class TimeScript : MonoBehaviour
 
     private float shakeForce;
 
-    public float shakeLength;
+    public float defaultShakeDuration;
+    private float shakeDuration;
     
     
     
@@ -75,7 +76,7 @@ public class TimeScript : MonoBehaviour
     private void shakeClock()
     {
         float elapsedTime = GameManager.Instance.elapsedTime;
-        if (shakeStarted >= 0 && elapsedTime - shakeStarted < shakeLength)
+        if (shakeStarted >= 0 && elapsedTime - shakeStarted < shakeDuration)
         {
             float shake_x = Mathf.Sin(speed * Time.time) * shakeForce;
             transform.position = new Vector3(shake_x,  transform.position.y, 0);
@@ -86,33 +87,34 @@ public class TimeScript : MonoBehaviour
         float timeLeft = GetSecondsLeft();
         
         // 90 seconds left
-        if (timeLeft <= 90 && timeLeft >= 90 - shakeLength)
-            startShake(1, AudioFileGetter.i.timeLeft90);
+        if (timeLeft <= 90 && timeLeft >= 90 - defaultShakeDuration)
+            startShake(1, AudioFileGetter.i.timeLeft90, defaultShakeDuration);
 
         // 60 seconds
-        if (timeLeft <= 60 && timeLeft >= 60 - shakeLength)
-            startShake(3, AudioFileGetter.i.timeLeft60);
+        if (timeLeft <= 60 && timeLeft >= 60 - defaultShakeDuration)
+            startShake(3, AudioFileGetter.i.timeLeft60, defaultShakeDuration);
         
 
         // 30 seconds
-        if (timeLeft <= 30 && timeLeft >= 30 - shakeLength)
+        if (timeLeft <= 30 && timeLeft >= 30 - defaultShakeDuration)
         {
-            startShake(5, AudioFileGetter.i.timeLeft30);
+            startShake(5, AudioFileGetter.i.timeLeft30, defaultShakeDuration);
         }
             
 
         // 15 seconds
-        if (timeLeft <= 15 && timeLeft >= 15 - shakeLength)
+        if (timeLeft <= 15 && timeLeft >= 0)
         {
-            startShake(7, AudioFileGetter.i.timeLeft15);
+            startShake(7, AudioFileGetter.i.timeLeft15, 15);
             AudioManager.i.InitClockSound(AudioFileGetter.i.clock, volumeScaleEnd);
         }
     }
 
-    private void startShake(float shakeForce, AudioClip clip)
+    private void startShake(float shakeForce, AudioClip clip, float shakeDuration)
     {
         shakeStarted = GameManager.Instance.elapsedTime;
         this.shakeForce = shakeForce;
+        this.shakeDuration = shakeDuration;
         
         GameManager.Instance.ActivateAlexa(clip, "");
         //SoundManager.PlaySound(clip);
