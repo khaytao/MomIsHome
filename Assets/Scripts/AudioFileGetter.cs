@@ -88,34 +88,5 @@ public class AudioFileGetter : MonoBehaviour
     public AudioClip momWin;
     public AudioClip momLose;
     
-        
     
-    
-    
-
-
-    /*Screens:
-    win game - Main/Title Screen + Win screen  (once)
-        ???? - Game itself screen (once> timed per level)
-    lose game - Lose game screen (once)
-
-    UI/X: 
-    clock - clock ticking (loop) > low volume idle > volume up when close to end
-    buttons:
-    Menu Move - mouse hover (once)
-    Menu Select - clicked (once)
-
-    Alexa:
-    alexa in - before speak {turn on sound} (once)
-        alexa out - after finished speaking {turn off} (once)
-    ???? - Win screen, {Don't worry, I won't tell... We should do this again} (once)
-    ???? - Lose screen, {I told you. But you didn't listen} (once)
-        every 30 seconds reads the time:
-    1 min 30 sec - 1 min and 30 sec till the end (once)
-        1 min - 1 min till the end (once)
-        30 sec - 30 sec till the end (once)
-        15 sec - 15 sec till the end (once)
-    speech triggered by events:
-    snarky 1-10 - random (once)*/
-
 }
