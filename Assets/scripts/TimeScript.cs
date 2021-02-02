@@ -29,6 +29,7 @@ public class TimeScript : MonoBehaviour
     private float shakeForce;
 
     public float defaultShakeDuration;
+    private float initialClockX;
     private float shakeDuration;
 
     private float x_original;
@@ -37,6 +38,7 @@ public class TimeScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        initialClockX = transform.position.x;
         GameManager.Instance.setClock(this);
         goalHourAngle = -90 * Vector3.forward;
 
@@ -84,10 +86,11 @@ public class TimeScript : MonoBehaviour
         if (shakeStarted >= 0 && elapsedTime - shakeStarted < shakeDuration)
         {
             float shake_x = Mathf.Sin(speed * Time.time) * shakeForce;
-            transform.position = new Vector3(shake_x,  transform.position.y, 0);
+            transform.position = new Vector3(initialClockX + shake_x,  transform.position.y, 0);
             return;
         }
         
+        transform.position = new Vector3(initialClockX, transform.position.y, 0);
         string comment;
         float timeLeft = GetSecondsLeft();
         
