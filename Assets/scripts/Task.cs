@@ -71,6 +71,7 @@ public class Task : MonoBehaviour, IComparable<Task>
     private bool isBurning;
     private bool isBroken;
     private FountainScript fountainScript;
+    private GameObject fountainGO;
 
     
     
@@ -104,6 +105,10 @@ public class Task : MonoBehaviour, IComparable<Task>
             if (canLeak())
             {
                 fountainScript = gameObject.AddComponent<FountainScript>();
+                fountainGO = Instantiate(Resources.Load("WaterFountain"), transform.position, Quaternion.identity) as GameObject;
+                Bounds bounds = fountainGO.GetComponent<SpriteRenderer>().bounds;
+                fountainGO.transform.position += new Vector3(0, bounds.extents.y/2);
+                fountainGO.SetActive(false);
                 fountainScript.enabled = false;
             }
             if (furnitureInitBreakLevel == 1)
@@ -164,8 +169,9 @@ public class Task : MonoBehaviour, IComparable<Task>
         }
         else if (type == TaskType.Tape && isFurniture)
         {
-            if (furnitureType == FurnitureType.Sink || furnitureType == FurnitureType.Toilet)
+            if (canLeak())
             {
+                fountainGO.SetActive(false);
                 fountainScript.enabled = false;
                 GameManager.Instance.leakCount--;
             }
@@ -215,6 +221,7 @@ public class Task : MonoBehaviour, IComparable<Task>
         {
             GameManager.Instance.leakCount++;
             fountainScript.enabled = true;
+            fountainGO.SetActive(true);
         }
         
         animator.SetInteger("BrokenLevel", 1);
@@ -277,5 +284,10 @@ public class Task : MonoBehaviour, IComparable<Task>
                furnitureType == FurnitureType.Towel || furnitureType == FurnitureType.TV ||
                furnitureType == FurnitureType.ShowerCurtain;
     }
-    
+
+    private void OnDestroy()
+    {
+        if(fountainGO)
+            Destroy(fountainGO);
+    }
 }
