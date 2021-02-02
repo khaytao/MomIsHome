@@ -13,4 +13,10 @@ public class WallScript : MonoBehaviour
             GameManager.Instance.addWallBounds(new Bounds(boxCollider.bounds.center, new Vector3(boxCollider.size.x, boxCollider.size.y, 0)));
         }
     }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }
