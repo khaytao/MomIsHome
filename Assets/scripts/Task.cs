@@ -101,7 +101,7 @@ public class Task : MonoBehaviour, IComparable<Task>
         if (isFurniture)
         {
             animator.SetInteger("Furniture", (int) furnitureType);
-            if (furnitureType == FurnitureType.Sink || furnitureType == FurnitureType.Toilet)
+            if (canLeak())
             {
                 fountainScript = gameObject.AddComponent<FountainScript>();
                 fountainScript.enabled = false;
@@ -211,7 +211,7 @@ public class Task : MonoBehaviour, IComparable<Task>
         if (isBurning)
             return;
 
-        if (furnitureType == FurnitureType.Sink || furnitureType == FurnitureType.Toilet)
+        if (canLeak())
         {
             GameManager.Instance.leakCount++;
             fountainScript.enabled = true;
@@ -254,6 +254,12 @@ public class Task : MonoBehaviour, IComparable<Task>
                 Debug.Log("broke" + other.gameObject.name);
             }
         }
+    }
+
+    private bool canLeak()
+    {
+        return furnitureType == FurnitureType.Sink || furnitureType == FurnitureType.Toilet ||
+               furnitureType == FurnitureType.Tub;
     }
     
 }
