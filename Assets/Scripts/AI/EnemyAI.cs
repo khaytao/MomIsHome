@@ -104,6 +104,9 @@ public class EnemyAI : MonoBehaviour
             return;
         }
 
+        // updateAnimator();
+
+        
         // do something
         if (!isInAction && !updatingLocation && pointsList[i] && Vector2.Distance(transform.position, ds.target.position) < thresh && !leaving)
         {
@@ -112,6 +115,10 @@ public class EnemyAI : MonoBehaviour
             if(Time.time - lastActionTime > actionCooldown && Random.Range(0, 10) < 3)
                 startAction(true);
         }
+
+        // var nn = AstarPath.active.GetNearest(transform.position, NNConstraint.Default);
+        // var closestPointOnGraph = nn.clampedPosition;
+        // transform.position = (Vector2) closestPointOnGraph;
     }
 
     private void pickNextRandomDest()
@@ -251,6 +258,19 @@ public class EnemyAI : MonoBehaviour
         return true;
     }
 
+
+    // IEnumerator updateLocation()
+    // {
+    //     updatingLocation = true;
+    //     if (!leaving)
+    //     {
+    //         yield return new WaitForSeconds(timeBetweenPoints);
+    //         i = (i + 1) % pointsList.Count;
+    //         ds.target = pointsList[i];
+    //         updatingLocation = false;
+    //     }
+    // }
+
     public void Leave()
     {
         leaving = true;
@@ -259,6 +279,8 @@ public class EnemyAI : MonoBehaviour
         {
             comp.enabled = false;
         }
+        
+        //Invoke(nameof(kill), 15 );
     }
 
     private void kill()

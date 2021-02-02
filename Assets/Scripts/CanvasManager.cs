@@ -17,7 +17,9 @@ public class CanvasManager : MonoBehaviour
     public static bool isPaused;
     public float menuDelay;
 
+    public TMP_Text TasksRemaining;
     private Transform Alexa;
+    
     
     private static CanvasManager _instance;
     
@@ -192,6 +194,12 @@ public class CanvasManager : MonoBehaviour
             yield return null;
         }
     }
+
+    public void updateCurTasks(int numTasks)
+    {
+        TasksRemaining.text = numTasks + " Tasks\n remain";
+    }
+    
 
     public float acc1;
     public float acc2;

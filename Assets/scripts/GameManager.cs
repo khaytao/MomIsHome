@@ -132,6 +132,7 @@ public class GameManager : Singleton<GameManager>
     {
         taskCount += num;
         Debug.Log(taskCount);
+        CanvasManager.instance.updateCurTasks(taskCount);
     }
 
     public void addItem(Item item)
@@ -237,22 +238,28 @@ public class GameManager : Singleton<GameManager>
         ResetVals();
         LoadLevelPrefabs(curLevel);
         CanvasManager.instance.ResetClock();
-        AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevel, 0.5f);
+        AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevel);
     }
 
     public void areTasksOver()
     {
         Debug.Log(taskCount);
-        
+        CanvasManager.instance.updateCurTasks(taskCount);
         if (taskCount <= 0)
         {
             Debug.Log("Game over! You Won");
+            //taskCount--; //this removes the trash can autamatically
             endGame(true);
         }
     }
 
     public void FinishTask(Task curTask)
     {
+        //progressBar.enabled = false;
+        
+        //Destroy(holdingItem.gameObject);
+        //holdingItem.transform.parent = null;
+        //holdingItem = null;
         addToTaskCount(-1);
         areTasksOver();
     }
@@ -276,7 +283,7 @@ public class GameManager : Singleton<GameManager>
         }
 
 
-        string levelName = "levels/level " + 10;//levelNum;
+        string levelName = "levels/level " + levelNum;
 
         GameObject cur = GameObject.FindWithTag("level");
         Destroy(cur);
@@ -308,7 +315,7 @@ public class GameManager : Singleton<GameManager>
         //AsyncOperation unload = SceneManager.UnloadSceneAsync(currentScene.scene.buildIndex);
 
         LoadLevelPrefabs(1);
-        AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevel, 0.5f);
+        AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevel);
     }
     
     public void MainMenu()
@@ -321,7 +328,7 @@ public class GameManager : Singleton<GameManager>
         ResetVals();
         curLevel++;
         LoadLevelPrefabs(curLevel);
-        AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevel, 0.5f);
+        AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevel);
     }
 
     private void loadFisrt()
@@ -384,7 +391,7 @@ public class GameManager : Singleton<GameManager>
     {
         yield return new WaitUntil(() => isAlexaPlaying == false);
         isAlexaPlaying = true;
-        AudioManager.i.PlaySound(comment);
+        AudioManager.i.PlaySound(comment, AudioManager.i.AS_Alexa);
         CanvasManager.instance.alexa(message);
         Invoke(nameof(alexaDone), comment.length);
     }

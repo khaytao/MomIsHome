@@ -51,7 +51,7 @@ public class AudioManager : MonoBehaviour
             stopWater();
         }
     }
-
+    [HideInInspector]
     public bool isPlayingSound;
     
     public AudioSource AS_background;
@@ -61,16 +61,17 @@ public class AudioManager : MonoBehaviour
     public AudioSource AS_fire;
     public AudioSource AS_water;
     public AudioSource AS_mom;
+    public AudioSource AS_Alexa;
     
     //public AudioSource AS_shorts;
 
     public void InitClockSound(AudioClip s, float scale)
     {
         AS_clock.clip = s;
-        if (0 <= scale && scale <= 1)
+        /*if (0 <= scale && scale <= 1)
         {
             AS_clock.volume = scale;
-        }
+        }*/
         AS_clock.loop = true;
         AS_clock.Play();
     }
@@ -84,11 +85,11 @@ public class AudioManager : MonoBehaviour
     {
         AS_background.clip = s;
         AS_background.loop = true;
-        AS_background.volume = 1;
+        //AS_background.volume = 1;
         AS_background.Play();
     }
 
-    public void PlayBackGround(AudioClip s, float scale)
+    /*public void PlayBackGround(AudioClip s, float scale)
     {
         AS_background.clip = s;
         AS_background.loop = true;
@@ -97,7 +98,7 @@ public class AudioManager : MonoBehaviour
             AS_background.volume = scale;
         }
         AS_background.Play();
-    }
+    }*/
     public void stopBackGround()
     {
         stopSound(AS_background);
@@ -116,9 +117,9 @@ public class AudioManager : MonoBehaviour
         //Invoke(nameof(donePlaying), t);
     }
     
-    public void PlaySound(AudioClip s, float scale)
+    public void PlaySound(AudioClip c, AudioSource s)
     {
-        AS_background.PlayOneShot(s, scale);
+        s.PlayOneShot(c);
     }
 
     public void PlayLooped(AudioSource s, AudioClip c)
