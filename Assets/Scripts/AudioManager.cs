@@ -27,7 +27,7 @@ public class AudioManager : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Instance.FireCount() > 0)
+        if (GameManager.Instance.FireCount() > 0 && !GameManager.Instance.gameOver)
         {
             if (!AS_fire.isPlaying)
             {
@@ -39,7 +39,7 @@ public class AudioManager : MonoBehaviour
             stopfire();
         }
 
-        if (GameManager.Instance.leakCount > 0)
+        if (GameManager.Instance.leakCount > 0 && !GameManager.Instance.gameOver)
         {
             if (!AS_water.isPlaying)
             {
