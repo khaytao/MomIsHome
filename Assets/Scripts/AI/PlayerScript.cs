@@ -29,6 +29,7 @@ public class PlayerScript : MonoBehaviour
     private List<Task> highlightedTasks;
     private Item highlightedItem;
     private Vector3 puddleScaleTaskStart;
+    private BoxCollider2D boxCollider2D;
 
     public float wallBounce = 1f;
 
@@ -37,6 +38,7 @@ public class PlayerScript : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         highlightedTasks = new List<Task>();
+        boxCollider2D = GetComponent<BoxCollider2D>();
         _rb = GetComponent<Rigidbody2D>();
         playerRenderer = GetComponent<SpriteRenderer>();
         //_animator = GetComponent<Animator>();
@@ -361,19 +363,23 @@ public class PlayerScript : MonoBehaviour
         
         // priority to fixing tasks
         foreach (Task task in curTasks)
-            if (task != null && (task.type == TaskType.Trash || task.canFix(holdingItem)))
+            if (task && (task.type == TaskType.Trash || task.canFix(holdingItem)) && noWallBetween(task.gameObject))
                 tasks.Add(task);
-
-        tasks.Sort();
+        
         if (tasks.Count == 0 && !curItem)
             return;
+        
+        tasks.Sort();
 
-        if (curItem && (tasks.Count == 0 || isCloser(curItem.gameObject, tasks[0].gameObject)))
+        if (curItem && (tasks.Count == 0 || isCloser(curItem.gameObject, tasks[0].gameObject)) && noWallBetween(curItem.gameObject))
         {
             highlightedItem = curItem;
             highlightedItem.triggerInteractable(true);
             return;
         }
+
+        if (tasks.Count == 0)
+            return;
 
         if (highlightedItem)
         {
@@ -404,5 +410,22 @@ public class PlayerScript : MonoBehaviour
         float dist1 = Vector3.Distance(gameObject.transform.position, go1.transform.position);
         float dist2 = Vector3.Distance(gameObject.transform.position, go2.transform.position);
         return dist1 < dist2;
+    }
+
+    private bool noWallBetween(GameObject go)
+    {
+        // check if go is in wall
+        Bounds smallBounds = new Bounds(go.transform.position, new Vector2(0.001f, 0.001f));
+        if (GameManager.Instance.isInWall(smallBounds))
+            return true;
+        
+        float leftBottomX = Mathf.Min(boxCollider2D.bounds.center.x, go.transform.position.x);
+        float leftBottomY = Mathf.Min(boxCollider2D.bounds.center.y, go.transform.position.y);
+        float rightTopX = Mathf.Max(boxCollider2D.bounds.center.x, go.transform.position.x);
+        float rightTopY = Mathf.Max(boxCollider2D.bounds.center.y, go.transform.position.y);
+        
+        Vector2 center = new Vector2(leftBottomX + (rightTopX - leftBottomX)/2, leftBottomY + (rightTopY - leftBottomY)/2);
+        Bounds rayLike = new Bounds(center, new Vector2(rightTopX - leftBottomX, rightTopY - leftBottomY));
+        return !GameManager.Instance.isInWall(rayLike);
     }
 }

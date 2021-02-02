@@ -293,7 +293,7 @@ public class EnemyAI : MonoBehaviour
         if (other.tag.Equals("Task"))
         {
             Task otherTask = GameManager.Instance.getTask(other.gameObject);
-            if (otherTask.type != TaskType.Furniture)
+            if (otherTask.type != TaskType.Furniture || wallBetween(other.gameObject))
                 return;
 
             // 50% chance to break
@@ -303,5 +303,17 @@ public class EnemyAI : MonoBehaviour
                 startAction(false);
             }
         }
+    }
+    
+    private bool wallBetween(GameObject go)
+    {
+        float leftBottomX = Mathf.Min(transform.position.x, go.transform.position.x);
+        float leftBottomY = Mathf.Min(transform.position.y, go.transform.position.y);
+        float rightTopX = Mathf.Max(transform.position.x, go.transform.position.x);
+        float rightTopY = Mathf.Max(transform.position.y, go.transform.position.y);
+        
+        Vector2 center = new Vector2(leftBottomX + (rightTopX - leftBottomX)/2, leftBottomY + (rightTopY - leftBottomY)/2);
+        Bounds rayLike = new Bounds(center, new Vector2(rightTopX - leftBottomX, rightTopY - leftBottomY));
+        return !GameManager.Instance.isInWall(rayLike);
     }
 }
