@@ -100,10 +100,10 @@ public class GameManager : Singleton<GameManager>
             if (fireGO == fireBounds[i].Item1)
             {
                 Destroy(fireGO);
+                fireBounds.RemoveAt(i);
                 break;
             }
         }
-        fireBounds.RemoveAt(i);
     }
 
     public bool isInWall(Bounds other)
