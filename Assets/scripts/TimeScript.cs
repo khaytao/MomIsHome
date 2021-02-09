@@ -98,14 +98,14 @@ public class TimeScript : MonoBehaviour
         if (timeLeft <= 90 && timeLeft >= 90 - defaultShakeDuration)
         {
             comment = GameManager.Instance.getAlexaText("timeLeft90");
-            startShake(1, AudioFileGetter.i.timeLeft90, defaultShakeDuration, comment);
+            startShake(0.01f, AudioFileGetter.i.timeLeft90, defaultShakeDuration, comment);
         }
         
         // 60 seconds
         if (timeLeft <= 60 && timeLeft >= 60 - defaultShakeDuration)
         {
             comment = GameManager.Instance.getAlexaText("timeLeft60");
-            startShake(3, AudioFileGetter.i.timeLeft60, defaultShakeDuration, comment);
+            startShake(0.1f, AudioFileGetter.i.timeLeft60, defaultShakeDuration, comment);
         }
         
 
@@ -113,7 +113,7 @@ public class TimeScript : MonoBehaviour
         if (timeLeft <= 30 && timeLeft >= 30 - defaultShakeDuration)
         {
             comment = GameManager.Instance.getAlexaText("timeLeft30");
-            startShake(5, AudioFileGetter.i.timeLeft30, defaultShakeDuration, comment);
+            startShake(0.19f, AudioFileGetter.i.timeLeft30, defaultShakeDuration, comment);
         }
             
 
@@ -121,7 +121,7 @@ public class TimeScript : MonoBehaviour
         if (timeLeft <= 15 && timeLeft >= 0)
         {
             comment = GameManager.Instance.getAlexaText("timeLeft15");
-            startShake(7, AudioFileGetter.i.timeLeft15, 15, comment);
+            startShake(0.28f, AudioFileGetter.i.timeLeft15, 15, comment);
             AudioManager.i.InitClockSound(AudioFileGetter.i.clock, volumeScaleEnd);
         }
         

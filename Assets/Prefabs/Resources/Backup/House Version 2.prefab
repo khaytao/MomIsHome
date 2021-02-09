@@ -1507,7 +1507,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 1.6812973, y: -9.296057}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -1533,7 +1533,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 1.7518845, y: 8.44528}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -1559,7 +1559,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 19.48843, y: 0.26174784}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -1585,7 +1585,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -16.041313, y: 3.643313}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -1611,7 +1611,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -16.028969, y: -5.809229}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -1637,7 +1637,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -5.648378, y: -6.1005206}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -1663,7 +1663,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -6.68401, y: -3.0756795}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -1689,7 +1689,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -13.366713, y: -3.036017}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -1715,7 +1715,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -5.285115, y: 0.91641426}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -1741,7 +1741,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -1.6333174, y: 5.420085}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -1767,7 +1767,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 3.2243311, y: 5.174494}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -1793,7 +1793,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 6.735217, y: 0.91724944}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -1819,7 +1819,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 10.292154, y: 7.4184136}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -1845,7 +1845,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 10.281576, y: 0.95118713}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -1871,7 +1871,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 16.665344, y: -0.1887722}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -1897,7 +1897,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 10.726185, y: -0.1814878}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -1923,7 +1923,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 7.342188, y: -6.3636527}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -1949,7 +1949,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 8.277811, y: -3.427902}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -1975,7 +1975,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 13.456608, y: -3.4444513}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -2001,7 +2001,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 14.568961, y: -1.8256712}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -2027,7 +2027,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -6.656012, y: -5.128433}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -2053,7 +2053,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.09812546, y: 19.150562}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -2079,7 +2079,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 30.176262, y: -2.2528458}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -2105,7 +2105,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -19.262049}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -2131,7 +2131,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -25.925428, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -2157,7 +2157,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -2.7499003, y: 6.3803067}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -2183,7 +2183,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -15.056604, y: 6.6387634}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -2209,7 +2209,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -6.3704214, y: 6.71251}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -2235,7 +2235,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -5.0130477, y: 0.73782706}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -2261,7 +2261,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -15.0338335, y: 6.713412}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -2287,7 +2287,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -5.027355, y: 0.7264035}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -2325,7 +2325,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -8.8670025, y: 5.8565717}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}
@@ -2351,7 +2351,7 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 8.112959, y: 7.4904437}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.7400445, y: 2.2, z: 1.7400445, w: 2.2}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 48.701244, y: 29.82}
     newSize: {x: 48.701244, y: 29.82}

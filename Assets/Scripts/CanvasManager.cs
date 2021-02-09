@@ -29,7 +29,10 @@ public class CanvasManager : MonoBehaviour
         {
             if (_instance == null)
             {
-                _instance = (Instantiate(Resources.Load("utils/CanvasManager")) as GameObject).GetComponent<CanvasManager>();
+                _instance = (Instantiate(Resources.Load("utils/CanvasManager 1")) as GameObject).GetComponent<CanvasManager>();
+                _instance.transform.position = Vector3.zero;
+                _instance.transform.localScale = Vector3.one;
+                
             }
 
             return _instance;
@@ -198,6 +201,14 @@ public class CanvasManager : MonoBehaviour
     public void updateCurTasks(int numTasks)
     {
         TasksRemaining.text = numTasks + " Tasks\n remain";
+    }
+
+    public void UpdateRes(float w, float h)
+    { 
+        midgame.GetComponent<RectTransform>().sizeDelta = new Vector2(w, h);
+        lost.GetComponent<RectTransform>().sizeDelta = new Vector2(w, h);
+        won.GetComponent<RectTransform>().sizeDelta = new Vector2(w, h);
+        pause.GetComponent<RectTransform>().sizeDelta = new Vector2(w, h);
     }
     
 

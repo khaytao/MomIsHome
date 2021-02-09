@@ -20,23 +20,32 @@ public class SetRes : MonoBehaviour
         float width = height * 16 / 9;
 
         float screenRatio = (float) Screen.width / (float) Screen.height;
-        float expectedRatio = height / width;
+        float expectedRatio = 16f / 9f;
         float diffRatio = screenRatio / expectedRatio;
 
+        float newOSize;
         if (screenRatio < expectedRatio)
         {
-            Camera.main.orthographicSize = (height / 200f) / diffRatio;
+            newOSize = (height / (2 * PPU)) / diffRatio;
+            //Camera.main.orthographicSize = (height / (2 * PPU)) / diffRatio;
         }
         else
         {
-            Camera.main.orthographicSize = (height / 200f);
+            newOSize = height / (2 * PPU);
+            //Camera.main.orthographicSize = (height /(2 * PPU));
         }
+        //CanvasManager.instance.UpdateRes(width, height);
+        height = 2 * OSize;
+        width = height * 16 / 9;
+        Camera.main.orthographicSize = newOSize;
+        CanvasManager.instance.UpdateRes(width, height);
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
+            Debug.Log("changing");
             setRes();
         }
     }
