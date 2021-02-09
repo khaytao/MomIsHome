@@ -43,7 +43,7 @@ public class PlayerScript : MonoBehaviour
         playerRenderer = GetComponent<SpriteRenderer>();
         //_animator = GetComponent<Animator>();
         curTasks = new List<Task>();
-        GameManager.Instance.setPlayerScript(this);
+        MyGameManager.Instance.setPlayerScript(this);
         _goal = _rb.position;
     }
 
@@ -310,12 +310,12 @@ public class PlayerScript : MonoBehaviour
         
         if (collision.tag.Equals("Item"))
         {
-            curItem = GameManager.Instance.getItem(collision.gameObject);
+            curItem = MyGameManager.Instance.getItem(collision.gameObject);
             updateHighlighted();
         }
         if (collision.tag.Equals("Task"))
         {
-            Task colTask = GameManager.Instance.getTask(collision.gameObject);
+            Task colTask = MyGameManager.Instance.getTask(collision.gameObject);
             if(!curTasks.Contains(colTask))
                 curTasks.Add(colTask);
             updateHighlighted();
@@ -331,7 +331,7 @@ public class PlayerScript : MonoBehaviour
         }
         if (collision.tag.Equals("Task"))
         {
-            Task task = GameManager.Instance.getTask(collision.gameObject);
+            Task task = MyGameManager.Instance.getTask(collision.gameObject);
             if(task != null)
                 curTasks.Remove(task);
             updateHighlighted();
@@ -416,7 +416,7 @@ public class PlayerScript : MonoBehaviour
     {
         // check if go is in wall
         Bounds smallBounds = new Bounds(go.transform.position, new Vector2(0.001f, 0.001f));
-        if (GameManager.Instance.isInWall(smallBounds))
+        if (MyGameManager.Instance.isInWall(smallBounds))
             return true;
         
         float leftBottomX = Mathf.Min(boxCollider2D.bounds.center.x, go.transform.position.x);
@@ -426,6 +426,6 @@ public class PlayerScript : MonoBehaviour
         
         Vector2 center = new Vector2(leftBottomX + (rightTopX - leftBottomX)/2, leftBottomY + (rightTopY - leftBottomY)/2);
         Bounds rayLike = new Bounds(center, new Vector2(rightTopX - leftBottomX, rightTopY - leftBottomY));
-        return !GameManager.Instance.isInWall(rayLike);
+        return !MyGameManager.Instance.isInWall(rayLike);
     }
 }

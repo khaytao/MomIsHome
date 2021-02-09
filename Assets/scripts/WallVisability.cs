@@ -14,7 +14,7 @@ public class WallVisability : MonoBehaviour
         BoxCollider2D[] boxColliders = GetComponents<BoxCollider2D>();
         foreach (BoxCollider2D boxCollider in boxColliders)
         {
-            GameManager.Instance.addWallBounds(boxCollider.bounds);
+            MyGameManager.Instance.addWallBounds(boxCollider.bounds);
         }
     }
 

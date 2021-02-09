@@ -94,7 +94,7 @@ public class Task : MonoBehaviour, IComparable<Task>
         taskCollider = GetComponent<Collider2D>();
         taskRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        GameManager.Instance.addTask(this);
+        MyGameManager.Instance.addTask(this);
         
         
         duration = duration / 2;
@@ -125,7 +125,7 @@ public class Task : MonoBehaviour, IComparable<Task>
     
     public bool canFix(Item heldItem)
     {
-        if (type == TaskType.NPC && !heldItem && !GameManager.Instance.getPlayerScript().holdingBin)
+        if (type == TaskType.NPC && !heldItem && !MyGameManager.Instance.getPlayerScript().holdingBin)
             return true;
 
         if (!heldItem)
@@ -136,7 +136,7 @@ public class Task : MonoBehaviour, IComparable<Task>
         {
             // cant fix if fire is on it
             Bounds taskBounds = taskCollider.bounds;
-            if (GameManager.Instance.isInFire(taskBounds))
+            if (MyGameManager.Instance.isInFire(taskBounds))
                 return false;
         }
         return type == heldItem.forTaskType;
@@ -152,20 +152,20 @@ public class Task : MonoBehaviour, IComparable<Task>
                 type = TaskType.Fire;
                 animator.SetBool("Burning", true);
                 isBurning = true;
-                GameManager.Instance.addToTaskCount(1);
-                GameManager.Instance.TrashCanOnFire = true;
+                MyGameManager.Instance.addToTaskCount(1);
+                MyGameManager.Instance.TrashCanOnFire = true;
             }
-            GameManager.Instance.removeItem(item);
+            MyGameManager.Instance.removeItem(item);
             Destroy(item.gameObject);
-            GameManager.Instance.FinishTask(this);
+            MyGameManager.Instance.FinishTask(this);
             item = null;
         }
         else if (type == TaskType.Fire && isBurning)
         {
             type = TaskType.Trash;
             animator.SetBool("Burning", false);
-            GameManager.Instance.TrashCanOnFire = false;
-            GameManager.Instance.FinishTask(this);
+            MyGameManager.Instance.TrashCanOnFire = false;
+            MyGameManager.Instance.FinishTask(this);
         }
         else if (type == TaskType.Tape && isFurniture)
         {
@@ -173,34 +173,34 @@ public class Task : MonoBehaviour, IComparable<Task>
             {
                 fountainGO.SetActive(false);
                 fountainScript.enabled = false;
-                GameManager.Instance.leakCount--;
+                MyGameManager.Instance.leakCount--;
             }
                 
             
             type = TaskType.Furniture;
             animator.SetInteger("BrokenLevel", 0);
             furnitureInitBreakLevel = 0;
-            GameManager.Instance.FinishTask(this);
+            MyGameManager.Instance.FinishTask(this);
         }
         else if (type == TaskType.Fire)
         {
-            GameManager.Instance.removeFire(gameObject);
-            GameManager.Instance.FinishTask(this);
+            MyGameManager.Instance.removeFire(gameObject);
+            MyGameManager.Instance.FinishTask(this);
             // todo: instantiate ash prefab
         }
 
         else if (type == TaskType.NPC)
         {
-            GameManager.Instance.removeTask(this); //todo why this function?
-            GameManager.Instance.FinishTask(this);
+            MyGameManager.Instance.removeTask(this); //todo why this function?
+            MyGameManager.Instance.FinishTask(this);
             EnemyAI ai = GetComponent<EnemyAI>();
             ai.Leave();
         }
         else
         {
-            GameManager.Instance.removeTask(this);
+            MyGameManager.Instance.removeTask(this);
             Destroy(gameObject);
-            GameManager.Instance.FinishTask(this);
+            MyGameManager.Instance.FinishTask(this);
         }
         
         return item;
@@ -219,14 +219,14 @@ public class Task : MonoBehaviour, IComparable<Task>
 
         if (canLeak())
         {
-            GameManager.Instance.leakCount++;
+            MyGameManager.Instance.leakCount++;
             fountainScript.enabled = true;
             fountainGO.SetActive(true);
         }
         
         animator.SetInteger("BrokenLevel", 1);
         type = TaskType.Tape;
-        GameManager.Instance.addToTaskCount(!isBroken ? 1 : 0);
+        MyGameManager.Instance.addToTaskCount(!isBroken ? 1 : 0);
         isBroken = true;
     }
 
@@ -237,7 +237,7 @@ public class Task : MonoBehaviour, IComparable<Task>
         
         animator.SetInteger("BrokenLevel", 2);
         type = TaskType.Tape;
-        GameManager.Instance.addToTaskCount(!isBroken && !isBurning ? 1 : 0);
+        MyGameManager.Instance.addToTaskCount(!isBroken && !isBurning ? 1 : 0);
         isBurning = true;
     }
 
@@ -248,7 +248,7 @@ public class Task : MonoBehaviour, IComparable<Task>
 
     public int CompareTo(Task other)
     {
-        Vector3 playerPos = GameManager.Instance.getPlayerScript().gameObject.transform.position;
+        Vector3 playerPos = MyGameManager.Instance.getPlayerScript().gameObject.transform.position;
         float dist1 = Vector3.Distance(playerPos, gameObject.transform.position);
         float dist2 = Vector3.Distance(playerPos, other.gameObject.transform.position);
         return dist1 == dist2 ? 0 : (dist1 < dist2 ? -1 : 1);

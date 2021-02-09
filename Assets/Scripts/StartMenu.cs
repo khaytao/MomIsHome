@@ -9,7 +9,7 @@ public class StartMenu : MonoBehaviour
     public void StartPlaying()
     {
         Debug.Log("clicked Button");
-        GameManager.Instance.FirstLevel();
+        MyGameManager.Instance.FirstLevel();
         //Invoke(nameof(_StartPlaying), 0.35f);
         //GameManager.Instance.LoadLevelPrefabs(1);
         //Instantiate(Resources.Load("levels/level1", typeof(GameObject)) as GameObject);
@@ -18,7 +18,7 @@ public class StartMenu : MonoBehaviour
     private void _StartPlaying()
     {
         Debug.Log(" Time");
-        GameManager.Instance.FirstLevel();
+        MyGameManager.Instance.FirstLevel();
     }
 
     public void ShowInstructions()

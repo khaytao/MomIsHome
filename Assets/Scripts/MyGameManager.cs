@@ -6,8 +6,9 @@ using System.Resources;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
-public class GameManager : Singleton<GameManager>
+public class MyGameManager : Singleton<MyGameManager>
 {
     public const int NumOfLevels = 9;
     private float timeStarted;
@@ -59,7 +60,7 @@ public class GameManager : Singleton<GameManager>
         {"timeLeft15", "Mom will be home in 15 seconds. It was nice knowing you"}
     };
     
-    public GameManager()
+    public MyGameManager()
     {
         ResetVals();
     }
@@ -399,6 +400,14 @@ public class GameManager : Singleton<GameManager>
     public string getAlexaText(string clipName)
     {
         return alexaTexts.ContainsKey(clipName) ? alexaTexts[clipName] : NOT_INITIALIZED;
+    }
+
+    public string getRandomAlexaComment()
+    {
+        
+        List<string> stringNames = alexaTexts.Keys.ToList();
+        int random = Random.Range(0, stringNames.Count);
+        return stringNames.ElementAt(random);
     }
     private void alexaDone()
     {

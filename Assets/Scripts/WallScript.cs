@@ -10,7 +10,7 @@ public class WallScript : MonoBehaviour
         BoxCollider2D[] boxColliders = GetComponents<BoxCollider2D>();
         foreach (BoxCollider2D boxCollider in boxColliders)
         {
-            GameManager.Instance.addWallBounds(new Bounds(boxCollider.bounds.center, new Vector3(boxCollider.size.x, boxCollider.size.y, 0)));
+            MyGameManager.Instance.addWallBounds(new Bounds(boxCollider.bounds.center, new Vector3(boxCollider.size.x, boxCollider.size.y, 0)));
         }
     }
 

@@ -243,7 +243,7 @@ public class EnemyAI : MonoBehaviour
 
     private bool goClosestFurniture()
     {
-        List<Task> furnitures = GameManager.Instance.getFurnitures();
+        List<Task> furnitures = MyGameManager.Instance.getFurnitures();
         List<Task> closeBreakableFurnitures = new List<Task>();
         foreach(Task furniture in furnitures)
             if(furniture.canBreak() && Vector3.Distance(gameObject.transform.position, furniture.gameObject.transform.position) < lookForFurnitureDistance)
@@ -292,7 +292,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (other.tag.Equals("Task"))
         {
-            Task otherTask = GameManager.Instance.getTask(other.gameObject);
+            Task otherTask = MyGameManager.Instance.getTask(other.gameObject);
             if (otherTask.type != TaskType.Furniture || wallBetween(other.gameObject))
                 return;
 
@@ -314,6 +314,6 @@ public class EnemyAI : MonoBehaviour
         
         Vector2 center = new Vector2(leftBottomX + (rightTopX - leftBottomX)/2, leftBottomY + (rightTopY - leftBottomY)/2);
         Bounds rayLike = new Bounds(center, new Vector2(rightTopX - leftBottomX, rightTopY - leftBottomY));
-        return !GameManager.Instance.isInWall(rayLike);
+        return !MyGameManager.Instance.isInWall(rayLike);
     }
 }

@@ -27,26 +27,15 @@ public class SetRes : MonoBehaviour
         if (screenRatio < expectedRatio)
         {
             newOSize = (height / (2 * PPU)) / diffRatio;
-            //Camera.main.orthographicSize = (height / (2 * PPU)) / diffRatio;
         }
         else
         {
             newOSize = height / (2 * PPU);
-            //Camera.main.orthographicSize = (height /(2 * PPU));
         }
-        //CanvasManager.instance.UpdateRes(width, height);
+
         height = 2 * OSize;
         width = height * 16 / 9;
         Camera.main.orthographicSize = newOSize;
         CanvasManager.instance.UpdateRes(width, height);
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log("changing");
-            setRes();
-        }
     }
 }

@@ -37,7 +37,7 @@ public class FountainScript : MonoBehaviour
             initialPuddleTime = puddleTask.duration;
             puddle.transform.position = transform.position + new Vector3(0, -renderer.bounds.extents.y - puddleRenderer.bounds.extents.y);
             Vector2 extents = Vector2.zero;
-            while (GameManager.Instance.isInWall(puddleRenderer.bounds))
+            while (MyGameManager.Instance.isInWall(puddleRenderer.bounds))
             {
                 extents += (Vector2)puddleRenderer.bounds.extents;
                 setNewPuddlePosition(extents);
@@ -49,14 +49,14 @@ public class FountainScript : MonoBehaviour
             scalePerSecond = (maxScale - initialPuddleScale) / secondsToMax;
         }
         
-        if (puddle && !GameManager.Instance.getPlayerScript().isFixing && puddle.transform.localScale.x < maxScale.x)
+        if (puddle && !MyGameManager.Instance.getPlayerScript().isFixing && puddle.transform.localScale.x < maxScale.x)
         {
             Vector2 addedExtents = puddleRenderer.bounds.extents;
             puddle.transform.localScale += (Vector3)(scalePerSecond * Time.deltaTime);
             puddleTask.duration = initialPuddleTime + (puddle.transform.localScale.x - initialPuddleScale.x) / initialPuddleScale.x;
             
             Vector2 extents = addedExtents;
-            while (GameManager.Instance.isInWall(puddleRenderer.bounds))
+            while (MyGameManager.Instance.isInWall(puddleRenderer.bounds))
             {
                 setNewPuddlePosition(extents);
                 extents += new Vector2(0.001f, 0.001f);
@@ -67,21 +67,21 @@ public class FountainScript : MonoBehaviour
     private void setNewPuddlePosition(Vector2 addedExtents)
     {
         Bounds puddleBounds = puddleRenderer.bounds;
-        if (GameManager.Instance.isInWall(puddleBounds))
+        if (MyGameManager.Instance.isInWall(puddleBounds))
         {
             if(addedExtents != (Vector2)puddleBounds.extents)
                 addedExtents = (Vector2) puddleBounds.extents - addedExtents;
             // move right
             Vector3 offsetRight = new Vector3(addedExtents.x, 0, 0);
             puddleBounds.center = puddle.transform.position + offsetRight;
-            if (!GameManager.Instance.isInWall(puddleBounds))
+            if (!MyGameManager.Instance.isInWall(puddleBounds))
             {
                 puddle.transform.position = puddleBounds.center;
             }
             // move left
             Vector3 offsetLeft = new Vector3(-addedExtents.x, 0, 0);
             puddleBounds.center = puddle.transform.position + offsetLeft;
-            if (!GameManager.Instance.isInWall(puddleBounds))
+            if (!MyGameManager.Instance.isInWall(puddleBounds))
             {
                 puddle.transform.position = puddleBounds.center;
                 return;
@@ -89,7 +89,7 @@ public class FountainScript : MonoBehaviour
             // move up
             Vector3 offsetUp = new Vector3(0, addedExtents.y, 0);
             puddleBounds.center = puddle.transform.position + offsetUp;
-            if (!GameManager.Instance.isInWall(puddleBounds))
+            if (!MyGameManager.Instance.isInWall(puddleBounds))
             {
                 puddle.transform.position = puddleBounds.center;
                 return;
@@ -97,7 +97,7 @@ public class FountainScript : MonoBehaviour
             // move down
             Vector3 offsetDown = new Vector3(0, -addedExtents.y, 0);
             puddleBounds.center = puddle.transform.position + offsetDown;
-            if (!GameManager.Instance.isInWall(puddleBounds))
+            if (!MyGameManager.Instance.isInWall(puddleBounds))
             {
                 puddle.transform.position = puddleBounds.center;
                 return;
@@ -105,7 +105,7 @@ public class FountainScript : MonoBehaviour
             
             // move up right
             puddleBounds.center = puddle.transform.position + offsetUp + offsetRight;
-            if (!GameManager.Instance.isInWall(puddleBounds))
+            if (!MyGameManager.Instance.isInWall(puddleBounds))
             {
                 puddle.transform.position = puddleBounds.center;
                 return;
@@ -113,7 +113,7 @@ public class FountainScript : MonoBehaviour
             
             // move up left
             puddleBounds.center = puddle.transform.position + offsetUp + offsetLeft;
-            if (!GameManager.Instance.isInWall(puddleBounds))
+            if (!MyGameManager.Instance.isInWall(puddleBounds))
             {
                 puddle.transform.position = puddleBounds.center;
                 return;
@@ -121,7 +121,7 @@ public class FountainScript : MonoBehaviour
             
             // move down right
             puddleBounds.center = puddle.transform.position + offsetDown + offsetRight;
-            if (!GameManager.Instance.isInWall(puddleBounds))
+            if (!MyGameManager.Instance.isInWall(puddleBounds))
             {
                 puddle.transform.position = puddleBounds.center;
                 return;
@@ -129,7 +129,7 @@ public class FountainScript : MonoBehaviour
             
             // move down left
             puddleBounds.center = puddle.transform.position + offsetDown + offsetLeft;
-            if (!GameManager.Instance.isInWall(puddleBounds))
+            if (!MyGameManager.Instance.isInWall(puddleBounds))
             {
                 puddle.transform.position = puddleBounds.center;
                 return;

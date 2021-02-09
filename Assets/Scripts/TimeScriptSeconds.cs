@@ -56,7 +56,7 @@ public class TimeScriptSeconds : MonoBehaviour
         shakeClock();
         
         if(GetSecondsLeft() <= 0)
-            GameManager.Instance.timeOver(); 
+            MyGameManager.Instance.timeOver(); 
 
         Vector3 minuteAngle = Time.deltaTime * (gameTimeFactor / 60) * anglePerMinute * Vector3.forward;
         minuteHand.transform.eulerAngles -= minuteAngle;
@@ -64,7 +64,7 @@ public class TimeScriptSeconds : MonoBehaviour
 
     private void shakeClock()
     {
-        float elapsedTime = GameManager.Instance.elapsedTime;
+        float elapsedTime = MyGameManager.Instance.elapsedTime;
         if (shakeStarted >= 0 && elapsedTime - shakeStarted < shakeLength)
         {
             float shake_x = Mathf.Sin(speed * Time.time) * shakeForce;
@@ -93,7 +93,7 @@ public class TimeScriptSeconds : MonoBehaviour
 
     private void startShake(float shakeForce, AudioClip clip)
     {
-        shakeStarted = GameManager.Instance.elapsedTime;
+        shakeStarted = MyGameManager.Instance.elapsedTime;
         this.shakeForce = shakeForce;
         SoundManager.PlaySound(clip);
         // todo: should shakeLength change per frame?
@@ -101,6 +101,6 @@ public class TimeScriptSeconds : MonoBehaviour
 
     private float GetSecondsLeft()
     {
-        return gameDurationMinutes * (60 / gameTimeFactor) - GameManager.Instance.elapsedTime;
+        return gameDurationMinutes * (60 / gameTimeFactor) - MyGameManager.Instance.elapsedTime;
     }
 }

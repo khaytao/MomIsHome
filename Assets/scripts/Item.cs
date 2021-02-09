@@ -16,7 +16,7 @@ public class Item : MonoBehaviour
         isInteractable = false;
         itemCollider = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
-        GameManager.Instance.addItem(this);
+        MyGameManager.Instance.addItem(this);
     }
 
     public void triggerInteractable(bool interactable)

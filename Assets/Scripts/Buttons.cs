@@ -13,7 +13,7 @@ public class Buttons : MonoBehaviour
     public void NextLevel()
     {
         Time.timeScale = 1;
-        GameManager.Instance.NextLevel();
+        MyGameManager.Instance.NextLevel();
     }
     public void ResumeGame()
     {
@@ -26,12 +26,12 @@ public class Buttons : MonoBehaviour
         {
             FindObjectOfType<CanvasManager>().Resume();
         }
-        GameManager.Instance.reloadLevel();
+        MyGameManager.Instance.reloadLevel();
     }
     
     public void MainManu()
     {
-        GameManager.Instance.MainMenu();
+        MyGameManager.Instance.MainMenu();
     }
     
     public void ExitGame()

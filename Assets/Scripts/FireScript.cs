@@ -22,9 +22,9 @@ public class FireScript : MonoBehaviour
         fireRenderer = GetComponent<SpriteRenderer>();
         boxBounds = boxCollider.bounds;
         // boxBounds = GetComponent<SpriteRenderer>().bounds;
-        GameManager.Instance.addFire(gameObject, boxBounds);
+        MyGameManager.Instance.addFire(gameObject, boxBounds);
         lastCheck = Time.time;
-        PlayerScript playerScript = GameManager.Instance.getPlayerScript();
+        PlayerScript playerScript = MyGameManager.Instance.getPlayerScript();
         if (playerScript != null && circleCollider.bounds.Contains(playerScript.transform.position))
         {
             playerScript.addToTask(GetComponent<Task>());
@@ -48,7 +48,7 @@ public class FireScript : MonoBehaviour
                 center.x += dir.x * boxBounds.size.x;
                 center.y += dir.y * boxBounds.size.y;
                 temp.center = center;
-                if (GameManager.Instance.isInFire(temp) || GameManager.Instance.isInWall(temp))
+                if (MyGameManager.Instance.isInFire(temp) || MyGameManager.Instance.isInWall(temp))
                     return;
                 
                 // center.x -= dir.x * boxBounds.extents.x * 0.5f;
@@ -70,8 +70,8 @@ public class FireScript : MonoBehaviour
         // weird exception
         if (!gameObject)
             return;
-        if (!GameManager.Instance)
+        if (!MyGameManager.Instance)
             return;
-        GameManager.Instance.removeFire(gameObject);
+        MyGameManager.Instance.removeFire(gameObject);
     }
 }
