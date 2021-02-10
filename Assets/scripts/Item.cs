@@ -10,11 +10,13 @@ public class Item : MonoBehaviour
     private bool isInteractable;
     public bool canBurn;
     [HideInInspector] public Collider2D itemCollider;
+    [HideInInspector] public SpriteRenderer itemRenderer;
 
     void Start()
     {
         isInteractable = false;
         itemCollider = GetComponent<Collider2D>();
+        itemRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         MyGameManager.Instance.addItem(this);
     }

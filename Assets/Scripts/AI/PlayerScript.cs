@@ -362,7 +362,7 @@ public class PlayerScript : MonoBehaviour
         
         // priority to fixing tasks
         foreach (Task task in curTasks)
-            if (task && (task.type == TaskType.Trash || task.canFix(holdingItem)) && noWallBetween(task.gameObject))
+            if (task && (task.type == TaskType.Trash || task.canFix(holdingItem)) && noWallBetween(task.taskRenderer.bounds))
                 tasks.Add(task);
         
         if (tasks.Count == 0 && !curItem)
@@ -370,7 +370,7 @@ public class PlayerScript : MonoBehaviour
         
         tasks.Sort();
 
-        if (curItem && (tasks.Count == 0 || isCloser(curItem.gameObject, tasks[0].gameObject)) && noWallBetween(curItem.gameObject))
+        if (curItem && (tasks.Count == 0 || isCloser(curItem.gameObject, tasks[0].gameObject)) && noWallBetween(curItem.itemRenderer.bounds))
         {
             highlightedItem = curItem;
             highlightedItem.triggerInteractable(true);
@@ -410,17 +410,16 @@ public class PlayerScript : MonoBehaviour
         return dist1 < dist2;
     }
 
-    private bool noWallBetween(GameObject go)
+    private bool noWallBetween(Bounds otherBounds)
     {
-        // check if go is in wall
-        Bounds smallBounds = new Bounds(go.transform.position, new Vector2(0.001f, 0.001f));
-        if (MyGameManager.Instance.isInWall(smallBounds))
+        // check if object is in wall
+        if (MyGameManager.Instance.isInWall(otherBounds))
             return true;
         
-        float leftBottomX = Mathf.Min(boxCollider2D.bounds.center.x, go.transform.position.x);
-        float leftBottomY = Mathf.Min(boxCollider2D.bounds.center.y, go.transform.position.y);
-        float rightTopX = Mathf.Max(boxCollider2D.bounds.center.x, go.transform.position.x);
-        float rightTopY = Mathf.Max(boxCollider2D.bounds.center.y, go.transform.position.y);
+        float leftBottomX = Mathf.Min(boxCollider2D.bounds.center.x, otherBounds.center.x);
+        float leftBottomY = Mathf.Min(boxCollider2D.bounds.center.y, otherBounds.center.y);
+        float rightTopX = Mathf.Max(boxCollider2D.bounds.center.x, otherBounds.center.x);
+        float rightTopY = Mathf.Max(boxCollider2D.bounds.center.y, otherBounds.center.y);
         
         Vector2 center = new Vector2(leftBottomX + (rightTopX - leftBottomX)/2, leftBottomY + (rightTopY - leftBottomY)/2);
         Bounds rayLike = new Bounds(center, new Vector2(rightTopX - leftBottomX, rightTopY - leftBottomY));
