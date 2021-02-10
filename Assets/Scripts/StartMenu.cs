@@ -30,5 +30,10 @@ public class StartMenu : MonoBehaviour
     {
         FindObjectOfType<MainMenuLogic>().backToManu();
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
     
 }

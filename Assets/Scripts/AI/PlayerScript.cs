@@ -74,8 +74,7 @@ public class PlayerScript : MonoBehaviour
             doTask();
             return;
         }
-        
-        
+
         if (holdingBin)
         {
             AudioManager.i.PlaySound(AudioFileGetter.i.drop);
@@ -402,7 +401,6 @@ public class PlayerScript : MonoBehaviour
 
         foreach (var task in highlightedTasks)
             task.triggerInteractable(true);
-        
     }
 
     private bool isCloser(GameObject go1, GameObject go2)

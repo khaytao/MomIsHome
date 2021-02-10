@@ -296,8 +296,17 @@ public class MyGameManager : Singleton<MyGameManager>
         {
             Destroy(unfinishedTask);
         }
+
+        try
+        {
+            GameObject level = Instantiate(Resources.Load(levelName, typeof(GameObject)) as GameObject);
+        }
+        catch (ArgumentException e)
+        {
+            SceneManager.LoadScene(0);
+        }
         
-        GameObject level = Instantiate(Resources.Load(levelName, typeof(GameObject)) as GameObject);
+
         //Instantiate(Resources.Load("House no walls", typeof(GameObject)) as GameObject);
         CanvasManager.instance.GameScreen();
     }
