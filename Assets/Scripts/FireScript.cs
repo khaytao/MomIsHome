@@ -28,11 +28,11 @@ public class FireScript : MonoBehaviour
         // boxBounds = GetComponent<SpriteRenderer>().bounds;
         MyGameManager.Instance.addFire(gameObject, boxCollider);
         lastCheck = Time.time;
-        PlayerScript playerScript = MyGameManager.Instance.getPlayerScript();
-        if (playerScript != null && circleCollider.bounds.Contains(playerScript.transform.position))
-        {
-            playerScript.addToTask(GetComponent<Task>());
-        }
+        // PlayerScript playerScript = MyGameManager.Instance.getPlayerScript();
+        // if (playerScript != null && circleCollider.bounds.Contains(playerScript.transform.position))
+        // {
+        //     playerScript.addToTask(GetComponent<Task>());
+        // }
     }
 
     // Update is called once per frame

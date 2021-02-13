@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,7 +22,7 @@ public class PlayerScript : MonoBehaviour
     private float _angle = 0;
     private Item holdingItem;
     [HideInInspector] public Task holdingBin;
-    private Item curItem;
+    private List<Item> curItems;
     private List<Task> curTasks;
     private List<Task> fixingTasks;
     private float taskStarted;
@@ -30,6 +31,7 @@ public class PlayerScript : MonoBehaviour
     private Item highlightedItem;
     private Vector3 puddleScaleTaskStart;
     private BoxCollider2D boxCollider2D;
+    private CapsuleCollider2D capsuleCollider2D;
     private Vector3 startPosition;
 
     public float wallBounce = 1f;
@@ -43,9 +45,11 @@ public class PlayerScript : MonoBehaviour
         boxCollider2D = GetComponent<BoxCollider2D>();
         _rb = GetComponent<Rigidbody2D>();
         playerRenderer = GetComponent<SpriteRenderer>();
+        capsuleCollider2D = GetComponent<CapsuleCollider2D>();
         //_animator = GetComponent<Animator>();
         curTasks = new List<Task>();
         fixingTasks = new List<Task>();
+        curItems = new List<Item>();
         MyGameManager.Instance.setPlayerScript(this);
         _goal = _rb.position;
     }
@@ -54,7 +58,7 @@ public class PlayerScript : MonoBehaviour
     {
         // MyGameManager.Instance.dumpLevelInfo(); // to dump prefab level info as level config for object pulling
         
-        if(curTasks.Count > 0)
+        if(curTasks.Count > 0 || curItems.Count > 0)
             updateHighlighted();
         
         if (isFixing)
@@ -317,7 +321,10 @@ public class PlayerScript : MonoBehaviour
         
         if (collision.tag.Equals("Item"))
         {
-            curItem = MyGameManager.Instance.getItem(collision.gameObject);
+            Item colItem = MyGameManager.Instance.getItem(collision.gameObject);
+            if (!curItems.Contains(colItem))
+                curItems.Add(colItem);
+            
             updateHighlighted();
         }
         if (collision.tag.Equals("Task"))
@@ -331,14 +338,22 @@ public class PlayerScript : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag.Equals("Item") && curItem != null && curItem.gameObject.Equals(collision.gameObject))
+        if (collision.tag.Equals("Item"))
         {
-            curItem = null;
+            Item item = MyGameManager.Instance.getItem(collision.gameObject);
+            if (capsuleCollider2D.IsTouching(collision))
+                return;
+
+            if(item != null)
+                curItems.Remove(item);
             updateHighlighted();
         }
         if (collision.tag.Equals("Task"))
         {
             Task task = MyGameManager.Instance.getTask(collision.gameObject);
+            if (capsuleCollider2D.IsTouching(collision))
+                return;
+
             if(task != null)
                 curTasks.Remove(task);
             updateHighlighted();
@@ -368,19 +383,30 @@ public class PlayerScript : MonoBehaviour
             highlightedItem = null;
         }
         
+        List<Task> toRemove = new List<Task>();
+
         // priority to fixing tasks
         foreach (Task task in curTasks)
-            if (task && (task.type == TaskType.Trash || task.canFix(holdingItem)) && noWallBetween(task.taskRenderer.bounds))
+        {
+            if(!task.getInteractBounds().Intersects(new Bounds(transform.position, capsuleCollider2D.bounds.size)))
+                toRemove.Add(task);
+            
+            else if (task && (task.type == TaskType.Trash || task.canFix(holdingItem)) && noWallBetween(task.getOriginalSizeBounds()))
                 tasks.Add(task);
-        
-        if (tasks.Count == 0 && !curItem)
+        }
+
+        foreach (var task in toRemove)
+            curTasks.Remove(task);
+
+        if (tasks.Count == 0 && curItems.Count == 0)
             return;
         
         tasks.Sort();
+        curItems.Sort();
 
-        if (curItem && (tasks.Count == 0 || isCloser(curItem.gameObject, tasks[0].gameObject)) && noWallBetween(curItem.itemRenderer.bounds))
+        if (curItems.Count > 0 && (tasks.Count == 0 || isCloser(curItems[0].gameObject, tasks[0].gameObject)) && noWallBetween(curItems[0].getOriginalSizeBounds()))
         {
-            highlightedItem = curItem;
+            highlightedItem = curItems[0];
             highlightedItem.triggerInteractable(true);
             return;
         }
@@ -421,13 +447,15 @@ public class PlayerScript : MonoBehaviour
     private bool noWallBetween(Bounds otherBounds)
     {
         // check if object is in wall
-        if (MyGameManager.Instance.isInWall(otherBounds))
+        // bounds of bottom fifth of the renderer bounds
+        Bounds bottomBounds = new Bounds(otherBounds.center + new Vector3(0, -otherBounds.extents.y * 0.9f, 0), new Vector3(otherBounds.size.x, otherBounds.size.y * 0.2f));
+        if (MyGameManager.Instance.isInWall(bottomBounds))
             return true;
         
-        float leftBottomX = Mathf.Min(boxCollider2D.bounds.center.x, otherBounds.center.x);
-        float leftBottomY = Mathf.Min(boxCollider2D.bounds.center.y, otherBounds.center.y);
-        float rightTopX = Mathf.Max(boxCollider2D.bounds.center.x, otherBounds.center.x);
-        float rightTopY = Mathf.Max(boxCollider2D.bounds.center.y, otherBounds.center.y);
+        float leftBottomX = Mathf.Min(boxCollider2D.bounds.center.x, bottomBounds.center.x);
+        float leftBottomY = Mathf.Min(boxCollider2D.bounds.center.y, bottomBounds.center.y);
+        float rightTopX = Mathf.Max(boxCollider2D.bounds.center.x, bottomBounds.center.x);
+        float rightTopY = Mathf.Max(boxCollider2D.bounds.center.y, bottomBounds.center.y);
         
         Vector2 center = new Vector2(leftBottomX + (rightTopX - leftBottomX)/2, leftBottomY + (rightTopY - leftBottomY)/2);
         Bounds rayLike = new Bounds(center, new Vector2(rightTopX - leftBottomX, rightTopY - leftBottomY));
@@ -440,6 +468,7 @@ public class PlayerScript : MonoBehaviour
         isFixing = false;
         fixingTasks.Clear();
         curTasks.Clear();
+        curItems.Clear();
         progressBar.gameObject.SetActive(false);
         _animator.SetBool("isMoving", false);
         _animator.SetBool("isWorking", false);

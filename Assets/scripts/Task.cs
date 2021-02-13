@@ -71,6 +71,7 @@ public class Task : MonoBehaviour, IComparable<Task>
     private bool isBroken;
     private FountainScript fountainScript;
     private GameObject fountainGO;
+    private Vector2 originalSize; // size of the renderer bounds without highlight
 
     [HideInInspector] public Vector3 initialScale;
     [HideInInspector] public float initialDuration;
@@ -79,7 +80,8 @@ public class Task : MonoBehaviour, IComparable<Task>
     [HideInInspector] public bool isFurniture;
     [HideInInspector] public bool isNPC;
     [HideInInspector] public Collider2D taskCollider;
-    [HideInInspector] public Collider2D circleCollider;
+    [HideInInspector] public Collider2D interactCollider;
+    [HideInInspector] public CircleCollider2D circleCollider;
     [HideInInspector] public SpriteRenderer taskRenderer;
     [HideInInspector] public bool isActive;
 
@@ -95,6 +97,11 @@ public class Task : MonoBehaviour, IComparable<Task>
         isInteractable = false;
         taskCollider = GetComponent<Collider2D>();
         taskRenderer = GetComponent<SpriteRenderer>();
+        originalSize = taskRenderer.bounds.size;
+        if (type == TaskType.Sweep)
+            interactCollider = GetComponent<BoxCollider2D>();
+        else
+            interactCollider = GetComponent<CircleCollider2D>();
         animator = GetComponent<Animator>();
         if(type == TaskType.Fire)
             fireScript = GetComponent<FireScript>();
@@ -213,6 +220,18 @@ public class Task : MonoBehaviour, IComparable<Task>
     {
         isInteractable = interactable;
         animator.SetBool("Interactable", interactable);
+    }
+
+    // get the bounds of the task without highlight
+    public Bounds getOriginalSizeBounds()
+    {
+        return new Bounds(transform.position, originalSize);
+        // return interactCollider.bounds;
+    }
+
+    public Bounds getInteractBounds()
+    {
+        return interactCollider.bounds;
     }
 
     public void breakFurniture()
