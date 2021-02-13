@@ -17,15 +17,16 @@ public class Buttons : MonoBehaviour
     }
     public void ResumeGame()
     {
-        FindObjectOfType<CanvasManager>().Resume();
+        CanvasManager.instance.Resume();
     }
 
     public void Restart()
     {
-        if (CanvasManager.isPaused)
-        {
-            FindObjectOfType<CanvasManager>().Resume();
-        }
+        // if (CanvasManager.isPaused)
+        // {
+        //     CanvasManager.instance.Resume();
+        // }
+        CanvasManager.instance.Resume();
         MyGameManager.Instance.reloadLevel();
     }
     

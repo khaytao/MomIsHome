@@ -17,8 +17,9 @@ public class StartMenu : MonoBehaviour
 
     private void _StartPlaying()
     {
-        Debug.Log(" Time");
-        MyGameManager.Instance.FirstLevel();
+        // Debug.Log(" Time");
+        // MyGameManager.Instance.FirstLevel();
+        
     }
 
     public void ShowInstructions()

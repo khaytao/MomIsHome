@@ -9,10 +9,12 @@ public class FireScript : MonoBehaviour
 {
     public float spreadTimeInterval;
     private float lastCheck;
-    private BoxCollider2D boxCollider;
     private Bounds boxBounds;
     private CircleCollider2D circleCollider;
     private SpriteRenderer fireRenderer;
+    private Task fireTask;
+    
+    [HideInInspector] public BoxCollider2D boxCollider;
     
     // Start is called before the first frame update
     void Start()
@@ -20,9 +22,11 @@ public class FireScript : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         circleCollider = GetComponent<CircleCollider2D>();
         fireRenderer = GetComponent<SpriteRenderer>();
+        fireTask = GetComponent<Task>();
+        
         boxBounds = boxCollider.bounds;
         // boxBounds = GetComponent<SpriteRenderer>().bounds;
-        MyGameManager.Instance.addFire(gameObject, boxBounds);
+        MyGameManager.Instance.addFire(gameObject, boxCollider);
         lastCheck = Time.time;
         PlayerScript playerScript = MyGameManager.Instance.getPlayerScript();
         if (playerScript != null && circleCollider.bounds.Contains(playerScript.transform.position))
@@ -53,7 +57,7 @@ public class FireScript : MonoBehaviour
                 
                 // center.x -= dir.x * boxBounds.extents.x * 0.5f;
                 // center.y -= dir.y * boxBounds.extents.y * 0.5f;
-                GameObject newFire = Instantiate(Resources.Load("Fire"), new Vector3(center.x, center.y), Quaternion.identity) as GameObject;
+                Task newFire = MyGameManager.Instance.createFireAt(new Vector3(center.x, center.y, 0));
 
                 // burn furniture if on them
                 // Task furniture = GameManager.Instance.inFurniture(new Bounds(center, boxBounds.extents));
@@ -68,10 +72,10 @@ public class FireScript : MonoBehaviour
     private void OnDestroy()
     {
         // weird exception
-        if (!gameObject)
-            return;
-        if (!MyGameManager.Instance)
-            return;
-        MyGameManager.Instance.removeFire(gameObject);
+        // if (!gameObject)
+        //     return;
+        // if (!MyGameManager.Instance)
+        //     return;
+        // MyGameManager.Instance.removeFireBounds(gameObject);
     }
 }

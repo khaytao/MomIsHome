@@ -30,12 +30,14 @@ public class PlayerScript : MonoBehaviour
     private Item highlightedItem;
     private Vector3 puddleScaleTaskStart;
     private BoxCollider2D boxCollider2D;
+    private Vector3 startPosition;
 
     public float wallBounce = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
+        startPosition = gameObject.transform.position;
         _animator = GetComponent<Animator>();
         highlightedTasks = new List<Task>();
         boxCollider2D = GetComponent<BoxCollider2D>();
@@ -43,12 +45,18 @@ public class PlayerScript : MonoBehaviour
         playerRenderer = GetComponent<SpriteRenderer>();
         //_animator = GetComponent<Animator>();
         curTasks = new List<Task>();
+        fixingTasks = new List<Task>();
         MyGameManager.Instance.setPlayerScript(this);
         _goal = _rb.position;
     }
 
     private void Update()
     {
+        // MyGameManager.Instance.dumpLevelInfo(); // to dump prefab level info as level config for object pulling
+        
+        if(curTasks.Count > 0)
+            updateHighlighted();
+        
         if (isFixing)
         {
             doTask();
@@ -424,5 +432,23 @@ public class PlayerScript : MonoBehaviour
         Vector2 center = new Vector2(leftBottomX + (rightTopX - leftBottomX)/2, leftBottomY + (rightTopY - leftBottomY)/2);
         Bounds rayLike = new Bounds(center, new Vector2(rightTopX - leftBottomX, rightTopY - leftBottomY));
         return !MyGameManager.Instance.isInWall(rayLike);
+    }
+
+    public void resetForLevel()
+    {
+        transform.position = startPosition;
+        isFixing = false;
+        fixingTasks.Clear();
+        curTasks.Clear();
+        progressBar.gameObject.SetActive(false);
+        _animator.SetBool("isMoving", false);
+        _animator.SetBool("isWorking", false);
+        _animator.SetInteger("HoldingItem", 0);
+        if (holdingBin)
+            holdingBin.transform.parent = null;
+        if (holdingItem)
+            holdingItem.transform.parent = null;
+        holdingBin = null;
+        holdingItem = null;
     }
 }

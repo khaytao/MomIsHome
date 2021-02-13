@@ -6,7 +6,6 @@ public class FountainScript : MonoBehaviour
 {
     public float secondsToMax;
     private SpriteRenderer renderer;
-    private GameObject puddle;
     private SpriteRenderer puddleRenderer;
 
     private Vector2 initialPuddleScale;
@@ -15,6 +14,7 @@ public class FountainScript : MonoBehaviour
     private Vector2 scalePerSecond;
 
     private Task puddleTask;
+    private GameObject puddle;
     private float initialPuddleTime;
     // Start is called before the first frame update
     void Start()
@@ -28,12 +28,12 @@ public class FountainScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!puddle)
+        if (!puddleTask || !puddleTask.isActive)
         {
-            puddle = Instantiate(Resources.Load("Puddle")) as GameObject;
+            puddleTask = MyGameManager.Instance.createPuddleAt();
+            puddle = puddleTask.gameObject;
             // position
             puddleRenderer = puddle.GetComponent<SpriteRenderer>();
-            puddleTask = puddle.GetComponent<Task>();
             initialPuddleTime = puddleTask.duration;
             puddle.transform.position = transform.position + new Vector3(0, -renderer.bounds.extents.y - puddleRenderer.bounds.extents.y);
             Vector2 extents = Vector2.zero;

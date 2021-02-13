@@ -12,6 +12,7 @@ public class HouseFurnitureSetup : MonoBehaviour
     {
         _toBreak = new HashSet<Task>(toBreak);
         Invoke(nameof(Break), 0.5f);
+        MyGameManager.Instance.addLevelToBreakData(toBreak);
     }
 
     void Break()

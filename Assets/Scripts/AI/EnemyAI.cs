@@ -24,7 +24,7 @@ public class EnemyAI : MonoBehaviour
     private float lastFurnitureSearch;
     public float thresh = 0.1f;
     public float timeBetweenPoints;
-    public List<Transform> pointsList;
+    [HideInInspector] public List<Transform> pointsList;
     private List<Transform> lastThreePoints;
     public List<string> spawnList;
     public Animator anim;
@@ -39,7 +39,7 @@ public class EnemyAI : MonoBehaviour
     private float movementThreshold = 0.001f;
     private int i;
 
-    public Transform exit;
+    private Vector3 exit;
     public float x_limit;
     public float y_limit;
     private float startedAction; // time started
@@ -50,7 +50,7 @@ public class EnemyAI : MonoBehaviour
 
     private SpriteRenderer renderer;
     private Task task;
-
+    private List<Collider2D> colliders;
 
     private bool isMoving;
 
@@ -58,28 +58,30 @@ public class EnemyAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lastActionTime = -1;
+        exit = new Vector3(-30, -2.5f, 0);
+        colliders = new List<Collider2D>(GetComponents<Collider2D>());
         lastThreePoints = new List<Transform>();
         anim = GetComponent<Animator>();
-        i = 0;
-        nextDestination = pointsList[i];
         ds = GetComponent<AIDestinationSetter>();
         path = GetComponent<AIPath>();
         task = GetComponent<Task>();
-        ds.target = nextDestination;
         renderer = GetComponent<SpriteRenderer>();
-        startedAction = -1;
-        isInAction = false;
-        updatingLocation = false;
+        if(pointsList != null)
+            pointsList = new List<Transform>();
+        i = 0;
+        initForLevel();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!(Mathf.Abs(transform.position.x) < x_limit && Mathf.Abs(transform.position.y) < y_limit))
-        {
-            Destroy(gameObject);
-        }
+        if (pointsList.Count == 0)
+            return;
+        
+        // if (!(Mathf.Abs(transform.position.x) < x_limit && Mathf.Abs(transform.position.y) < y_limit))
+        // {
+        //     Destroy(gameObject);
+        // }
 
         // check if stuck
         if (Time.time - lastLocationChecked >= 0.5f)
@@ -88,7 +90,10 @@ public class EnemyAI : MonoBehaviour
             {
                 sameLocationStrikes++;
                 if (sameLocationStrikes >= 4)
+                {
                     pickNextRandomDest();
+                    sameLocationStrikes = 0;
+                }
             }
             else
                 sameLocationStrikes = 0;
@@ -114,6 +119,11 @@ public class EnemyAI : MonoBehaviour
             // 30% to make dirty action
             if(Time.time - lastActionTime > actionCooldown && Random.Range(0, 10) < 3)
                 startAction(true);
+        }
+
+        if (leaving && Vector2.Distance(transform.position, ds.target.position) < thresh)
+        {
+            task.resetForLevel();
         }
 
         // var nn = AstarPath.active.GetNearest(transform.position, NNConstraint.Default);
@@ -188,8 +198,8 @@ public class EnemyAI : MonoBehaviour
         yield return new WaitForSeconds(18f / 24f);
         if (task.NPCType == NPCType.DrunkFriend || task.NPCType == NPCType.Hobo)
         {
-            GameObject puddle = Instantiate(Resources.Load("Puddle")) as GameObject;
-            Vector2 puddleExtents = puddle.GetComponent<SpriteRenderer>().bounds.extents;
+            Task puddle = MyGameManager.Instance.createPuddleAt();
+            Vector2 puddleExtents = puddle.gameObject.GetComponent<SpriteRenderer>().bounds.extents;
             // calc puddle location
             int dirX = renderer.flipX ? 1 : -1;
             Vector2 rendExtents = renderer.bounds.extents;
@@ -274,8 +284,8 @@ public class EnemyAI : MonoBehaviour
     public void Leave()
     {
         leaving = true;
-        ds.target = exit;
-        foreach (var comp in GetComponents<Collider2D>())
+        ds.target.position = exit;
+        foreach (var comp in colliders)
         {
             comp.enabled = false;
         }
@@ -315,5 +325,30 @@ public class EnemyAI : MonoBehaviour
         Vector2 center = new Vector2(leftBottomX + (rightTopX - leftBottomX)/2, leftBottomY + (rightTopY - leftBottomY)/2);
         Bounds rayLike = new Bounds(center, new Vector2(rightTopX - leftBottomX, rightTopY - leftBottomY));
         return !MyGameManager.Instance.isInWall(rayLike);
+    }
+
+    public void resetForLevel()
+    {
+        pointsList.Clear();
+        anim.SetInteger("Action", (int) ActionType.Idle);
+        lastActionTime = -1;
+        i = 0;
+        startedAction = -1;
+        isInAction = false;
+        updatingLocation = false;
+    }
+
+    public void initForLevel()
+    {
+        pointsList.Clear();
+        for (int i = 0; i < MyGameManager.Instance.curAIPointCount; i++)
+            pointsList.Add(MyGameManager.Instance.pointsAI[i]);
+        
+        if (ds && pointsList.Count > 0)
+        {
+            int nextIndex = Random.Range(0, pointsList.Count);
+            nextDestination = pointsList[nextIndex];
+            ds.target = nextDestination;
+        }
     }
 }

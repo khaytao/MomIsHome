@@ -144,7 +144,6 @@ MonoBehaviour:
   - TrashWaste
   - TrashWaste
   anim: {fileID: 0}
-  exit: {fileID: 0}
   x_limit: 25
   y_limit: 17
   idleTimeBeforeAction: 0
@@ -197,16 +196,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d3ac837be754849affa81d62e7ebbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 0.5
+  duration: 0.4
   type: 7
   furnitureType: 0
-  furnitureInitBreakLevel: 0
   NPCType: 1
+  initialScale: {x: 0, y: 0, z: 0}
+  initialDuration: 0
+  fireScript: {fileID: 0}
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!212 &1296617868
 SpriteRenderer:

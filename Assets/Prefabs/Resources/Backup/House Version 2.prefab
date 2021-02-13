@@ -144,13 +144,14 @@ MonoBehaviour:
   duration: 4
   type: 6
   furnitureType: 7
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &2529913526026583778
 Animator:
@@ -315,13 +316,14 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 22
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &2213478300283960183
 Animator:
@@ -486,13 +488,14 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 20
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &1558854205510717326
 Animator:
@@ -657,13 +660,14 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 16
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &8868916167021794863
 Animator:
@@ -800,13 +804,14 @@ MonoBehaviour:
   duration: 4
   type: 6
   furnitureType: 6
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &4059277664319500683
 Animator:
@@ -944,13 +949,14 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 12
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &9142128585644534527
 Animator:
@@ -1115,13 +1121,14 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 17
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &5554837445749006392
 Animator:
@@ -1260,13 +1267,14 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 26
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &4099692305663322237
 Animator:
@@ -1337,7 +1345,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3917617819545780895}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.178518, y: 0.0026665926, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3917617820548027304}
@@ -2505,13 +2513,14 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 14
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &9023534446534008197
 Animator:
@@ -2676,13 +2685,14 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 24
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &4581868076495691786
 Animator:
@@ -2846,13 +2856,14 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 21
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &7176119936701754923
 Animator:
@@ -3016,13 +3027,14 @@ MonoBehaviour:
   duration: 4
   type: 6
   furnitureType: 3
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &2433415988413089564
 Animator:
@@ -3186,13 +3198,14 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 25
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &1682441246030441955
 Animator:
@@ -3356,13 +3369,14 @@ MonoBehaviour:
   duration: 4
   type: 6
   furnitureType: 1
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &5959737063526300507
 Animator:
@@ -3526,13 +3540,14 @@ MonoBehaviour:
   duration: 4
   type: 6
   furnitureType: 5
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &9162416392064362627
 Animator:
@@ -3671,13 +3686,14 @@ MonoBehaviour:
   duration: 4
   type: 6
   furnitureType: 2
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &5413467079921208670
 Animator:
@@ -3737,6 +3753,7 @@ GameObject:
   - component: {fileID: 1075750168932626779}
   - component: {fileID: 1260113053086197894}
   - component: {fileID: 8997187044261531467}
+  - component: {fileID: 2939624137797840545}
   m_Layer: 0
   m_Name: stove
   m_TagString: Task
@@ -3841,13 +3858,14 @@ MonoBehaviour:
   duration: 4
   type: 6
   furnitureType: 4
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &8997187044261531467
 Animator:
@@ -3868,6 +3886,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &2939624137797840545
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3917617821070655165}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.020604491}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.14, y: 2.4103072}
+    newSize: {x: 3.15, y: 2.4303095}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.14, y: 2.3690984}
+  m_EdgeRadius: 0
 --- !u!1 &3917617821073777884
 GameObject:
   m_ObjectHideFlags: 0
@@ -3985,13 +4029,14 @@ MonoBehaviour:
   duration: 4
   type: 6
   furnitureType: 2
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &8770513599444147674
 Animator:
@@ -4155,13 +4200,14 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 23
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &2477340556182868383
 Animator:
@@ -4325,13 +4371,14 @@ MonoBehaviour:
   duration: 4
   type: 6
   furnitureType: 5
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &275684734224741341
 Animator:
@@ -4468,13 +4515,14 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 27
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &521510502422939341
 Animator:
@@ -4639,13 +4687,14 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 8
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &596300801381962855
 Animator:
@@ -4810,13 +4859,14 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 18
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &4189134406582000478
 Animator:
@@ -4954,13 +5004,14 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 9
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &6264423514299818934
 Animator:
@@ -5098,13 +5149,14 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 10
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &3944787442130206972
 Animator:
@@ -5242,13 +5294,14 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 11
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &5227020559261290836
 Animator:
@@ -5413,13 +5466,14 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 13
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &4270910538484678035
 Animator:
@@ -5667,13 +5721,14 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 28
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &1802589768196588433
 Animator:
@@ -5921,13 +5976,14 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 19
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &7541399310487458035
 Animator:
@@ -6092,13 +6148,14 @@ MonoBehaviour:
   duration: 3
   type: 6
   furnitureType: 15
-  furnitureInitBreakLevel: 0
   NPCType: 0
+  enemyAI: {fileID: 0}
   isFurniture: 0
   isNPC: 0
   taskCollider: {fileID: 0}
   circleCollider: {fileID: 0}
   taskRenderer: {fileID: 0}
+  isActive: 0
   burnChance: 0
 --- !u!95 &3862751033836349035
 Animator:

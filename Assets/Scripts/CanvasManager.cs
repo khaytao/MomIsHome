@@ -27,7 +27,7 @@ public class CanvasManager : MonoBehaviour
     {
         get
         {
-            if (_instance == null)
+            if (!_instance)
             {
                 _instance = (Instantiate(Resources.Load("utils/CanvasManager 1")) as GameObject).GetComponent<CanvasManager>();
                 _instance.transform.position = Vector3.zero;
@@ -83,12 +83,13 @@ public class CanvasManager : MonoBehaviour
 
     private IEnumerator FadeBackGroundIn(Image img)
     {
-        for (float i = 1; i >= 0; i -= Time.deltaTime)
+        for (float i = 0.5f; i >= 0; i -= Time.deltaTime)
         {
             // set color with i as alpha
-            img.color = new Color(1, 1, 1, i);
+            img.color = new Color(1, 1, 1, i*2);
             yield return null;
         }
+        GameScreen();
     }
     
     public void LostScreenFade()
@@ -120,6 +121,7 @@ public class CanvasManager : MonoBehaviour
         Time.timeScale = 1;
         pause.SetActive(false);
         isPaused = false;
+        // GameScreen();
     }
 
     private void Update()
@@ -147,7 +149,7 @@ public class CanvasManager : MonoBehaviour
 
     public void ResetClock()
     {
-        clock = Instantiate(Resources.Load("utils/AudioFileGetter")) as GameObject;
+        // clock = Instantiate(Resources.Load("utils/AudioFileGetter")) as GameObject;
     }
     
     public void ResetClock(float levelSeconds)
