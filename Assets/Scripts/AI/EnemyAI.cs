@@ -336,6 +336,7 @@ public class EnemyAI : MonoBehaviour
         startedAction = -1;
         isInAction = false;
         updatingLocation = false;
+        leaving = false;
     }
 
     public void initForLevel()
