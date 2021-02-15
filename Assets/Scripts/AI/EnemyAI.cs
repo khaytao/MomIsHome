@@ -36,7 +36,7 @@ public class EnemyAI : MonoBehaviour
 
     private Transform nextDestination;
     private bool leaving;
-    private float movementThreshold = 0.001f;
+    private float movementThreshold = 0.3f;
     private int i;
 
     private Vector3 exit;
@@ -231,11 +231,12 @@ public class EnemyAI : MonoBehaviour
             anim.SetInteger("Action", (int) ActionType.Move);
         }
 
-        if (velocity.x > 0.01f)
+        if (velocity.x > 0.02f)
             renderer.flipX = true;
 
-        if (velocity.x < -0.01f)
+        if (velocity.x < -0.02f)
             renderer.flipX = false;
+        
     }
 
     private void FixedUpdate()
@@ -337,6 +338,9 @@ public class EnemyAI : MonoBehaviour
         isInAction = false;
         updatingLocation = false;
         leaving = false;
+        nextDestination = null;
+        foreach (var comp in colliders)
+            comp.enabled = true;
     }
 
     public void initForLevel()

@@ -18,6 +18,8 @@ public static class LevelsConfig
     private static string[] levels =
     {
         // "toBreak, Fridge, fridge closed\nItem, FireExtenguisher, Fire, -8.11,-9.29,0\nItem, Broom, Sweep, 0.83,1.01,0\nItem, Tape, Tape, -5.91,-0.7,0", // 1 task level for test
+        // "Item, Broom, Sweep, 0,0,0\nItem, Tape, Tape, 0,0,0\nTask, Racoon (1), NPC, 6.52,2.24,0\nTask, Racoon (2), NPC, -9.26,2.37,0\nAI_Point, 15.8,-4.13,-11.48077\nAI_Point, -15.81,-6.5,-11.48077\nAI_Point, 12.1,2.8,-11.48077\nAI_Point, -12.29,-0.82,-11.48077\nAI_Point, -10.25,-8.15,-11.48077\nAI_Point, -7.81,0.98,-11.48077\nAI_Point, -12.7,2.17,-11.48077\nAI_Point, 13.1,0.2,-11.48077\nAI_Point, -10.51,-3.35,-11.48077\nAI_Point, -16,-2.5,-11.48077",
+        
         "toBreak, Fridge, fridge closed\nItem, FireExtenguisher, Fire, -8.11,-9.29,0\nItem, Broom, Sweep, 0.83,1.01,0\nItem, Tape, Tape, -5.91,-0.7,0\nItem, TrashDrink, Trash, -12.05,1.31,0\nItem, TrashDrink (1), Trash, -15.7,-3.63,0\nItem, TrashCig, Trash, -3.07,-3.92,0\nTask, TrashCan, Trash, -16.34,1.36,0\nburnChance, 0\nTask, Fire, Fire, 11.72,2.44,0\nTask, Fire (2), Fire, -7.83,6.05,0\nTask, Puddle, Sweep, -0.69,3.73,0\nTask, Racoon, NPC, 15.08,-8.33,0\nAI_Point, 15.3,-7.79,-7.829367\nAI_Point, 16.55,-4.58,-7.829367\nAI_Point, 12.3,-8.37,-7.829367",
         "toBreak, Sink, sink\nItem, FireExtenguisher, Fire, -2.1,3.91,0\nItem, Broom, Sweep, -16.39,2.26,0\nItem, Tape, Tape, 12.81,-6.97,0\nItem, TrashDrink, Trash, 11.63,-9.06,0\nTask, TrashCan, Trash, 2.68,-8.56,0\nburnChance, 4\nTask, Fire, Fire, 11.01,-0.45,0\nTask, Fire (1), Fire, 9.35,-4.07,0\nItem, TrashCig (1), Trash, 0.45,2.73,0\nItem, TrashDrink, Trash, -12.9,-1.5,0\nItem, TrashWaste, Trash, -9.14,-8.51,0\nItem, TrashWaste (1), Trash, -10.6,-5.76,0\nItem, TrashCigShiftedCollider, Trash, -5.75,-0.77,0\nItem, TrashCigShiftedCollider (1), Trash, 15.19,1.58,0\nTask, Puddle, Sweep, -13.23,1.5,0",
         "Item, FireExtenguisher, Fire, -8.36,-8.66,0\nItem, Broom, Sweep, -2.06,4.43,0\nItem, Tape, Tape, -5.93,-0.78,0\nTask, TrashCan, Trash, -16.21,1.4,0\nburnChance, 2\nTask, Racoon, NPC, -13.94,-6.63,0\nTask, Racoon (1), NPC, 6.52,2.24,0\nTask, Racoon (2), NPC, -9.26,2.37,0\nTask, FireSameOrder, Fire, 16.2,-8.15,0\nTask, FireSameOrder (1), Fire, 14.9,-6.73,0\nTask, FireSameOrder (2), Fire, 16.51,-6.74,0\nAI_Point, 15.8,-4.13,-11.48077\nAI_Point, -15.81,-6.5,-11.48077\nAI_Point, 12.1,2.8,-11.48077\nAI_Point, -12.29,-0.82,-11.48077\nAI_Point, -10.25,-8.15,-11.48077\nAI_Point, -7.81,0.98,-11.48077\nAI_Point, -12.7,2.17,-11.48077\nAI_Point, 13.1,0.2,-11.48077\nAI_Point, -10.51,-3.35,-11.48077\nAI_Point, -16,-2.5,-11.48077",
@@ -33,5 +35,10 @@ public static class LevelsConfig
             return levels[0];
         
         return levels[levelNum - 1];
+    }
+
+    public static int getLevelsCount()
+    {
+        return levels.Length;
     }
 }

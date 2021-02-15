@@ -164,7 +164,6 @@ public class CanvasManager : MonoBehaviour
         {
             return;
         }
-        Debug.Log(txt);
         Alexa.gameObject.SetActive(true);
         Alexa.Find("Text").GetComponent<TMP_Text>().text = txt;
     }
@@ -190,7 +189,6 @@ public class CanvasManager : MonoBehaviour
             }
             im.transform.position = Vector3.right * x + Vector3.up * (float)(start + 0.5 * acceleration *(t*t));
             t += Time.deltaTime;
-            Debug.Log("im moved: " + im.transform.position + "  ---- time---- " + t);
             yield return null;
         }
     }

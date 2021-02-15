@@ -185,6 +185,7 @@ public class Task : MonoBehaviour, IComparable<Task>
             if (canLeak())
             {
                 fountainGO.SetActive(false);
+                fountainScript.resetForLevel();
                 fountainScript.enabled = false;
                 MyGameManager.Instance.leakCount--;
             }
@@ -330,6 +331,9 @@ public class Task : MonoBehaviour, IComparable<Task>
         {
             fireScript.enabled = false;
         }
+        
+        if(canLeak())
+            fountainScript.resetForLevel();
 
         if (isNPC)
         {

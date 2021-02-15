@@ -154,7 +154,6 @@ public class MyGameManager : Singleton<MyGameManager>
     public void addToTaskCount(int num)
     {
         taskCount += num;
-        Debug.Log(taskCount);
         CanvasManager.instance.updateCurTasks(taskCount);
     }
 
@@ -309,7 +308,6 @@ public class MyGameManager : Singleton<MyGameManager>
 
     public void areTasksOver()
     {
-        Debug.Log(taskCount);
         CanvasManager.instance.updateCurTasks(taskCount);
         if (taskCount <= 0)
         {
@@ -389,7 +387,7 @@ public class MyGameManager : Singleton<MyGameManager>
             if(npc.enemyAI)
                 npc.enemyAI.initForLevel();
         }
-
+        
         CanvasManager.instance.updateCurTasks(taskCount);
     }
 
@@ -466,8 +464,6 @@ public class MyGameManager : Singleton<MyGameManager>
                 return task;
             }
         }
-        if(type == TaskType.NPC)
-            Debug.Log("z");
         // couldn't find an available object
         string prefabName = goName.Split(' ')[0];
         GameObject newTaskGO = Instantiate(Resources.Load(prefabName), position, Quaternion.identity) as GameObject;
@@ -676,7 +672,13 @@ public class MyGameManager : Singleton<MyGameManager>
         // ResetVals();
         // curLevel++;
         // LoadLevelPrefabs(curLevel);
-        loadLevel(++curLevel);
+        curLevel++;
+        if (curLevel > LevelsConfig.getLevelsCount())
+        {
+            MainMenu();
+            return;
+        }
+        loadLevel(curLevel);
         AudioManager.i.PlayBackGround(AudioFileGetter.i.BackGroundLevel);
         CanvasManager.instance.Resume();
     }

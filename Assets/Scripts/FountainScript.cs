@@ -136,4 +136,10 @@ public class FountainScript : MonoBehaviour
             }
         }
     }
+
+    public void resetForLevel()
+    {
+        puddle = null;
+        puddleTask = null;
+    }
 }
