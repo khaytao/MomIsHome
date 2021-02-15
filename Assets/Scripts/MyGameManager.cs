@@ -331,7 +331,8 @@ public class MyGameManager : Singleton<MyGameManager>
             goItem.Value.resetForLevel();
         
         playerScript.resetForLevel();
-        
+
+        TrashCanOnFire = false;
         curAIPointCount = 0;
         timeStarted = -1;
         gameOver = false;
@@ -784,11 +785,13 @@ public class MyGameManager : Singleton<MyGameManager>
 
     public int FireCount()
     {
-        int count = fireCollider.Count;
+        int count = 0;
+        foreach (var goTask in goToTask)
+            if (goTask.Value.isActive && goTask.Value.type == TaskType.Fire)
+                count++;
+        
         if (TrashCanOnFire)
-        {
             count++;
-        }
 
         return count;
     }
