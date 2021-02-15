@@ -736,6 +736,8 @@ public class MyGameManager : Singleton<MyGameManager>
         wallBounds.Clear();
         fireCollider.Clear();
         furnitureTaskBounds.Clear();
+        pointsAI.Clear();
+        curAIPointCount = 0;
     }
 
     public bool isAlexaPlaying;
